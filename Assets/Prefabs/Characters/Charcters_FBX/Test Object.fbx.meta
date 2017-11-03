@@ -1,0 +1,226 @@
+fileFormatVersion: 2
+guid: 1fc48396483d0664d85d2f982b92cbe9
+timeCreated: 1509733545
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Master_CTRLGRP
+    100002: pCube1
+    100004: pCube10
+    100006: pCube11
+    100008: pCube12
+    100010: pCube13
+    100012: pCube14
+    100014: pCube15
+    100016: pCube16
+    100018: pCube17
+    100020: pCube18
+    100022: pCube19
+    100024: pCube20
+    100026: pCube3
+    100028: pCube4
+    100030: pCube9
+    100032: pSphere4
+    100034: pSphere5
+    100036: pTorus1
+    100038: pTorus2
+    100040: pTorus3
+    100042: //RootNode
+    100044: transform12
+    100046: transform13
+    100048: transform14
+    100050: transform15
+    100052: transform16
+    100054: transform17
+    100056: transform18
+    100058: transform19
+    100060: transform2
+    100062: transform20
+    100064: transform21
+    100066: transform22
+    100068: transform23
+    100070: transform24
+    100072: transform25
+    100074: transform26
+    100076: transform27
+    100078: transform4
+    100080: transform5
+    400000: Master_CTRLGRP
+    400002: pCube1
+    400004: pCube10
+    400006: pCube11
+    400008: pCube12
+    400010: pCube13
+    400012: pCube14
+    400014: pCube15
+    400016: pCube16
+    400018: pCube17
+    400020: pCube18
+    400022: pCube19
+    400024: pCube20
+    400026: pCube3
+    400028: pCube4
+    400030: pCube9
+    400032: pSphere4
+    400034: pSphere5
+    400036: pTorus1
+    400038: pTorus2
+    400040: pTorus3
+    400042: //RootNode
+    400044: transform12
+    400046: transform13
+    400048: transform14
+    400050: transform15
+    400052: transform16
+    400054: transform17
+    400056: transform18
+    400058: transform19
+    400060: transform2
+    400062: transform20
+    400064: transform21
+    400066: transform22
+    400068: transform23
+    400070: transform24
+    400072: transform25
+    400074: transform26
+    400076: transform27
+    400078: transform4
+    400080: transform5
+    2300000: pCube20
+    3300000: pCube20
+    4300000: pCube20
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: c6cb6ba88d2cdde47871b8cdefdb5379, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lightAngleShader16
+    second: {fileID: 2100000, guid: 020d2b3d9979a6b4c926522feb07c970, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lightAngleShader17
+    second: {fileID: 2100000, guid: ea2aff966d16bb94d97996f50b056f1f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lightAngleShader18
+    second: {fileID: 2100000, guid: 32f4d677177867a4183b47c8c7495dda, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lightAngleShader22
+    second: {fileID: 2100000, guid: ea451e8a28305a34eabdcdaab9a79e95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lightAngleShader23
+    second: {fileID: 2100000, guid: 21c1addf414ed8542ba3a84df166f32e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lightAngleShader24
+    second: {fileID: 2100000, guid: fa82c29a285e40d46a2dc2b585416ed8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lightAngleShader4
+    second: {fileID: 2100000, guid: b2ade93ff8ff4054484a58f6ab91e0bc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lightAngleShader5
+    second: {fileID: 2100000, guid: 40d0228f57eaaa943aad28e4b685e4bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lightAngleShader8
+    second: {fileID: 2100000, guid: cd1710c764ec55b4aa05a47fc7a3dc7a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lightAngleShader9
+    second: {fileID: 2100000, guid: 42093a1d162d66e45a42fe2f39b2d254, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

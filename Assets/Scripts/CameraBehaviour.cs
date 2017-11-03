@@ -12,7 +12,7 @@ public class CameraBehaviour : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Player = GameObject.Find("Test Character");
+        Player = GameObject.Find("Char_TestMain_PF");
         PlayerScript = Player.GetComponent<PlayerControls>();
         x = transform.position.x - Player.transform.position.x;
         y = transform.position.y - Player.transform.position.y;
