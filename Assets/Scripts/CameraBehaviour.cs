@@ -12,7 +12,7 @@ public class CameraBehaviour : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Player = GameObject.Find("Char_TestMain_PF");
+        Player = GameObject.Find("Template_Female_Mesh_3");
         PlayerScript = Player.GetComponent<PlayerControls>();
         x = transform.position.x - Player.transform.position.x;
         y = transform.position.y - Player.transform.position.y;
