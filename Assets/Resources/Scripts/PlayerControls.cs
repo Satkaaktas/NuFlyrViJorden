@@ -13,6 +13,13 @@ public class PlayerControls : MonoBehaviour
 
     float v, h;
 
+    bool moving = false;
+
+    public bool Moving
+    {
+        get { return this.moving; }
+    }
+
     private CharacterController characterController;
 
     private Vector3 forward, right, vertical, horizontal, direction;
@@ -51,7 +58,12 @@ public class PlayerControls : MonoBehaviour
         characterController.SimpleMove(direction);
 
         if (direction.magnitude > .01f)
+        {
             transform.forward = direction;
+            moving = true;
+        }
+        else
+            moving = false;
     }
 
     void OnTriggerEnter(Collider other)
