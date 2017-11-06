@@ -5,18 +5,25 @@ using UnityEngine;
 public class PlayerControls : MonoBehaviour
 {
     IInteractable currentInteractable;
-    
+
     GameObject interactButton;
 
     [SerializeField]
-    float moveSpeed, rotSpeed;
+    float speed;
 
-    float vertical, horizontal;
+    float v, h;
 
-    //Quaternion[] moveRotations = new Quaternion[] { new Quaternion(0f, 45f, 0f)};
+    private CharacterController characterController;
+
+    private Vector3 forward, right, vertical, horizontal, direction;
 
     void Start()
     {
+        characterController = GetComponent<CharacterController>();
+        forward = Camera.main.transform.forward;
+        forward.y = 0;
+        forward = Vector3.Normalize(forward);
+        right = Quaternion.Euler(new Vector3(0, 90, 0)) * forward;
         interactButton = GameObject.Find("InteractButton");
         interactButton.SetActive(false);
     }
@@ -32,10 +39,19 @@ public class PlayerControls : MonoBehaviour
 
     void Move()
     {
-        //ska ändras
-        horizontal = Input.GetAxisRaw("Horizontal") * Time.deltaTime * moveSpeed;
-        vertical = Input.GetAxisRaw("Vertical") * Time.deltaTime * moveSpeed;
-        //transform.Translate(horizontal, 0, vertical, Space.Self);
+        h = Input.GetAxis("Horizontal");
+        v = Input.GetAxis("Vertical");
+
+        horizontal = right * h;
+        vertical = forward * v;
+
+        direction = Vector3.Normalize(horizontal + vertical);
+        direction *= speed;
+
+        characterController.SimpleMove(direction);
+
+        if (direction.magnitude > .01f)
+            transform.forward = direction;
     }
 
     void OnTriggerEnter(Collider other)
