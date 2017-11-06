@@ -5,17 +5,20 @@ using UnityEngine;
 public class PlayerControls : MonoBehaviour
 {
     IInteractable currentInteractable;
-
-    CharacterController cc;
+    
+    GameObject interactButton;
 
     [SerializeField]
     float moveSpeed, rotSpeed;
 
     float vertical, horizontal;
 
+    //Quaternion[] moveRotations = new Quaternion[] { new Quaternion(0f, 45f, 0f)};
+
     void Start()
     {
-        cc = GetComponent<CharacterController>();
+        interactButton = GameObject.Find("InteractButton");
+        interactButton.SetActive(false);
     }
 
     void Update()
@@ -29,10 +32,10 @@ public class PlayerControls : MonoBehaviour
 
     void Move()
     {
-        horizontal = Input.GetAxisRaw("Horizontal") * Time.deltaTime * rotSpeed;
-        transform.Rotate(0, horizontal, 0, Space.Self);
+        //ska ändras
+        horizontal = Input.GetAxisRaw("Horizontal") * Time.deltaTime * moveSpeed;
         vertical = Input.GetAxisRaw("Vertical") * Time.deltaTime * moveSpeed;
-        transform.Translate(0, 0, vertical, Space.Self);
+        //transform.Translate(horizontal, 0, vertical, Space.Self);
     }
 
     void OnTriggerEnter(Collider other)
@@ -41,6 +44,7 @@ public class PlayerControls : MonoBehaviour
         if (otherInterface != null)
         {
             otherInterface.ShowAction(true);
+            interactButton.SetActive(true);
             currentInteractable = otherInterface;
         }
     }
@@ -51,6 +55,7 @@ public class PlayerControls : MonoBehaviour
         if (otherInterface != null)
         {
             otherInterface.ShowAction(false);
+            interactButton.SetActive(false);
             currentInteractable = null;
         }
     }
