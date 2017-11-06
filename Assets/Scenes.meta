@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 2770f99d04b17724891c51520c4845fb
 folderAsset: yes
 timeCreated: 1509714847
+=======
+guid: 6dbd99468142a424eb8dc4a79e778c3b
+folderAsset: yes
+timeCreated: 1509702878
+>>>>>>> refs/remotes/origin/CharacterDevelopment
 licenseType: Free
 DefaultImporter:
   externalObjects: {}
