@@ -15,6 +15,16 @@ public class PlayerControls : MonoBehaviour
 
     bool moving = false;
 
+    public IInteractable CurrentInteractable
+    {
+        get { return this.currentInteractable; }
+        set { if (value == null)
+            { interactButton.SetActive(false); }
+                else
+            { interactButton.SetActive(true); }
+            this.currentInteractable = value; }
+    }
+
     public bool Moving
     {
         get { return this.moving; }
