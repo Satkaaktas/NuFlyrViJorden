@@ -808,6 +808,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.01
   waitToFollow: 1
+  player: {fileID: 758317465}
 --- !u!1 &250242850
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,7 +7,9 @@ public class CameraBehaviour : MonoBehaviour
     [SerializeField]
     float speed, waitToFollow;
 
+    [SerializeField]
     GameObject player;
+
     PlayerControls playerScript;
     float x, y, z;
 
@@ -15,7 +17,6 @@ public class CameraBehaviour : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.Find("Template_Female_Mesh_3");
         playerScript = player.GetComponent<PlayerControls>();
         x = transform.position.x - player.transform.position.x;
         y = transform.position.y - player.transform.position.y;
