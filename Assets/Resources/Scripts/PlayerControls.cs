@@ -73,7 +73,10 @@ public class PlayerControls : MonoBehaviour
             moving = true;
         }
         else
+        {
             moving = false;
+            characterController.SimpleMove(new Vector3(0, 0, 0));
+        }
     }
 
     void OnTriggerEnter(Collider other)
