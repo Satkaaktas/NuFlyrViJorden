@@ -22,8 +22,10 @@ GameObject:
   - component: {fileID: 33646749698909596}
   - component: {fileID: 23924796339787294}
   - component: {fileID: 95820221524315362}
+  - component: {fileID: 136763540016297864}
+  - component: {fileID: 114146865423854076}
   m_Layer: 0
-  m_Name: Template_Female_Mesh_3
+  m_Name: Female_Character_Model_WR_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,13 +37,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1529974556854656}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 435.745, y: 0.020000024, z: 86.962}
+  m_LocalRotation: {x: -0, y: -0.006370322, z: -0, w: 0.99997973}
+  m_LocalPosition: {x: -3.1203613, y: -8.4850855, z: -0.9252548}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -0.73, z: 0}
 --- !u!23 &23924796339787294
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -82,7 +84,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1529974556854656}
-  m_Mesh: {fileID: 4300000, guid: 2af54a2fd9ed85e41bceace10cc8cb88, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 5d05298516bf0a944a857dd4e415816e, type: 3}
 --- !u!95 &95820221524315362
 Animator:
   serializedVersion: 3
@@ -100,3 +102,27 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114146865423854076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1529974556854656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 785d47890421a6f40b41238d5ea9b63d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!136 &136763540016297864
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1529974556854656}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.76448196
+  m_Height: 1.7135001
+  m_Direction: 1
+  m_Center: {x: -4.850712e-10, y: 0.8567501, z: 0.32688534}

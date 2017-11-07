@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44845456, g: 0.4984907, b: 0.5756348, a: 1}
+  m_IndirectSpecularColor: {r: 0.44845486, g: 0.4984908, b: 0.57563597, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1698,6 +1698,36 @@ Prefab:
       propertyPath: m_Name
       value: Main_Character
       objectReference: {fileID: 0}
+    - target: {fileID: 95820221524315362, guid: 0a1dd0547a426e040ba94c15bed7e0f7,
+        type: 2}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 5d05298516bf0a944a857dd4e415816e, type: 3}
+    - target: {fileID: 136763540016297864, guid: 0a1dd0547a426e040ba94c15bed7e0f7,
+        type: 2}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 136763540016297864, guid: 0a1dd0547a426e040ba94c15bed7e0f7,
+        type: 2}
+      propertyPath: m_Height
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 136763540016297864, guid: 0a1dd0547a426e040ba94c15bed7e0f7,
+        type: 2}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 136763540016297864, guid: 0a1dd0547a426e040ba94c15bed7e0f7,
+        type: 2}
+      propertyPath: m_Center.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 136763540016297864, guid: 0a1dd0547a426e040ba94c15bed7e0f7,
+        type: 2}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0a1dd0547a426e040ba94c15bed7e0f7, type: 2}
   m_IsPrefabParent: 0
@@ -3060,35 +3090,6 @@ Transform:
   m_Father: {fileID: 441236765}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 89.71001, z: 0}
---- !u!1 &1053558736 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1529974556854656, guid: 0a1dd0547a426e040ba94c15bed7e0f7,
-    type: 2}
-  m_PrefabInternal: {fileID: 1728334224}
---- !u!114 &1053558737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1053558736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 785d47890421a6f40b41238d5ea9b63d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!136 &1053558738
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1053558736}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.76448196
-  m_Height: 1.7135001
-  m_Direction: 1
-  m_Center: {x: -4.850712e-10, y: 0.8567501, z: 0.32688534}
 --- !u!4 &1053558742 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4844704489127526, guid: 0a1dd0547a426e040ba94c15bed7e0f7,
@@ -4754,19 +4755,32 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1529974556854656, guid: 0a1dd0547a426e040ba94c15bed7e0f7, type: 2}
       propertyPath: m_Name
-      value: Template_Female_Mesh_3 (1)
+      value: Female_Character_Model_WR
       objectReference: {fileID: 0}
-    - target: {fileID: 4844704489127526, guid: 0a1dd0547a426e040ba94c15bed7e0f7, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -0.73
+    - target: {fileID: 136763540016297864, guid: 0a1dd0547a426e040ba94c15bed7e0f7,
+        type: 2}
+      propertyPath: m_Center.x
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4844704489127526, guid: 0a1dd0547a426e040ba94c15bed7e0f7, type: 2}
-      propertyPath: m_LocalScale.x
+    - target: {fileID: 136763540016297864, guid: 0a1dd0547a426e040ba94c15bed7e0f7,
+        type: 2}
+      propertyPath: m_Center.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4844704489127526, guid: 0a1dd0547a426e040ba94c15bed7e0f7, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
+    - target: {fileID: 136763540016297864, guid: 0a1dd0547a426e040ba94c15bed7e0f7,
+        type: 2}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 136763540016297864, guid: 0a1dd0547a426e040ba94c15bed7e0f7,
+        type: 2}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 136763540016297864, guid: 0a1dd0547a426e040ba94c15bed7e0f7,
+        type: 2}
+      propertyPath: m_Height
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0a1dd0547a426e040ba94c15bed7e0f7, type: 2}
