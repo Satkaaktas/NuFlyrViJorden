@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraBehaviour : MonoBehaviour
 {
-
+    [SerializeField]
     GameObject Player;
     PlayerControls PlayerScript;
     float x, y, z;
@@ -12,7 +12,7 @@ public class CameraBehaviour : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Player = GameObject.Find("Main_Character");
+        //Player = GameObject.Find("Female_Character_Model_WR");
         PlayerScript = Player.GetComponent<PlayerControls>();
         x = transform.position.x - Player.transform.position.x;
         y = transform.position.y - Player.transform.position.y;
