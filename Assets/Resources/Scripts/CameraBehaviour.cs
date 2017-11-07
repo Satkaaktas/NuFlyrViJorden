@@ -32,7 +32,7 @@ public class CameraBehaviour : MonoBehaviour
         {
             Vector3 targetPos = new Vector3(player.transform.position.x + x, player.transform.position.y + y, player.transform.position.z + z);
             transform.position = Vector3.Lerp(gameObject.transform.position, targetPos, speed);
-            if (Vector3.Distance(transform.position, targetPos) < 0.05f)
+            if (Vector3.Distance(transform.position, targetPos) < 0.2f)
             {
                 following = false;
             }
