@@ -6,9 +6,11 @@ position: -56,-129
 Mystisk person: Sha brush!
 Mystisk person: Kolla va bäst vi ää va men vem fan e du yaooo?
 -> Det vill jag inte berätta
-    Jo, komigen!
+    ???: Det vill jag inte berätta om det går bra...
+    Mystisk person: Jo, komigen!
 -> Jag kan berätta om du vill...
-    Men gör det då!
+    ???: Ja, jo, jag kan väll berätta om du vill...
+    Mystisk person: Men gör det då!
 [[Jon|jon]]
 [[Jag heter inte ens Jon|default]]
 [[Jag vill inte svara på din fråga, främling|Quit]]
@@ -18,8 +20,11 @@ tags:
 colorID: 0
 position: -263,148
 ---
+Jon: Jag heter Jon
 Mystisk person: VILKET NAMN BRUSH
-[[Näe nu drar jag|Quit]]
+->Nu drar jag
+    Jon: Nääe nu drar jag
+[[Quit]]
 ===
 title: default
 tags: 
@@ -27,7 +32,9 @@ colorID: 0
 position: 144,173
 ---
 Mystisk person: snacka skit mannen yo
-[[Jag drar nu|Quit]]
+-> Hejdå
+    Jon: Nu drar jag hörrududu
+[[Quit]]
 ===
 title: Quit
 tags: 
