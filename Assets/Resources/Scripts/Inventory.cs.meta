@@ -1,12 +1,17 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Resources/Scripts/Inventory.cs.meta
 guid: 3bd5bac91182974499f2edaf94463f5c
 timeCreated: 1509715836
+=======
+guid: 8b6248e1af1fa154ab97291d853e128d
+timeCreated: 1510082395
+>>>>>>> Inventory2:Assets/Resources/Scripts/Inventory.cs.meta
 licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences: []
-  executionOrder: 0
+  executionOrder: 200
   icon: {instanceID: 0}
   userData: 
   assetBundleName: 
