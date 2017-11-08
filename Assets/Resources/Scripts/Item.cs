@@ -16,8 +16,8 @@ public class Item {
         itemName = name;
         itemID = id;
         itemDesc = desc;
-        itemIcon = Resources.Load<Texture2D>("Item Icons/" + name);
-        itemGo = Resources.Load<GameObject>("Item Prefabs/" + name);
+        itemIcon = Resources.Load<Texture2D>("UI/Item Icons/" + name);
+        itemGo = Resources.Load<GameObject>("UI/Item Prefabs/" + name);
     }
     public Item()
     {
