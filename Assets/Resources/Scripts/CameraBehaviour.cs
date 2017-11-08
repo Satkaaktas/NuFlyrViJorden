@@ -11,16 +11,17 @@ public class CameraBehaviour : MonoBehaviour
     GameObject player;
 
     PlayerControls playerScript;
-    float x, y, z;
+
+    Vector3 offset;
 
     bool following = false, waiting = false;
 
     void Start()
     {
         playerScript = player.GetComponent<PlayerControls>();
-        x = transform.position.x - player.transform.position.x;
-        y = transform.position.y - player.transform.position.y;
-        z = transform.position.z - player.transform.position.z;
+
+        offset = new Vector3(18.6f, 24.4f, -32.7f);
+        transform.position = player.transform.position + offset;
     }
 
     void LateUpdate()
@@ -31,7 +32,8 @@ public class CameraBehaviour : MonoBehaviour
         }
         else if (following && !waiting)
         {
-            Vector3 targetPos = new Vector3(player.transform.position.x + x, player.transform.position.y + y, player.transform.position.z + z);
+
+            Vector3 targetPos = player.transform.position + offset;
             transform.position = Vector3.Lerp(gameObject.transform.position, targetPos, speed);
             if (Vector3.Distance(transform.position, targetPos) < 0.2f)
             {
