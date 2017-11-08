@@ -5,6 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class Item {
 
+    //info each item contains.
+
     public string itemName;
     public int itemID;
     public string itemDesc;

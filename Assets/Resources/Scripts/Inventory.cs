@@ -10,6 +10,7 @@ public class Inventory : MonoBehaviour {
     //List of items visualised in inventorySlots
     public List<Item> inventorySlots = new List<Item>();
 
+    //reference to database
     private ItemDatabase database;
 
     bool showInventory;
@@ -18,7 +19,7 @@ public class Inventory : MonoBehaviour {
 
     //-----------------------------------------    TILLSVIDARE   ------------------------------------------------
     int indexitem = 0;
-    //-----------------------------------------    TILLSVIDARE   ------------------------------------------------
+    //-----------------------------------------    TILLSVIDARE   -------------------------------------------------
 
     void Start () {
 
