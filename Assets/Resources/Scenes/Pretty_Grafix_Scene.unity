@@ -111,7 +111,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 0f235c6fd16dc9441bd623719cec5ce3, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 7f30da9db754d914c9306bb1ecce24cc, type: 2}
 --- !u!1 &73581561
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,7 +593,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 175279659}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 646, y: 216, z: 0}
+  m_LocalPosition: {x: 636, y: 216, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1535716772}
@@ -1131,7 +1131,7 @@ Prefab:
     - target: {fileID: 224873859721461706, guid: bad13db38919e6742859d82e16bb1bf6,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 646
+      value: 636
       objectReference: {fileID: 0}
     - target: {fileID: 224873859721461706, guid: bad13db38919e6742859d82e16bb1bf6,
         type: 2}
@@ -1428,7 +1428,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 143580806164910106, guid: 4f71d57e65d229748b1ba4a5b1cbf46e,
+        type: 2}
+      propertyPath: m_StepOffset
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 195172933925164632, guid: 4f71d57e65d229748b1ba4a5b1cbf46e,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 195172933925164632, guid: 4f71d57e65d229748b1ba4a5b1cbf46e, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 4f71d57e65d229748b1ba4a5b1cbf46e, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &420678580

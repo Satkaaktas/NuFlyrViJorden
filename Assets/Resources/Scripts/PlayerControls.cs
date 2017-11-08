@@ -18,11 +18,14 @@ public class PlayerControls : MonoBehaviour
     public IInteractable CurrentInteractable
     {
         get { return this.currentInteractable; }
-        set { if (value == null)
+        set
+        {
+            if (value == null)
             { interactButton.SetActive(false); }
-                else
+            else
             { interactButton.SetActive(true); }
-            this.currentInteractable = value; }
+            this.currentInteractable = value;
+        }
     }
 
     public bool Moving
@@ -47,7 +50,7 @@ public class PlayerControls : MonoBehaviour
 
     void Update()
     {
-        Move();
+            Move();
         if (Input.GetKeyDown(KeyCode.E) && currentInteractable != null)
         {
             currentInteractable.DoAction();
@@ -67,7 +70,7 @@ public class PlayerControls : MonoBehaviour
 
         characterController.SimpleMove(direction);
 
-        if (direction.magnitude > .01f)
+        if (direction.magnitude > 0.11f)
         {
             transform.forward = direction;
             moving = true;
@@ -75,7 +78,6 @@ public class PlayerControls : MonoBehaviour
         else
         {
             moving = false;
-            characterController.SimpleMove(new Vector3(0, 0, 0));
         }
     }
 
