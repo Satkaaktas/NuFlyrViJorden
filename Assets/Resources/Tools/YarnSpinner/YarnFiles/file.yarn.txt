@@ -33,7 +33,7 @@ position: 144,173
 ---
 Mystisk person: snacka skit mannen yo
 -> Hejdå
-    Jon: Nu drar jag hörrududu
+    Jon: Nu drar jag o lirar guitar hero hörrududu
 [[Quit]]
 ===
 title: Quit
