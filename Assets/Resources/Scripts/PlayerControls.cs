@@ -8,6 +8,8 @@ public class PlayerControls : MonoBehaviour
 
     GameObject interactButton;
 
+    Animator playerAnim;
+
     [SerializeField]
     float speed;
 
@@ -39,6 +41,7 @@ public class PlayerControls : MonoBehaviour
 
     void Start()
     {
+        playerAnim = GetComponent<Animator>();
         characterController = GetComponent<CharacterController>();
         forward = Camera.main.transform.forward;
         forward.y = 0;
@@ -50,7 +53,7 @@ public class PlayerControls : MonoBehaviour
 
     void Update()
     {
-            Move();
+        Move();
         if (Input.GetKeyDown(KeyCode.E) && currentInteractable != null)
         {
             currentInteractable.DoAction();
@@ -74,10 +77,12 @@ public class PlayerControls : MonoBehaviour
         {
             transform.forward = direction;
             moving = true;
+            playerAnim.SetBool("isRunning", true);
         }
         else
         {
             moving = false;
+            playerAnim.SetBool("isRunning", false);
         }
     }
 

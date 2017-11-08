@@ -41,7 +41,7 @@ ModelImporter:
     400030: R_Shoulder_bJNT
     400032: Root_JNT
     400034: Spine_1_bJNT
-    7400000: Take 001
+    7400000: RunningAnim
     9500000: //RootNode
   externalObjects: {}
   materials:
@@ -71,7 +71,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Take 001
+      name: RunningAnim
       takeName: Take 001
       firstFrame: 1
       lastFrame: 20
