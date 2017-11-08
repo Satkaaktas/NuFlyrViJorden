@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Yarn.Unity;
 
 public interface IInteractable
 {
@@ -15,7 +16,8 @@ public class NPCScript : MonoBehaviour, IInteractable {
     public void DoAction()
     {
         GameObject.Find("PlayerPrefab").GetComponent<PlayerControls>().CurrentInteractable = null;
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);
+        GameObject.Find("DialogueManager").GetComponent<DialogueRunner>().StartDialogue();
     }
 
     public void ShowAction(bool show)
