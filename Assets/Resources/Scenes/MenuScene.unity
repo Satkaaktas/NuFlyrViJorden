@@ -477,7 +477,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 257524186}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e799fc7a6ffed20448cfbc988760ecfe, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a36c9584c9f4d848a979d5404f7102f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &269182127
@@ -3782,7 +3782,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 257524191}
-        m_MethodName: quit
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4105,7 +4105,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 257524191}
-        m_MethodName: startNew
+        m_MethodName: NewGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4385,7 +4385,7 @@ Animator:
   m_GameObject: {fileID: 1510211519}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0d95f2f56d38ea9428372e6b56374218, type: 2}
+  m_Controller: {fileID: 9100000, guid: 39aeeef452d172c47873d187a4e17194, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4660,7 +4660,7 @@ GameObject:
   - component: {fileID: 1624271694}
   - component: {fileID: 1624271693}
   m_Layer: 5
-  m_Name: Manu_Canvas
+  m_Name: Menu_Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4730,7 +4730,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1624271692}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 341.5, y: 211, z: 0}
+  m_LocalPosition: {x: 587, y: 285.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 257524187}
@@ -4849,7 +4849,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1627971925}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2c6f4601629fef43a00dd18d8c8f9f9, type: 3}
+  m_Script: {fileID: 11500000, guid: f0016b7bffca2aa4db913b2c338580c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mMenu: {fileID: 257524186}
@@ -4862,7 +4862,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 121217c2ad1b05442ba6cf0667f14470, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 99cac2307967ed741afda62b497cf238, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -5329,7 +5329,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: fd899a4269bb84697ac44eb9dbfb59d3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5666,7 +5666,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c2f71b5d523e1a04fb49ebbebbf127ef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b7e838fe5d8c20f45a8325ff1a7ae6cb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

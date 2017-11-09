@@ -13,11 +13,21 @@ public class NPCScript : MonoBehaviour, IInteractable {
 
     GameObject interactionButton;
 
+    [SerializeField]
+    TextAsset dialogue;
+
+    DialogueRunner dR;
+
+    void Start()
+    {
+        dR = GameObject.Find("DialogueManager").GetComponent<DialogueRunner>();
+    }
+
     public void DoAction()
     {
         GameObject.Find("PlayerPrefab").GetComponent<PlayerControls>().CurrentInteractable = null;
-        //Destroy(this.gameObject);
-        GameObject.Find("DialogueManager").GetComponent<DialogueRunner>().StartDialogue();
+        //dR.sourceText = this.dialogue;
+        dR.StartDialogue();
     }
 
     public void ShowAction(bool show)

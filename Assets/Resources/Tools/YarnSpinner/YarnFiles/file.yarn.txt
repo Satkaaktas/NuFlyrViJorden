@@ -1,9 +1,10 @@
 title: Start
 tags: 
 colorID: 0
-position: -56,-129
+position: -53,-136
 ---
-Mystisk person: Sha brush!
+<<ChangePortrait Portrait 0>>
+Mystisk person: Sha brush!!
 Mystisk person: Kolla va bäst vi ää va men vem fan e du yaooo?
 -> Det vill jag inte berätta
     ???: Det vill jag inte berätta om det går bra...

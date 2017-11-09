@@ -1,0 +1,57 @@
+title: Start
+tags: 
+colorID: 0
+position: -53,-135
+---
+<<ChangePortrait Portrait MysteriousGuy>>
+Mystisk person: Sha brush!!
+Mystisk person: Kolla va bäst vi ää va men vem fan e du yaooo?
+<<ChangePortrait Portrait JonPortrait>>
+-> Det vill jag inte berätta
+    Det vill jag inte berätta om det går bra...
+    <<ChangePortrait Portrait MysteriousGuy>>
+    Mystisk person: Jo, komigen!
+-> Jag kan berätta om du vill...
+    Ja, jo, jag kan väll berätta om du vill...
+    <<ChangePortrait Portrait MysteriousGuy>>
+    Mystisk person: Men gör det då!
+[[Jon|jon]]
+[[Jag heter inte ens Jon|default]]
+[[Jag vill inte svara på din fråga, främling|Quit]]
+===
+title: jon
+tags: 
+colorID: 0
+position: -262,149
+---
+<<ChangePortrait Portrait JonPortrait>>
+Jag heter Jon
+<<ChangePortrait Portrait MysteriousGuy>>
+VILKET NAMN BRUSH
+<<ChangePortrait Portrait JonPortrait>>
+->Nu drar jag
+    Jon: Nääe nu drar jag
+[[Quit]]
+===
+title: default
+tags: 
+colorID: 0
+position: 144,173
+---
+<<ChangePortrait Portrait JonPortrait>>
+Ja, jag heter ju inte Jon i alla fall, så det så...
+<<ChangePortrait Portrait MysteriousGuy>>
+snacka skit mannen yo
+<<ChangePortrait Portrait JonPortrait>>
+-> Hejdå
+    Jon: Nu drar jag o lirar guitar hero hörrududu
+[[Quit]]
+===
+title: Quit
+tags: 
+colorID: 6
+position: -45,490
+---
+<<ChangePortrait Portrait MysteriousGuy>>
+Mystisk person: Jahapp...
+===
