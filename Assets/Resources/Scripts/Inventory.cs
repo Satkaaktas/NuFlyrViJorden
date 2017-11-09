@@ -90,7 +90,7 @@ public class Inventory : MonoBehaviour {
             {
                 Rect slotRect = new Rect(x * 50, y * 50, 100, 100);
 
-                GUI.Box(slotRect, Resources.Load<Texture2D>("UI/InventorySlot"), GUIStyle.none);
+                GUI.Box(slotRect, Resources.Load<Texture2D>("Sprites/UI/InventorySlot"), GUIStyle.none);
 
                 if (inventory[i].itemName != null)
                 {
