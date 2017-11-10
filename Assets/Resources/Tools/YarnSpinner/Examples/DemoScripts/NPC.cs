@@ -32,6 +32,8 @@ using UnityEngine.Serialization;
 namespace Yarn.Unity.Example {
     public class NPC : MonoBehaviour {
 
+        int[] array = new int[2];
+
         public string characterName = "";
 
         [FormerlySerializedAs("startNode")]
@@ -55,3 +57,5 @@ namespace Yarn.Unity.Example {
     }
 
 }
+
+
