@@ -65,6 +65,8 @@ public class PlayerControls : MonoBehaviour
         Move();
         if (Input.GetKeyDown(KeyCode.E) && currentInteractable != null)
         {
+            playerAnim.SetBool("isRunning", false);
+            playerAnim.SetBool("isWalking", false);
             currentInteractable.DoAction();
         }
     }
