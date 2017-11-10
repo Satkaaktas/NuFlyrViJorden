@@ -8,12 +8,7 @@ public class WallInvisibilityScript : MonoBehaviour {
     public Transform _camera;
 
     private List<Renderer> renderers = new List<Renderer>();
-
-	void Start () {
-
-	}
-	
-	
+    	
 	void Update () {
         Ray ray = new Ray(transform.position, _camera.position - transform.position);
 
