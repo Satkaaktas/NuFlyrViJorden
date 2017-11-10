@@ -14,6 +14,9 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour
      */
     public GameObject dialogueContainer;
 
+    [SerializeField]
+    KeyCode[] dialogueKeys;
+
     /// The UI element that displays lines
     public Text lineText;
 
@@ -87,7 +90,7 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour
             continuePrompt.SetActive(true);
 
         // Wait for any user input
-        while (Input.anyKeyDown == false)
+        while (Input.GetKeyDown(KeyCode.Space) == false && Input.GetKeyDown(KeyCode.Return) == false && Input.GetKeyDown(KeyCode.KeypadEnter) == false)
         {
             yield return null;
         }
@@ -98,6 +101,18 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour
         if (continuePrompt != null)
             continuePrompt.SetActive(false);
 
+    }
+
+    int ValidKeyDown()
+    {
+        for(int i = 0; i < dialogueKeys.Length; i++)
+        {
+            if (Input.GetKeyDown(dialogueKeys[i]))
+            {
+                return i;
+            }
+        }
+        return -1;
     }
 
     /// Show a list of options, and wait for the player to make a selection.
@@ -135,13 +150,7 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour
             button.gameObject.SetActive(false);
         }
     }
-
-    [YarnCommand("portaritChange")]
-    public void UpdatePortrait()
-    {
-        print("?");
-    }
-
+    
     /// Called by buttons to make a selection.
     public void SetOption(int selectedOption)
     {

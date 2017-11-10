@@ -15,7 +15,19 @@ public class PlayerControls : MonoBehaviour
 
     float v, h;
 
-    bool moving = false;
+    bool moving = false, movementEnabled = true;
+
+    private CharacterController characterController;
+
+    private Vector3 forward, right, vertical, horizontal, direction;
+
+    float originalSpeed;
+
+    public bool MovementEnabled
+    {
+        get { return this.movementEnabled; }
+        set { this.movementEnabled = value; if (value == false) { playerAnim.SetBool("isRunning", false); }/*FIX ME*/ /*ResetMovement(); else { Move(); }*/ }
+    }
 
     public IInteractable CurrentInteractable
     {
@@ -35,12 +47,9 @@ public class PlayerControls : MonoBehaviour
         get { return this.moving; }
     }
 
-    private CharacterController characterController;
-
-    private Vector3 forward, right, vertical, horizontal, direction;
-
     void Start()
     {
+        originalSpeed = speed;
         playerAnim = GetComponent<Animator>();
         characterController = GetComponent<CharacterController>();
         forward = Camera.main.transform.forward;
@@ -60,6 +69,15 @@ public class PlayerControls : MonoBehaviour
         }
     }
 
+    void ResetMovement()
+    {
+        h = 0f;
+        v = 0f;
+        horizontal = Vector3.zero;
+        vertical = Vector3.zero;
+        direction = Vector3.zero;
+    }
+
     void Move()
     {
         h = Input.GetAxis("Horizontal");
@@ -71,18 +89,36 @@ public class PlayerControls : MonoBehaviour
         direction = Vector3.Normalize(horizontal + vertical);
         direction *= speed;
 
-        characterController.SimpleMove(direction);
+        if (movementEnabled)
+        {
+            if (direction != Vector3.zero)
+            {
 
-        if (direction.magnitude > 0.11f)
-        {
-            transform.forward = direction;
-            moving = true;
-            playerAnim.SetBool("isRunning", true);
-        }
-        else
-        {
-            moving = false;
-            playerAnim.SetBool("isRunning", false);
+                characterController.SimpleMove(direction);
+            }
+            if (direction.magnitude > 0.11f)
+            {
+                transform.forward = direction;
+                moving = true;
+                if (Input.GetKey(KeyCode.LeftShift))
+                {
+                    speed = originalSpeed / 2;
+                    playerAnim.SetBool("isRunning", false);
+                    playerAnim.SetBool("isWalking", true);
+                }
+                else if (!Input.GetKey(KeyCode.LeftShift))
+                {
+                    playerAnim.SetBool("isRunning", true);
+                    playerAnim.SetBool("isWalking", false);
+                    speed = originalSpeed;
+                }
+            }
+            else
+            {
+                moving = false;
+                playerAnim.SetBool("isRunning", false);
+                playerAnim.SetBool("isWalking", false);
+            }
         }
     }
 

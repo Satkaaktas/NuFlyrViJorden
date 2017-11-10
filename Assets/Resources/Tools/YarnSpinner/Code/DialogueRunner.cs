@@ -80,6 +80,9 @@ namespace Yarn.Unity
         /// Our conversation engine
         /** Automatically created on first access
          */
+
+        PlayerControls player;
+
         private Dialogue _dialogue;
         public Dialogue dialogue
         {
@@ -107,6 +110,7 @@ namespace Yarn.Unity
         /// Start the dialogue
         void Start()
         {
+            player = FindObjectOfType<PlayerControls>();
             // Ensure that we have our Implementation object
             if (dialogueUI == null)
             {
@@ -175,10 +179,7 @@ namespace Yarn.Unity
             {
                 if (newDialogue == txt.name)
                 {
-                    print(newDialogue);
-                    //AddScript(newDialogue);                                           //FIXA HÄR
                     StartDialogue(newDialogue);
-                    //this.sourceText
                 }
             }
         }
@@ -250,6 +251,7 @@ namespace Yarn.Unity
 
         IEnumerator RunDialogue(string startNode = "Start")
         {
+            player.MovementEnabled = false;
             // Mark that we're in conversation.
             isDialogueRunning = true;
 
@@ -315,6 +317,7 @@ namespace Yarn.Unity
             // to allow time for any animations that might run while transitioning
             // out of a conversation (ie letterboxing going away, etc)
             isDialogueRunning = false;
+            player.MovementEnabled = true;
         }
 
         /// Clear the dialogue system
