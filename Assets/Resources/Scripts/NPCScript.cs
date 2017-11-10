@@ -14,7 +14,7 @@ public class NPCScript : MonoBehaviour, IInteractable {
     GameObject interactionButton;
 
     [SerializeField]
-    TextAsset dialogue;
+    string myDialogueNode;
 
     DialogueRunner dR;
 
@@ -26,7 +26,8 @@ public class NPCScript : MonoBehaviour, IInteractable {
     public void DoAction()
     {
         GameObject.Find("PlayerPrefab").GetComponent<PlayerControls>().CurrentInteractable = null;
-        //dR.sourceText = this.dialogue;
+        //dR.sourceText[0] = this.dialogue;
+        dR.SetDialogue(myDialogueNode);
         dR.StartDialogue();
     }
 

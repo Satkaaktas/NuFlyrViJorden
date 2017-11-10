@@ -2593,7 +2593,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f66fcafe80d54414288c75648ddc5a34, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 528a6dd601766934abb8b1053bd798ef, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4079,7 +4079,7 @@ Prefab:
         type: 2}
       propertyPath: dialogue
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4900000, guid: 24f22b038d584445ba4f43344cc5733d, type: 3}
     - target: {fileID: 114360410612250142, guid: 22ade85547e149140aeecce0088015ee,
         type: 2}
       propertyPath: dialogue.Array.data[0]
@@ -5432,6 +5432,7 @@ MonoBehaviour:
   portrait: {fileID: 836477064}
   sourceText:
   - {fileID: 4900000, guid: af6243567ef95424189c6d89e1bb34b4, type: 3}
+  - {fileID: 4900000, guid: 8b6ae1e8d32e840f0b3fd0b033e52253, type: 3}
   stringGroups: []
   shouldOverrideLanguage: 0
   overrideLanguage: 10
@@ -6481,7 +6482,7 @@ Prefab:
         type: 2}
       propertyPath: dialogue
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4900000, guid: 37afdc4bca850824d8ba3e103f362c96, type: 3}
     - target: {fileID: 114360410612250142, guid: 22ade85547e149140aeecce0088015ee,
         type: 2}
       propertyPath: dialogue.Array.data[0]

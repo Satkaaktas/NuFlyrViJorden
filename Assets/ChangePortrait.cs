@@ -12,7 +12,6 @@ public class ChangePortrait : MonoBehaviour {
     [YarnCommand("ChangePortrait")]
     public void ChangeSprite(string newSprite)
     {
-        print(newSprite);
         foreach(Sprite sprite in this.sprites)
         {
             if (sprite.name == newSprite)

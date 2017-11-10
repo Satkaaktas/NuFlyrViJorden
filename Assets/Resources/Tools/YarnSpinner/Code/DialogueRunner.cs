@@ -160,28 +160,6 @@ namespace Yarn.Unity
 
         }
 
-        //[YarnCommand("changePortrait")]
-        public void UseSprite(string spriteName)
-        {
-            print("tja brush");
-            Sprite s = null;
-            foreach (Sprite info in portraitSprites)
-            {
-                if (info.name == spriteName)
-                {
-                    s = info;
-                    break;
-                }
-            }
-            if (s == null)
-            {
-               // Debug.Log("Can't find sprite named {0}!", spriteName);
-                return;
-            }
-
-            GameObject.Find("Portait").GetComponent<Image>().sprite = s;
-        }
-
         /// Add a string of text to a script
         public void AddScript(string text)
         {
@@ -193,6 +171,21 @@ namespace Yarn.Unity
         {
             dialogue.LoadString(asset.text);
         }
+
+        public void SetDialogue(string newDialogue)
+        {
+            foreach(TextAsset txt in this.sourceText)
+            {
+                if (newDialogue == txt.name)
+                {
+                    print(newDialogue);
+                    //AddScript(newDialogue);                                           //FIXA HÄR
+                    StartDialogue("StartMe");
+                    //this.sourceText
+                }
+            }
+        }
+
 
         /// Loads a string table, replacing any existing strings with the same
         /// key.
