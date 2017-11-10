@@ -28,7 +28,6 @@ public class NPCScript : MonoBehaviour, IInteractable {
         GameObject.Find("PlayerPrefab").GetComponent<PlayerControls>().CurrentInteractable = null;
         //dR.sourceText[0] = this.dialogue;
         dR.SetDialogue(myDialogueNode);
-        dR.StartDialogue();
     }
 
     public void ShowAction(bool show)

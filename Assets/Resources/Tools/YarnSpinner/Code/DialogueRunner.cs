@@ -47,9 +47,6 @@ namespace Yarn.Unity
     public class DialogueRunner : MonoBehaviour
     {
         [SerializeField]
-        Sprite[] portraitSprites;
-
-        [SerializeField]
         Image portrait;
 
         /// The JSON files to load the conversation from
@@ -174,13 +171,13 @@ namespace Yarn.Unity
 
         public void SetDialogue(string newDialogue)
         {
-            foreach(TextAsset txt in this.sourceText)
+            foreach (TextAsset txt in this.sourceText)
             {
                 if (newDialogue == txt.name)
                 {
                     print(newDialogue);
                     //AddScript(newDialogue);                                           //FIXA HÄR
-                    StartDialogue("StartMe");
+                    StartDialogue(newDialogue);
                     //this.sourceText
                 }
             }

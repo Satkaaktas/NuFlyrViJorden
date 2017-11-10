@@ -2621,6 +2621,7 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: 4e50d6a13942b474bbbd95436afc18e1, type: 3}
   - {fileID: 21300000, guid: f66fcafe80d54414288c75648ddc5a34, type: 3}
+  - {fileID: 21300000, guid: 88c6b4c4fc4365a40b046aad0a303109, type: 3}
 --- !u!1 &858790918
 GameObject:
   m_ObjectHideFlags: 0
@@ -4085,6 +4086,11 @@ Prefab:
       propertyPath: dialogue.Array.data[0]
       value: 
       objectReference: {fileID: 4900000, guid: 8b6ae1e8d32e840f0b3fd0b033e52253, type: 3}
+    - target: {fileID: 114360410612250142, guid: 22ade85547e149140aeecce0088015ee,
+        type: 2}
+      propertyPath: myDialogueNode
+      value: newFile.yarn
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 22ade85547e149140aeecce0088015ee, type: 2}
   m_IsPrefabParent: 0
@@ -5426,13 +5432,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bec29c0a230741bdac901dba8da47ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  portraitSprites:
-  - {fileID: 21300000, guid: 4e50d6a13942b474bbbd95436afc18e1, type: 3}
-  - {fileID: 21300000, guid: f66fcafe80d54414288c75648ddc5a34, type: 3}
   portrait: {fileID: 836477064}
   sourceText:
   - {fileID: 4900000, guid: af6243567ef95424189c6d89e1bb34b4, type: 3}
-  - {fileID: 4900000, guid: 8b6ae1e8d32e840f0b3fd0b033e52253, type: 3}
+  - {fileID: 4900000, guid: 2954e416970f0fe4490a4536d5f32b1f, type: 3}
   stringGroups: []
   shouldOverrideLanguage: 0
   overrideLanguage: 10
@@ -6488,6 +6491,11 @@ Prefab:
       propertyPath: dialogue.Array.data[0]
       value: 
       objectReference: {fileID: 4900000, guid: e147b634e64b55545b49823de699ed36, type: 3}
+    - target: {fileID: 114360410612250142, guid: 22ade85547e149140aeecce0088015ee,
+        type: 2}
+      propertyPath: myDialogueNode
+      value: file.yarn
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 22ade85547e149140aeecce0088015ee, type: 2}
   m_IsPrefabParent: 0

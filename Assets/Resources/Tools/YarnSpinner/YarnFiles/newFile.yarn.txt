@@ -1,12 +1,12 @@
-title: Start
+title: newFile.yarn
 tags: 
 colorID: 0
-position: -53,-135
+position: -52,-135
 ---
 <<ChangePortrait Portrait MysteriousGuy>>
 Mystisk person: Sha brush!!
 Mystisk person: Kolla va bäst vi ää va men vem fan e du yaooo?
-<<ChangePortrait Portrait JonPortrait>>
+<<ChangePortrait Portrait UnknownCharacter>>
 -> Det vill jag inte berätta
     Det vill jag inte berätta om det går bra...
     <<ChangePortrait Portrait MysteriousGuy>>
@@ -15,6 +15,7 @@ Mystisk person: Kolla va bäst vi ää va men vem fan e du yaooo?
     Ja, jo, jag kan väll berätta om du vill...
     <<ChangePortrait Portrait MysteriousGuy>>
     Mystisk person: Men gör det då!
+    <<ChangePortrait Portrait JonPortrait>>
 [[Jon|jon]]
 [[Jag heter inte ens Jon|default]]
 [[Jag vill inte svara på din fråga, främling|Quit]]
