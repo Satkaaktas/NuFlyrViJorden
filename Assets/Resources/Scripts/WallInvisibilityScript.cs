@@ -47,7 +47,6 @@ public class WallInvisibilityScript : MonoBehaviour
                 }
             }
         }
-        if (mats.Count != dontChangeBack.Count)
             RestoreMaterials(dontChangeBack);
     }
     void RestoreMaterials(List<Material> dCB)

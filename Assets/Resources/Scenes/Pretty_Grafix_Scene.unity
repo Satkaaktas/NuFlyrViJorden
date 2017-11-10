@@ -3767,6 +3767,10 @@ Prefab:
       propertyPath: m_Name
       value: Enviroment_Wall_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1384591432303442, guid: 80ea4aa44d3b45e439eb0079bd34e96f, type: 2}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 80ea4aa44d3b45e439eb0079bd34e96f, type: 2}
   m_IsPrefabParent: 0
