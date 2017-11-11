@@ -31,47 +31,45 @@ public class WallInvisibilityScript : MonoBehaviour
         ray = new Ray(transform.position + new Vector3(0.0f, rayYOffset, 0.0f), _camera.position - transform.position);
         hits = Physics.RaycastAll(ray);
         //Debug.DrawRay(transform.position + new Vector3(0.0f, rayYOffset, 0.0f), _camera.position - transform.position); // Se raycasten i scene
-        if (hits.Length != 0)
+        for (int i = 0; i < hits.Length; i++)
         {
-            for (int i = 0; i < hits.Length; i++)
+            if (hits[i].transform.gameObject.tag == "Wall")
             {
-                if (hits[i].transform.gameObject.tag == "Wall")
+                hitMat = hits[i].transform.gameObject.GetComponent<Renderer>().material;
+                if (invMats.Contains(hitMat))
                 {
-                    hitMat = hits[i].transform.gameObject.GetComponent<Renderer>().material;
-                    if (invMats.Contains(hitMat))
-                    {
-                        newInvMats.Add(hitMat);
-                    }
-                    else
-                    {
-                        newMats.Add(hitMat);
-                    }
+                    newInvMats.Add(hitMat);
                 }
+                else
+                {
+                    newMats.Add(hitMat);
+                }
+            }
 
-            }
-            for (int i = 0; i < invMats.Count; i++)
-            {
-                if (!newInvMats.Contains(invMats[i]))
-                {
-                    tempColor = invMats[i].color;
-                    tempColor.a = 1.0f;
-                    invMats[i].color = tempColor;
-                }
-            }
-            foreach (Material mat in newMats)
-            {
-                tempColor = mat.color;
-                tempColor.a = 0.2f;
-                mat.color = tempColor;
-                newInvMats.Add(mat);
-            }
-            invMats.Clear();
-            for (int i = 0; i < newInvMats.Count; i++)
-            {
-                invMats.Add(newInvMats[i]);
-            }
-            newInvMats.Clear();
-            newMats.Clear();
         }
+        for (int i = 0; i < invMats.Count; i++)
+        {
+            if (!newInvMats.Contains(invMats[i]))
+            {
+                tempColor = invMats[i].color;
+                tempColor.a = 1.0f;
+                invMats[i].color = tempColor;
+            }
+        }
+        foreach (Material mat in newMats)
+        {
+            tempColor = mat.color;
+            tempColor.a = 0.2f;
+            mat.color = tempColor;
+            newInvMats.Add(mat);
+        }
+        invMats.Clear();
+        for (int i = 0; i < newInvMats.Count; i++)
+        {
+            invMats.Add(newInvMats[i]);
+        }
+        newInvMats.Clear();
+        newMats.Clear();
+
     }
 }
