@@ -41,6 +41,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1075400063047370
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4670174599044986}
+  m_Layer: 0
+  m_Name: Left_Foot_VFX_TARGET
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1196800996788494
 GameObject:
   m_ObjectHideFlags: 1
@@ -66,6 +81,21 @@ GameObject:
   - component: {fileID: 4068092245064298}
   m_Layer: 0
   m_Name: L_Shoulder_bJNT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1253067517962828
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4430869047275374}
+  m_Layer: 0
+  m_Name: Right_Foot_VFX_TARGET
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -203,6 +233,7 @@ GameObject:
   - component: {fileID: 143577641374255992}
   - component: {fileID: 114088172109560710}
   - component: {fileID: 114788281828931922}
+  - component: {fileID: 114927685895721034}
   m_Layer: 0
   m_Name: PlayerPrefab
   m_TagString: Untagged
@@ -388,6 +419,19 @@ Transform:
   m_Father: {fileID: 4496660918313004}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4430869047275374
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1253067517962828}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.095, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4455166121577888}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4440619574772114
 Transform:
   m_ObjectHideFlags: 1
@@ -411,7 +455,8 @@ Transform:
   m_LocalRotation: {x: 0.0043632677, y: -0.000019038467, z: -0.0043632677, w: 0.999981}
   m_LocalPosition: {x: -0.000000012971638, y: 0.4492454, z: -0.000000047849696}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4430869047275374}
   m_Father: {fileID: 4727790392291896}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -465,7 +510,8 @@ Transform:
   m_LocalRotation: {x: 0.0043632677, y: -0.000019038467, z: -0.0043632677, w: 0.999981}
   m_LocalPosition: {x: -0, y: -0.44924563, z: 3.1086245e-17}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4670174599044986}
   m_Father: {fileID: 4326940527165462}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -480,6 +526,19 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4109742076979086}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4670174599044986
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1075400063047370}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.095, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4602713407995428}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4694253413815194
@@ -601,12 +660,26 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1584811574196150}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e59601cd7be3dfb4fb54e6c566d7c85a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _camera: {fileID: 0}
+--- !u!114 &114927685895721034
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1584811574196150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8a8feeebbadd34694376532fc1e95e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vfxTargetLeft: {fileID: 4670174599044986}
+  vfxTargetRight: {fileID: 4430869047275374}
+  vfx: {fileID: 1592514580707000, guid: d6e49e9c802543c4aaabdf5c2700ecb2, type: 2}
 --- !u!137 &137683980146795878
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
