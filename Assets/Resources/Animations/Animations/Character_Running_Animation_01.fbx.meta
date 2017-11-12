@@ -94,7 +94,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.077806816
+      - time: 0.049415648
         functionName: PlayVfxOnStep
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: dc8a8feeebbadd34694376532fc1e95e,
@@ -102,7 +102,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.58494294
+      - time: 0.5502426
         functionName: PlayVfxOnStep
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: dc8a8feeebbadd34694376532fc1e95e,
