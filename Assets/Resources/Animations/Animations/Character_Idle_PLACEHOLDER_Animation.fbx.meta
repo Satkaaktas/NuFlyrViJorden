@@ -41,7 +41,7 @@ ModelImporter:
     400030: R_Shoulder_bJNT
     400032: Root_JNT
     400034: Spine_1_bJNT
-    7400000: Idleanim_01_Placeholder
+    7400000: Idleanim00_Placeholder
     9500000: //RootNode
   externalObjects: {}
   materials:
@@ -71,7 +71,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Idleanim_01_Placeholder
+      name: Idleanim00_Placeholder
       takeName: Take 001
       firstFrame: 1
       lastFrame: 26

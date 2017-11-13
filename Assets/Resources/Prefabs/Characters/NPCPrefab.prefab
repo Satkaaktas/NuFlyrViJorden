@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1237940000986312}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 440.537, y: 0, z: 87.3}
+  m_LocalPosition: {x: 435.11, y: 0, z: 87.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -59,7 +59,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b88e72ae11d7a844bad416a4670a607f, type: 2}
+  - {fileID: 2100000, guid: 497ce2353975dfa4bb410c3ef82aa96a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,7 +85,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1237940000986312}
-  m_Mesh: {fileID: 4300000, guid: 75fe637475cf5a54eaf5aa504c98aff4, type: 3}
+  m_Mesh: {fileID: 4300000, guid: d15f7359085e3ea45beaeb1919127147, type: 3}
 --- !u!95 &95015372774807228
 Animator:
   serializedVersion: 3
@@ -114,6 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d42c9e24a4e87e4eb84f368cb3969aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myDialogueNode: file.yarn
 --- !u!136 &136359978648767848
 CapsuleCollider:
   m_ObjectHideFlags: 1
