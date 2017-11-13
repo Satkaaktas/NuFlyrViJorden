@@ -144,5 +144,13 @@ public class PlayerControls : MonoBehaviour
             interactButton.SetActive(false);
             currentInteractable = null;
         }
+        else
+        {
+            DoorScript door = other.gameObject.GetComponentInParent<DoorScript>();
+            if (door != null)
+            {
+                door.WalkThroughDoor(other);
+            }
+        }
     }
 }

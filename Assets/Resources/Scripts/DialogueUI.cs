@@ -29,7 +29,7 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour
     private Yarn.OptionChooser SetSelectedOption;
 
     //public Image characterDisplay;
-    
+
     /// How quickly to show the text, in seconds per character
     [Tooltip("How quickly to show the text, in seconds per character")]
     public float textSpeed = 0.025f;
@@ -64,9 +64,9 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour
     /// Show a line of dialogue, gradually
     public override IEnumerator RunLine(Yarn.Line line)
     {
+        bool skipping = false;
         // Show the text
         lineText.gameObject.SetActive(true);
-
         if (textSpeed > 0.0f)
         {
             // Display the line one character at a time
@@ -74,9 +74,15 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour
 
             foreach (char c in line.text)
             {
+                yield return new WaitForSeconds(textSpeed);
+                if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
+                {
+                    skipping = true;
+                    lineText.text = line.text;
+                    break;
+                }
                 stringBuilder.Append(c);
                 lineText.text = stringBuilder.ToString();
-                yield return new WaitForSeconds(textSpeed);
             }
         }
         else
@@ -84,14 +90,14 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour
             // Display the line immediately if textSpeed == 0
             lineText.text = line.text;
         }
-
         // Show the 'press any key' prompt when done, if we have one
         if (continuePrompt != null)
             continuePrompt.SetActive(true);
 
-        // Wait for any user input
-        while (Input.GetKeyDown(KeyCode.Space) == false && Input.GetKeyDown(KeyCode.Return) == false && Input.GetKeyDown(KeyCode.KeypadEnter) == false)
+        // Wait for user input
+        while (skipping || (Input.GetKeyDown(KeyCode.Space) == false && Input.GetKeyDown(KeyCode.Return) == false && Input.GetKeyDown(KeyCode.KeypadEnter) == false))
         {
+            skipping = false;
             yield return null;
         }
 
@@ -101,18 +107,6 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour
         if (continuePrompt != null)
             continuePrompt.SetActive(false);
 
-    }
-
-    int ValidKeyDown()
-    {
-        for(int i = 0; i < dialogueKeys.Length; i++)
-        {
-            if (Input.GetKeyDown(dialogueKeys[i]))
-            {
-                return i;
-            }
-        }
-        return -1;
     }
 
     /// Show a list of options, and wait for the player to make a selection.
@@ -150,7 +144,7 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour
             button.gameObject.SetActive(false);
         }
     }
-    
+
     /// Called by buttons to make a selection.
     public void SetOption(int selectedOption)
     {
