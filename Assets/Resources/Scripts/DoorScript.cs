@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+                                                                        /*By Björn Andersson*/
 
 public class DoorScript : MonoBehaviour {
 
@@ -29,7 +30,7 @@ public class DoorScript : MonoBehaviour {
         }
     }
 
-    void ShowWalls(float alpha)
+    void ShowWalls(float alpha)         //Gömmer och visar väggar när spelaren går in och ut ur hus
     {
         foreach (GameObject wall in wallsAndRoof)
         {

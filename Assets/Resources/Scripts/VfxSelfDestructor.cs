@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
+                                            /*By Erik Qvarnström, Björn Andersson && Timmy Alvelöv*/
+public class VfxSelfDestructor : MonoBehaviour
+{
+    [SerializeField]
+    float delay;
 
-public class VfxSelfDestructor : MonoBehaviour {
-
-    public float time = 0.25f;
     void Start()
     {
-        Destroy(this.gameObject, time);
+        Destroy(this.gameObject, GetComponent<ParticleSystem>().main.duration + delay);             //Förstör fotstegspartiklar efter en viss tid
     }
-
-    
 }

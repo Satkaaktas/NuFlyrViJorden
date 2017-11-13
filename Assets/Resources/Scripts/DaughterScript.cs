@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-
+                                                                 /*By Björn Andersson*/
 public class DaughterScript : MonoBehaviour, IInteractable
 {
     [SerializeField]
-    float minDistance, maxDistance;
+    float minDistance, maxDistance;     //bestämmer hur nära och långt ifrån spelaren dottern kan vara
 
     NavMeshAgent agent;
 
@@ -23,17 +23,17 @@ public class DaughterScript : MonoBehaviour, IInteractable
         mother = FindObjectOfType<PlayerControls>();
     }
 
-    public void DoAction()
+    public void DoAction()              //Initierar dialog mellan spelaren och dottern
     {
 
     }
 
-    public void ShowAction(bool show)
+    public void ShowAction(bool show)           //Visar att dottern går att interagera med
     {
 
     }
 
-    void Update()
+    void Update()                               //Får dottern att följa efter spelaren samt bestämmer vilken animation som ska spelas upp
     {
         float currentDistance = Vector3.Distance(transform.position, mother.transform.position);
         if (currentDistance > minDistance && currentDistance <= maxDistance)

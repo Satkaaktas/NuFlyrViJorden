@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+                                            /*By Björn Andersson && Timmy Alvelöv*/
 public class PlayerControls : MonoBehaviour
 {
     IInteractable currentInteractable;
@@ -26,7 +26,7 @@ public class PlayerControls : MonoBehaviour
     public bool MovementEnabled
     {
         get { return this.movementEnabled; }
-        set { this.movementEnabled = value; if (value == false) { playerAnim.SetBool("isRunning", false); }/*FIX ME*/ /*ResetMovement(); else { Move(); }*/ }
+        set { this.movementEnabled = value; if (value == false) { playerAnim.SetBool("isRunning", false); } }
     }
 
     public IInteractable CurrentInteractable
@@ -63,7 +63,7 @@ public class PlayerControls : MonoBehaviour
     void Update()
     {
         Move();
-        if (Input.GetKeyDown(KeyCode.E) && currentInteractable != null)
+        if (Input.GetKeyDown(KeyCode.E) && currentInteractable != null)         //Interagerar med föremål och NPCs när spelaren klickar på E
         {
             playerAnim.SetBool("isRunning", false);
             playerAnim.SetBool("isWalking", false);
@@ -71,7 +71,7 @@ public class PlayerControls : MonoBehaviour
         }
     }
 
-    void ResetMovement()
+    void ResetMovement()                    //Hindrar ett fel som får spelaren att springa som en idiot efter konversationer
     {
         h = 0f;
         v = 0f;
@@ -80,7 +80,7 @@ public class PlayerControls : MonoBehaviour
         direction = Vector3.zero;
     }
 
-    void Move()
+    void Move()                             //Sköter spelarkaraktärens rörelser och bestämmer vilken animation som ska spelas upp
     {
         h = Input.GetAxis("Horizontal");
         v = Input.GetAxis("Vertical");
@@ -124,7 +124,7 @@ public class PlayerControls : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)                     //Möjliggör för spelaren att interagera med föremål och NPCs
     {
         IInteractable otherInterface = other.gameObject.GetComponent<IInteractable>();
         if (otherInterface != null)
@@ -135,7 +135,7 @@ public class PlayerControls : MonoBehaviour
         }
     }
 
-    void OnTriggerExit(Collider other)
+    void OnTriggerExit(Collider other)                     //Omöjliggör för spelaren att interagera med föremål och NPCs
     {
         IInteractable otherInterface = other.gameObject.GetComponent<IInteractable>();
         if (otherInterface != null)

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+                                                                    /*By Björn Andersson && Timmy Alvelöv*/
 public class ButtonPresser : MonoBehaviour
 {
     [SerializeField]
@@ -22,9 +22,9 @@ public class ButtonPresser : MonoBehaviour
     {
         for (int i = 0; i < validKeys.Length; i++)
         {
-            if (Input.GetKeyDown(validKeys[i]) && buttons[i].IsActive())
+            if (Input.GetKeyDown(validKeys[i]) && buttons[i].IsActive())        
             {
-                dUI.SetOption(i);
+                dUI.SetOption(i);               //Väljer ett alternativ i en dialog utifrån vilken knapp spelaren tryckt på
             }
         }
     }
