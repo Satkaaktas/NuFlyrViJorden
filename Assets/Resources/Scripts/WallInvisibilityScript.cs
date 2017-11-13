@@ -7,69 +7,42 @@ public class WallInvisibilityScript : MonoBehaviour
 {
 
     public Transform _camera;
-    [SerializeField]
-    List<Material> invMats; //Förra uppdateringens material som är "gömda"
-    [SerializeField]
-    List<Material> newInvMats; // De materialen som göms när denna uppdatering är klar
-    [SerializeField]
-    List<Material> newMats; //Material som inte fanns med i förra uppdateringen
-    Material hitMat;
-    Ray ray;
-    RaycastHit[] hits;
-    Color tempColor;
-    float rayYOffset = 1.0f;
 
-    void Start()
-    {
-        invMats = new List<Material>();
-        newInvMats = new List<Material>();
-        newMats = new List<Material>();
-    }
+    private List<Renderer> renderers = new List<Renderer>();
 
     void Update()
     {
-        ray = new Ray(transform.position + new Vector3(0.0f, rayYOffset, 0.0f), _camera.position - transform.position);
+        Ray ray = new Ray(transform.position, _camera.position - transform.position);
+
+        RaycastHit[] hits;
+
         hits = Physics.RaycastAll(ray);
-        //Debug.DrawRay(transform.position + new Vector3(0.0f, rayYOffset, 0.0f), _camera.position - transform.position); // Se raycasten i scene
+
+        Renderer[] renders = new Renderer[hits.Length];
+
         for (int i = 0; i < hits.Length; i++)
         {
-            if (hits[i].transform.gameObject.tag == "Wall")
+            RaycastHit hit = hits[i];
+            Renderer rend = hit.transform.GetComponent<Renderer>();
+
+            if (rend != null)
             {
-                hitMat = hits[i].transform.gameObject.GetComponent<Renderer>().material;
-                if (invMats.Contains(hitMat))
+                rend.enabled = false;
+                renders[i] = rend;
+
+                if (!renderers.Contains(rend))
                 {
-                    newInvMats.Add(hitMat);
-                }
-                else
-                {
-                    newMats.Add(hitMat);
+                    renderers.Add(rend);
                 }
             }
-
         }
-        for (int i = 0; i < invMats.Count; i++)
+        for (int i = 0; i < renderers.Count; i++)
         {
-            if (!newInvMats.Contains(invMats[i]))
+            if (!renders.Contains(renderers[i]))
             {
-                tempColor = invMats[i].color;
-                tempColor.a = 1.0f;
-                invMats[i].color = tempColor;
+                renderers[i].transform.GetComponent<Renderer>().enabled = true;
+                renderers.Remove(renderers[i]);
             }
         }
-        foreach (Material mat in newMats)
-        {
-            tempColor = mat.color;
-            tempColor.a = 0.2f;
-            mat.color = tempColor;
-            newInvMats.Add(mat);
-        }
-        invMats.Clear();
-        for (int i = 0; i < newInvMats.Count; i++)
-        {
-            invMats.Add(newInvMats[i]);
-        }
-        newInvMats.Clear();
-        newMats.Clear();
-
     }
 }
