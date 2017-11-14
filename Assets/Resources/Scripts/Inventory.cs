@@ -10,6 +10,8 @@ public class Inventory : MonoBehaviour {
     //List of items visualised in inventorySlots
     public List<Item> inventorySlots = new List<Item>();
 
+    public AudioClip inventorySound;
+
     //reference to database
     private ItemDatabase database;
 
@@ -17,9 +19,28 @@ public class Inventory : MonoBehaviour {
 
     public int slotsX, slotsY;
 
+    public static Inventory instance;
+
     //-----------------------------------------    TILLSVIDARE   ------------------------------------------------
     int indexitem = 0;
     //-----------------------------------------    TILLSVIDARE   -------------------------------------------------
+
+    private void Awake()
+    {
+        //kolla om en instans av soundmanager redan är i scenen.
+        if (instance == null)
+        {
+            instance = this;
+        }
+
+        //ser till att det bara är en soundmanager instansierad.
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(gameObject);
+    }
 
     void Start () {
 
@@ -35,6 +56,7 @@ public class Inventory : MonoBehaviour {
         }
     }
 
+    
     void Update () {
 
         //open and close inventory.
@@ -53,7 +75,7 @@ public class Inventory : MonoBehaviour {
             }
         }
 
-        //-----------------------------------------    TILLSVIDARE   ------------------------------------------------
+        //-----------------------------------------    TILLSVIDARE Lägger till och ta bort item i inventory ------------------------------------------------
 
         if (Input.GetKeyDown(KeyCode.Keypad1) && indexitem <= 2 && indexitem >= 0)
         {
@@ -72,6 +94,7 @@ public class Inventory : MonoBehaviour {
         //-----------------------------------------    TILLSVIDARE   ------------------------------------------------
     }
 
+    //creates inventory if Inventorykey is pressed.
     private void OnGUI()
     {
         if (showInventory)
@@ -80,13 +103,14 @@ public class Inventory : MonoBehaviour {
         }
     }
 
+    // creates the inventory and loads in items.
     public void OpenInventory()
     {
         int i = 0;
 
-        for (int y = 0; y < slotsY; y++) 
+        for (int y = 1; y < slotsY+1; y++) 
         {
-            for (int x = 0; x < slotsX; x++)
+            for (int x = 1; x < slotsX+1; x++)
             {
                 Rect slotRect = new Rect(x * 50, y * 50, 100, 100);
 
@@ -104,6 +128,8 @@ public class Inventory : MonoBehaviour {
         
     }
 
+
+    // used to remove item from inventory by itemname.
     public void RemoveItem(Item item)
     {
         int removeIndex = -1;
@@ -116,4 +142,6 @@ public class Inventory : MonoBehaviour {
         }
 
     }
+
+    //Stina Hedman
 }
