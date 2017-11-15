@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
                                                                         /*By Björn Andersson && Timmy Alvelöv*/
 
-public class DoorScript : MonoBehaviour
-{
+public class DoorScript : MonoBehaviour {
 
     [SerializeField]
     Collider inColl, outColl;
 
     [SerializeField]
-    GameObject Walls, Roof; // Väggar och tak som ska påverkas när man går in/ut i/ur dören.
+    GameObject walls, roof; // Väggar och tak som ska påverkas när man går in/ut i/ur dörren.
 
     Color[] originalColors;
 
@@ -21,28 +20,24 @@ public class DoorScript : MonoBehaviour
 
     void Start()
     {
-        childs = Walls.transform.childCount;
+        childs = walls.transform.childCount;
         originalColors = new Color[childs];
         for (int i = 0; i < childs; i++)
         {
-            originalColors[i] = Walls.transform.GetChild(i).GetComponent<Renderer>().material.color;
+            originalColors[i] = walls.transform.GetChild(i).GetComponent<Renderer>().material.color;
         }
     }
     public void WalkThroughDoor(Collider inOut)
     {
         if (inOut == inColl)
         {
-            if (Roof != null)
-                Roof.SetActive(false);
-            if (Walls != null)
-                ShowWalls(false);
+            roof.SetActive(false);
+            ShowWalls(false);
         }
         else if (inOut == outColl)
         {
-            if (Roof != null)
-                Roof.SetActive(true);
-            if (Walls != null)
-                ShowWalls(true);
+            roof.SetActive(true);
+            ShowWalls(true);
         }
         else
         {
@@ -51,12 +46,12 @@ public class DoorScript : MonoBehaviour
     }
     void ShowWalls(bool showWalls)         //Gömmer och visar väggar när spelaren går in och ut ur hus
     {
-
+        
         if (showWalls)
         {
-            for (int i = 0; i < childs; i++)
+            for (int i = 0; i< childs;i++)
             {
-                mat = Walls.transform.GetChild(i).GetComponent<Renderer>().material;
+                mat = walls.transform.GetChild(i).GetComponent<Renderer>().material;
                 mat.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.One);     //Härifrån...
                 mat.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.Zero);
                 mat.SetInt("_ZWrite", 1);
@@ -72,7 +67,7 @@ public class DoorScript : MonoBehaviour
         {
             for (int i = 0; i < childs; i++)
             {
-                mat = Walls.transform.GetChild(i).GetComponent<Renderer>().material;
+                mat = walls.transform.GetChild(i).GetComponent<Renderer>().material;
                 mat.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.One);  //Härifrån...
                 mat.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
                 mat.SetInt("_ZWrite", 0);
@@ -83,9 +78,9 @@ public class DoorScript : MonoBehaviour
 
                 tempColor.a = 0.2f;
                 mat.color = tempColor;
-
+                
             }
-
+            
         }
     }
 }

@@ -3,5 +3,12 @@ tags:
 colorID: 0
 position: -63,-3
 ---
-Funkar?
+<<ChangePortrait Portrait TheGariPortrait>>
+Hello! I am the GÄRI!
+<<ChangePortrait Portrait JonPortrait>>
+Hörru, varför pratar du på engelska när resten av spelet är på svenska?
+<<ChangePortrait Portrait TheGariPortrait>>
+...
+<<ChangePortrait Portrait JonPortrait>>
+...
 ===

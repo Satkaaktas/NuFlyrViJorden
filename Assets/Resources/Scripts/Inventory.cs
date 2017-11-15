@@ -55,14 +55,14 @@ public class Inventory : MonoBehaviour {
 
         //-----------------------------------------    TILLSVIDARE   ------------------------------------------------
 
-        if (Input.GetKeyDown(KeyCode.Keypad1) && indexitem <= 2 && indexitem >= 0)
+        if (Input.GetKey(KeyCode.LeftShift)&& Input.GetKeyDown(KeyCode.Alpha1) && indexitem <= 2 && indexitem >= 0)
         {
             inventory[indexitem] = database.Items[indexitem];
             indexitem++;
             Debug.Log("Item added. indexitem = " + indexitem);
         }
         
-        if (Input.GetKeyDown(KeyCode.Keypad2) && indexitem >= 1 && indexitem <= 3)
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha2) && indexitem >= 1 && indexitem <= 3)
         {
             RemoveItem(database.Items[indexitem-1]);
             indexitem--;
