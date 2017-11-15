@@ -1,58 +1,85 @@
 title: newFile.yarn
 tags: 
 colorID: 0
-position: -52,-135
+position: 28,-227
 ---
-<<ChangePortrait Portrait MysteriousGuy>>
-Mystisk person: Sha brush!!
-Mystisk person: Kolla va bäst vi ää va men vem fan e du yaooo?
-<<ChangePortrait Portrait UnknownCharacter>>
--> Det vill jag inte berätta
-    Det vill jag inte berätta om det går bra...
-    <<ChangePortrait Portrait MysteriousGuy>>
-    Mystisk person: Jo, komigen!
--> Jag kan berätta om du vill...
-    Ja, jo, jag kan väll berätta om du vill...
-    <<ChangePortrait Portrait MysteriousGuy>>
-    Mystisk person: Men gör det då!
+<<if $revealed is true>>
+    <<ChangePortrait Portrait PhilPortrait>>
+    Hej igen, Jon.
+<<else>>
+    <<ChangePortrait Portrait MysteriousGuy>> 
+    Sha igen brush!!
     <<ChangePortrait Portrait JonPortrait>>
-[[Jon|jon]]
-[[Jag heter inte ens Jon|default]]
-[[Jag vill inte svara på din fråga, främling|Quit]]
+    -> Hej igen främling!
+        Åh nä, inte du igen...
+        <<ChangePortrait Portrait MysteriousGuy>>
+        Hörru brush var inte så tråkig nu vaa
+        <<ChangePortrait Portrait JonPortrait>>
+    [[Jag vill helst inte ha den här diskussionen igen främling|Boring]]
+    [[Vad är ditt namn, främling?|Reveal]]
+    [[*Distrahera främlingen*|Distract]]
+<<endif>>
 ===
-title: jon
+title: Boring
 tags: 
 colorID: 0
-position: -262,149
+position: -233,-11
 ---
 <<ChangePortrait Portrait JonPortrait>>
-Jag heter Jon
+Du får tycka att jag är tråkig om du vill, jag vill inte prata med dig
 <<ChangePortrait Portrait MysteriousGuy>>
-VILKET NAMN BRUSH
+JON
+BRUSH
+varför vill du inte snacka va?
 <<ChangePortrait Portrait JonPortrait>>
-->Nu drar jag
-    Jon: Nääe nu drar jag
-[[Quit]]
-===
-title: default
-tags: 
-colorID: 0
-position: 144,173
----
-<<ChangePortrait Portrait JonPortrait>>
-Ja, jag heter ju inte Jon i alla fall, så det så...
-<<ChangePortrait Portrait MysteriousGuy>>
-snacka skit mannen yo
-<<ChangePortrait Portrait JonPortrait>>
--> Hejdå
-    Jon: Nu drar jag o lirar guitar hero hörrududu
-[[Quit]]
+->  Jag vet ju inte ens vad du heter, du är fortfarande en främling för mig
+    <<ChangePortrait Portrait MysteriousGuy>>
+    Men yao brush om jag säger vem jag är då?
+    [[Ja, då kan jag väl prata vidare med dig...|Reveal]]
+    [[Nä, jag vill gärna gå härifrån och spela brädspel ändå.|Quit]]
 ===
 title: Quit
 tags: 
 colorID: 6
-position: -45,490
+position: -260,258
 ---
 <<ChangePortrait Portrait MysteriousGuy>>
-Mystisk person: Jahapp...
+Haha brush, vi ses igen nästa vecka yao
+===
+title: Reveal
+tags: 
+colorID: 0
+position: 20,246
+---
+<<set $revealed to true>>
+<<ChangePortrait Portrait PhilPortrait>>
+Jon, du vet redan vem jag är brush...
+<<ChangePortrait Portrait JonPortrait>>
+PHIL!?!?
+Varför håller du på och pratar låtsasspråk?
+Ska inte du skapa Greenerland eller något?
+<<ChangePortrait Portrait PhilPortrait>>
+Jo, det är under produktion...
+<<ChangePortrait Portrait JonPortrait>>
+.....
+<<ChangePortrait Portrait PhilPortrait>>
+Och det är bara i din verklighet jag pratar låtsasspråk.
+I den riktiga verkligheten, min verklighet, pratar jag felfritt och propert.
+<<ChangePortrait Portrait JonPortrait>>
+Vad pratar du om?
+<<ChangePortrait Portrait PhilPortrait>>
+Det kommer du få reda på, käre vän... Nästa vecka.
+===
+title: Distract
+tags: 
+colorID: 0
+position: 287,10
+---
+<<ChangePortrait Portrait JonPortrait>>
+Titta främling, ett svart hål!
+<<ChangePortrait Portrait MysteriousGuy>>
+Yao brush svarta hål finns inte, försök inte luras va
+<<ChangePortrait Portrait JonPortrait>>
+*Tänker* Fan också
+[[Främling, vem är du som vet så mycket om påhittade fenomen|Reveal]]
 ===
