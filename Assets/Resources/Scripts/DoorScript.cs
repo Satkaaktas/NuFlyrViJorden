@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
                                                                         /*By Björn Andersson && Timmy Alvelöv*/
 
-public class DoorScript : MonoBehaviour {
+public class DoorScript : MonoBehaviour
+{
 
     [SerializeField]
     Collider inColl, outColl;
@@ -31,13 +32,17 @@ public class DoorScript : MonoBehaviour {
     {
         if (inOut == inColl)
         {
-            Roof.SetActive(false);
-            ShowWalls(false);
+            if (Roof != null)
+                Roof.SetActive(false);
+            if (Walls != null)
+                ShowWalls(false);
         }
         else if (inOut == outColl)
         {
-            Roof.SetActive(true);
-            ShowWalls(true);
+            if (Roof != null)
+                Roof.SetActive(true);
+            if (Walls != null)
+                ShowWalls(true);
         }
         else
         {
@@ -46,10 +51,10 @@ public class DoorScript : MonoBehaviour {
     }
     void ShowWalls(bool showWalls)         //Gömmer och visar väggar när spelaren går in och ut ur hus
     {
-        
+
         if (showWalls)
         {
-            for (int i = 0; i< childs;i++)
+            for (int i = 0; i < childs; i++)
             {
                 mat = Walls.transform.GetChild(i).GetComponent<Renderer>().material;
                 mat.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.One);     //Härifrån...
@@ -78,9 +83,9 @@ public class DoorScript : MonoBehaviour {
 
                 tempColor.a = 0.2f;
                 mat.color = tempColor;
-                
+
             }
-            
+
         }
     }
 }

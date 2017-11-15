@@ -69,6 +69,7 @@ public class PlayerControls : MonoBehaviour
             playerAnim.SetBool("isWalking", false);
             currentInteractable.DoAction();
         }
+        
     }
 
     void ResetMovement()                    //Hindrar ett fel som får spelaren att springa som en idiot efter konversationer
