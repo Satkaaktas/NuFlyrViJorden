@@ -262,6 +262,8 @@ GameObject:
   - component: {fileID: 4086237989220898}
   - component: {fileID: 95853624863179668}
   - component: {fileID: 136283204228633428}
+  - component: {fileID: 135683877310599940}
+  - component: {fileID: 114749233228122388}
   m_Layer: 0
   m_Name: Character_Slum_MalewCap_Model_WR
   m_TagString: Untagged
@@ -305,15 +307,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1629412704336226}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.4835815, y: 0.019, z: -6.538925}
+  m_LocalRotation: {x: -0, y: 0.9892932, z: -0, w: -0.14594176}
+  m_LocalPosition: {x: 10.496735, y: 0, z: 11.334198}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4743386049845180}
   - {fileID: 4333479778933076}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 196.784, z: 0}
 --- !u!4 &4097320701498384
 Transform:
   m_ObjectHideFlags: 1
@@ -581,6 +583,32 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114749233228122388
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1629412704336226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d42c9e24a4e87e4eb84f368cb3969aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myDialogueNode: file.yarn
+  highlightMat: {fileID: 2100000, guid: 3dc841133c8aa5a41823e6de2fc89307, type: 2}
+  dR: {fileID: 0}
+--- !u!135 &135683877310599940
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1629412704336226}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!136 &136283204228633428
 CapsuleCollider:
   m_ObjectHideFlags: 1
