@@ -23,12 +23,14 @@ public class NPCScript : MonoBehaviour, IInteractable
     [SerializeField]
     Material highlightMat;
 
+    [SerializeField]
     DialogueRunner dR;
 
     void Start()
     {
         myMat = GetComponent<Renderer>().material;
-        dR = GameObject.Find("DialogueManager").GetComponent<DialogueRunner>();
+        //dR = GameObject.Find("DialogueManager").GetComponent<DialogueRunner>();
+        //dR = FindObjectOfType<DialogueRunner>();
     }
 
     public void DoAction()          //Initierar en dialog mellan spelaren och NPCn

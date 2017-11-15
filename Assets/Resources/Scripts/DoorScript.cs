@@ -9,7 +9,7 @@ public class DoorScript : MonoBehaviour {
     Collider inColl, outColl;
 
     [SerializeField]
-    GameObject Walls, Roof; // Väggar och tak som ska påverkas när man går in/ut i/ur dören.
+    GameObject walls, roof; // Väggar och tak som ska påverkas när man går in/ut i/ur dörren.
 
     Color[] originalColors;
 
@@ -20,23 +20,23 @@ public class DoorScript : MonoBehaviour {
 
     void Start()
     {
-        childs = Walls.transform.childCount;
+        childs = walls.transform.childCount;
         originalColors = new Color[childs];
         for (int i = 0; i < childs; i++)
         {
-            originalColors[i] = Walls.transform.GetChild(i).GetComponent<Renderer>().material.color;
+            originalColors[i] = walls.transform.GetChild(i).GetComponent<Renderer>().material.color;
         }
     }
     public void WalkThroughDoor(Collider inOut)
     {
         if (inOut == inColl)
         {
-            Roof.SetActive(false);
+            roof.SetActive(false);
             ShowWalls(false);
         }
         else if (inOut == outColl)
         {
-            Roof.SetActive(true);
+            roof.SetActive(true);
             ShowWalls(true);
         }
         else
@@ -51,7 +51,7 @@ public class DoorScript : MonoBehaviour {
         {
             for (int i = 0; i< childs;i++)
             {
-                mat = Walls.transform.GetChild(i).GetComponent<Renderer>().material;
+                mat = walls.transform.GetChild(i).GetComponent<Renderer>().material;
                 mat.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.One);     //Härifrån...
                 mat.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.Zero);
                 mat.SetInt("_ZWrite", 1);
@@ -67,7 +67,7 @@ public class DoorScript : MonoBehaviour {
         {
             for (int i = 0; i < childs; i++)
             {
-                mat = Walls.transform.GetChild(i).GetComponent<Renderer>().material;
+                mat = walls.transform.GetChild(i).GetComponent<Renderer>().material;
                 mat.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.One);  //Härifrån...
                 mat.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
                 mat.SetInt("_ZWrite", 0);
