@@ -7877,6 +7877,20 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 836477062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eab55965c4e2cf24e9c35600f6fb4ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 4e50d6a13942b474bbbd95436afc18e1, type: 3}
+  - {fileID: 21300000, guid: f66fcafe80d54414288c75648ddc5a34, type: 3}
+  - {fileID: 21300000, guid: 88c6b4c4fc4365a40b046aad0a303109, type: 3}
+  - {fileID: 21300000, guid: ee860b3e4edb53b4cbfb74fd7744ff20, type: 3}
+--- !u!1 &858790918
+=======
   m_GameObject: {fileID: 1099246753}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -8476,6 +8490,7 @@ Prefab:
   m_ParentPrefab: {fileID: 100100000, guid: 80ea4aa44d3b45e439eb0079bd34e96f, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1177624008
+>>>>>>> a3ba5aa0f3fb0dc2d30e082d3eca88a60b6224a6
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
