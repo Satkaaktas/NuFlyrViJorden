@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-                                                                        /*By Björn Andersson*/
+                                                                        /*By Björn Andersson && Timmy Alvelöv*/
 
 public class DoorScript : MonoBehaviour {
 
@@ -9,34 +9,78 @@ public class DoorScript : MonoBehaviour {
     Collider inColl, outColl;
 
     [SerializeField]
-    GameObject[] wallsAndRoof;
+    GameObject Walls, Roof; // Väggar och tak som ska påverkas när man går in/ut i/ur dören.
 
-    [SerializeField]
-    float fadeAlpha;
-	
+    Color[] originalColors;
+
+    Material mat;           //Tempvariabel
+    Color tempColor;
+    int childs;
+
+
+    void Start()
+    {
+        childs = Walls.transform.childCount;
+        originalColors = new Color[childs];
+        for (int i = 0; i < childs; i++)
+        {
+            originalColors[i] = Walls.transform.GetChild(i).GetComponent<Renderer>().material.color;
+        }
+    }
     public void WalkThroughDoor(Collider inOut)
     {
         if (inOut == inColl)
         {
-            ShowWalls(fadeAlpha);
+            Roof.SetActive(false);
+            ShowWalls(false);
         }
         else if (inOut == outColl)
         {
-            ShowWalls(1f);
+            Roof.SetActive(true);
+            ShowWalls(true);
         }
         else
         {
             print("nu har nåt gått fel här.");
         }
     }
-
-    void ShowWalls(float alpha)         //Gömmer och visar väggar när spelaren går in och ut ur hus
+    void ShowWalls(bool showWalls)         //Gömmer och visar väggar när spelaren går in och ut ur hus
     {
-        foreach (GameObject wall in wallsAndRoof)
+        
+        if (showWalls)
         {
-            Color newColor = wall.GetComponent<Renderer>().material.color;
-            newColor.a = alpha;
-            wall.GetComponent<Renderer>().material.color = newColor;
+            for (int i = 0; i< childs;i++)
+            {
+                mat = Walls.transform.GetChild(i).GetComponent<Renderer>().material;
+                mat.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.One);     //Härifrån...
+                mat.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.Zero);
+                mat.SetInt("_ZWrite", 1);
+                mat.DisableKeyword("_ALPHATEST_ON");
+                mat.DisableKeyword("_ALPHABLEND_ON");
+                mat.DisableKeyword("_ALPHAPREMULTIPLY_ON");
+                mat.renderQueue = -1;                                                  //... till hit är hämtat från internet, detta är var som händer när man ändrar renderering mode till Opaque 
+
+                mat.color = originalColors[i];
+            }
+        }
+        else
+        {
+            for (int i = 0; i < childs; i++)
+            {
+                mat = Walls.transform.GetChild(i).GetComponent<Renderer>().material;
+                mat.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.One);  //Härifrån...
+                mat.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
+                mat.SetInt("_ZWrite", 0);
+                mat.DisableKeyword("_ALPHATEST_ON");
+                mat.DisableKeyword("_ALPHABLEND_ON");
+                mat.EnableKeyword("_ALPHAPREMULTIPLY_ON");
+                mat.renderQueue = 3000;                                                 //... till hit är hämtat från internet, detta är var som händer när man ändrar renderering mode till Transparent
+
+                tempColor.a = 0.2f;
+                mat.color = tempColor;
+                
+            }
+            
         }
     }
 }
