@@ -11,6 +11,7 @@ using UnityEngine;
 public class PauseGame : MonoBehaviour {
 
     public Transform canvas;
+    
 
     // Update is called once per frame
     void Update()
@@ -28,12 +29,14 @@ public class PauseGame : MonoBehaviour {
             {
                 canvas.gameObject.SetActive(true); // I sånnafall, gör den true så man ser paus menyn och samt
                 Time.timeScale = 0;                // så sätter vi skalan där tiden passerar till 0 så allt stannar i bakgrunden
+                AudioListener.volume = 0.5f;        // Musik eller annan audio som spelas i bakgrunden sänks i paus menyn.
             }
             else
             {
                 canvas.gameObject.SetActive(false); // När vi återgår till spelet som kan ske via att man trycker ESC igen eller Resume knappen
                 Time.timeScale = 1;                 // så återgår vi till spelet, canvas blir false igen och tids skalan återgår till normalt.
-            }
+                AudioListener.volume =  1;
+        }
         
 
     }
