@@ -10,7 +10,7 @@ public class Inventory : MonoBehaviour {
     //List of items visualised in inventorySlots
     public List<Item> inventorySlots = new List<Item>();
 
-    public AudioClip inventorySound;
+    public AudioClip invOpenSound, invCloseSound;
 
     //reference to database
     private ItemDatabase database;
@@ -54,6 +54,9 @@ public class Inventory : MonoBehaviour {
             inventorySlots.Add(new Item());
 
         }
+
+        invOpenSound = Resources.Load<AudioClip>("Audio/Inventory/openInv");
+        invCloseSound = Resources.Load<AudioClip>("Audio/Inventory/closeInv");
     }
 
     
@@ -65,12 +68,14 @@ public class Inventory : MonoBehaviour {
             if (!showInventory)
             {
                 Debug.Log("inventory Open");
+                SoundManager.instance.PlaySingle(invOpenSound);
                 showInventory = true;
             }
 
             else
             {
                 Debug.Log("inventory Closed");
+                SoundManager.instance.PlaySingle(invCloseSound);
                 showInventory = false;
             }
         }
