@@ -16,7 +16,6 @@ public class TextColorChanger : MonoBehaviour
     [YarnCommand("TColor")]
     public void ChangeTextColor(string textColor)
     {
-        print("hej");
         switch (textColor.ToUpper())
         {
             case "BLUE":
