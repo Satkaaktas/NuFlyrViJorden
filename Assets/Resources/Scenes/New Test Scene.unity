@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2487,6 +2487,63 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 976ca31c63825684f89fbab61f590f8c, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &821196242
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4831413165690710, guid: d301379b8d19ba14081852ea9afb8ff8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831413165690710, guid: d301379b8d19ba14081852ea9afb8ff8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831413165690710, guid: d301379b8d19ba14081852ea9afb8ff8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831413165690710, guid: d301379b8d19ba14081852ea9afb8ff8, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831413165690710, guid: d301379b8d19ba14081852ea9afb8ff8, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831413165690710, guid: d301379b8d19ba14081852ea9afb8ff8, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831413165690710, guid: d301379b8d19ba14081852ea9afb8ff8, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831413165690710, guid: d301379b8d19ba14081852ea9afb8ff8, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114433874357508238, guid: d301379b8d19ba14081852ea9afb8ff8,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1999532301}
+    - target: {fileID: 114433874357508238, guid: d301379b8d19ba14081852ea9afb8ff8,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Pausing
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d301379b8d19ba14081852ea9afb8ff8, type: 2}
+  m_IsPrefabParent: 0
+--- !u!224 &821196243 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224876321385982484, guid: d301379b8d19ba14081852ea9afb8ff8,
+    type: 2}
+  m_PrefabInternal: {fileID: 821196242}
 --- !u!1 &832978647
 GameObject:
   m_ObjectHideFlags: 0
@@ -5834,6 +5891,47 @@ Transform:
   m_PrefabParentObject: {fileID: 4325168058726244, guid: 8d0740fc20c71cc43b8f9376b88b5fbd,
     type: 2}
   m_PrefabInternal: {fileID: 1836852779}
+--- !u!1 &1999532299
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1999532300}
+  - component: {fileID: 1999532301}
+  m_Layer: 0
+  m_Name: PauseManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1999532300
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1999532299}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -23.383139, y: 1.2439498, z: 39.472427}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1999532301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1999532299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7d7b5e87d23d4b41aba8d23099f6880, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 821196243}
 --- !u!4 &2014710802 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4990239120960158, guid: a1f3881300a51174a951188f5bbf2859,

@@ -1,85 +1,11 @@
 title: newFile.yarn
 tags: 
 colorID: 0
-position: 28,-227
+position: 27,-227
 ---
-<<if $revealed is true>>
-    <<ChangePortrait Portrait PhilPortrait>>
-    Hej igen, Jon.
-<<else>>
-    <<ChangePortrait Portrait MysteriousGuy>> 
-    Sha igen brush!!
-    <<ChangePortrait Portrait JonPortrait>>
-    -> Hej igen främling!
-        Åh nä, inte du igen...
-        <<ChangePortrait Portrait MysteriousGuy>>
-        Hörru brush var inte så tråkig nu vaa
-        <<ChangePortrait Portrait JonPortrait>>
-    [[Jag vill helst inte ha den här diskussionen igen främling|Boring]]
-    [[Vad är ditt namn, främling?|Reveal]]
-    [[*Distrahera främlingen*|Distract]]
-<<endif>>
-===
-title: Boring
-tags: 
-colorID: 0
-position: -233,-11
----
-<<ChangePortrait Portrait JonPortrait>>
-Du får tycka att jag är tråkig om du vill, jag vill inte prata med dig
-<<ChangePortrait Portrait MysteriousGuy>>
-JON
-BRUSH
-varför vill du inte snacka va?
-<<ChangePortrait Portrait JonPortrait>>
-->  Jag vet ju inte ens vad du heter, du är fortfarande en främling för mig
-    <<ChangePortrait Portrait MysteriousGuy>>
-    Men yao brush om jag säger vem jag är då?
-    [[Ja, då kan jag väl prata vidare med dig...|Reveal]]
-    [[Nä, jag vill gärna gå härifrån och spela brädspel ändå.|Quit]]
-===
-title: Quit
-tags: 
-colorID: 6
-position: -260,258
----
-<<ChangePortrait Portrait MysteriousGuy>>
-Haha brush, vi ses igen nästa vecka yao
-===
-title: Reveal
-tags: 
-colorID: 0
-position: 20,246
----
-<<set $revealed to true>>
 <<ChangePortrait Portrait PhilPortrait>>
-Jon, du vet redan vem jag är brush...
+Jon.
+<<TColor DialogueManager Blue>>
+Tiden är äntligen inne.
 <<ChangePortrait Portrait JonPortrait>>
-PHIL!?!?
-Varför håller du på och pratar låtsasspråk?
-Ska inte du skapa Greenerland eller något?
-<<ChangePortrait Portrait PhilPortrait>>
-Jo, det är under produktion...
-<<ChangePortrait Portrait JonPortrait>>
-.....
-<<ChangePortrait Portrait PhilPortrait>>
-Och det är bara i din verklighet jag pratar låtsasspråk.
-I den riktiga verkligheten, min verklighet, pratar jag felfritt och propert.
-<<ChangePortrait Portrait JonPortrait>>
-Vad pratar du om?
-<<ChangePortrait Portrait PhilPortrait>>
-Det kommer du få reda på, käre vän... Nästa vecka.
-===
-title: Distract
-tags: 
-colorID: 0
-position: 287,10
----
-<<ChangePortrait Portrait JonPortrait>>
-Titta främling, ett svart hål!
-<<ChangePortrait Portrait MysteriousGuy>>
-Yao brush svarta hål finns inte, försök inte luras va
-<<ChangePortrait Portrait JonPortrait>>
-*Tänker* Fan också
-[[Främling, vem är du som vet så mycket om påhittade fenomen|Reveal]]
 ===
