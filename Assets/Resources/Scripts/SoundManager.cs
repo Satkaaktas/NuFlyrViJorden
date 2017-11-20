@@ -14,13 +14,11 @@ public class SoundManager : MonoBehaviour {
 
     private void Awake()
     {   
-        //kolla om en instans av soundmanager redan är i scenen.
         if (instance == null)
         {
             instance = this;
         }
 
-        //ser till att det bara är en soundmanager instansierad.
         else if (instance != this)
         {
             Destroy(gameObject);
@@ -37,7 +35,13 @@ public class SoundManager : MonoBehaviour {
         efxSource.Play();
     }
 
-    // used to play random clip at somewhat random pitch. <------------------- use for walking.
+    public void PlayMusic(AudioClip clip)
+    {
+        musicSource.clip = clip;
+        musicSource.Play();
+    }
+
+    // used to play random clips at somewhat random pitch. <------------------- use for walking.
     public void PlayRandom(params AudioClip[] clips)
     {
         //chose random clip in range.
@@ -50,11 +54,6 @@ public class SoundManager : MonoBehaviour {
 
         //play clip
         efxSource.Play();
-        
-    }
-
-    private void Start()
-    {
         
     }
 
