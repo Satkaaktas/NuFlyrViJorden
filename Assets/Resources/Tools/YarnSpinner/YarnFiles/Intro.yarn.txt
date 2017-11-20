@@ -1,26 +1,59 @@
-title: Intro
+title: Intro.yarn
 tags: 
 colorID: 0
-position: 724,1701
+position: 622,2186
 ---
 <<ChangePortrait Portrait NorbertP>>
 "Hello Laura, Dottie. May I come in?"
 <<ChangePortrait Portrait LauraP>>
-"Norbert. Of course, come in!"<<TColor DialogueManager Blue>> Laura is quickly roused from her rumination
+"Norbert. Of course, come in!"
+<<TColor DialogueManager Blue>> 
+Laura is quickly roused from her rumination
 <<ChangePortrait Portrait DottieP>>
-<<TColor DialogueManager Black>>"Hi Norb!"<<TColor DialogueManager Blue>> Dottie looks up at Norbert and greets him with a nod and then quickly switches her attention back to the toy
+<<TColor DialogueManager Black>>
+"Hi Norb!"
+<<TColor DialogueManager Blue>> 
+Dottie looks up at Norbert and greets him with a nod and then quickly switches her attention back to the toy
 <<ChangePortrait Portrait LauraP>>
-"What can I do for you?" <<TColor DialogueManager Blue>> Laura takes a few steps toward Norbert as he comes in.
+<<TColor DialogueManager Black>>
+"What can I do for you?"
+<<TColor DialogueManager Blue>>
+Laura takes a few steps toward Norbert as he comes in.
 <<ChangePortrait Portrait NorbertP>>
-<<TColor DialogueManager Black>>“I know things seem tough right now but if you need anything I’m here for you. We all are.” <<TColor DialogueManager Blue>>Norbert pauses, collecting his thoughts.<<TColor DialogueManager Black>> “You know, I was thinking about what Jeb said and I had this idea… Maybe you could talk to Bobby, maybe he could help?"
+<<TColor DialogueManager Black>>
+“I know things seem tough right now but if you need anything I’m here for you. We all are.” 
+<<TColor DialogueManager Blue>>
+Norbert pauses, collecting his thoughts.
+<<TColor DialogueManager Black>> 
+“You know, I was thinking about what Jeb said and I had this idea… Maybe you could talk to Bobby, maybe he could help?"
 <<ChangePortait Portrait LauraP>>
 “Bobby? What? No… not after that thing with Kaleb.”
 <<ChangePortrait Portrait DottieP>>
- “Look what Jeb got me!” <<TColor DialogueManager Blue>>Dottie proudly presents the toy that Jeb gave her yesterday, now reduced to a mockery of its former self.<<TColor DialogueManager Black>>“Look!”
-“That’s great Dottie.”<<TColor DialogueManager Blue>> Norbert gives her a pleasant smile.<<TColor DialogueManager Black>> “Laura, that was such a long time ago. I’m sure Bobby is over that!” <<TColor DialogueManager Blue>>Norbert smiles reassuringly.<<<TColor DialogueManager Black>>“I actually saw him at the gates earlier. You should go talk to him.”
+ “Look what Jeb got me!”
+<<TColor DialogueManager Blue>>
+Dottie proudly presents the toy that Jeb gave her yesterday, now reduced to a mockery of its former self.
+<<TColor DialogueManager Black>>
+“Look!”
+<<ChangePortait Portrait NorbertP>>
+“That’s great Dottie.”
+<<TColor DialogueManager Blue>> 
+Norbert gives her a pleasant smile.
+<<TColor DialogueManager Black>> 
+“Laura, that was such a long time ago. I’m sure Bobby is over that!”
+<<TColor DialogueManager Blue>>Norbert smiles reassuringly.
+<<TColor DialogueManager Black>>
+“I actually saw him at the gates earlier. You should go talk to him.”
 ->"I'd rather not..."
     <<ChangePortrait Portrait LauraP>>
-    “The thing with Bobby… It didn’t end well. It’s better if I just let him be.” <<TColor DialogueManager Blue>>Laura is silent for a moment.<<TColor DialogueManager Black>> “Jeb told me he knew someone in AlphaAid that could help me. He just need time to set it up.”<<TColor DialogueManager Blue>> Laura pauses and bites her lower lip. <<TColor DialogueManager Black>>“He was going to contact me today but… I just haven’t heard anything from him. I guess I… I lashed out at him yesterday.”
+    “The thing with Bobby… It didn’t end well. It’s better if I just let him be.” 
+    <<TColor DialogueManager Blue>>
+    Laura is silent for a moment.
+    <<TColor DialogueManager Black>> 
+    “Jeb told me he knew someone in AlphaAid that could help me. He just need time to set it up.”
+    <<TColor DialogueManager Blue>>
+    Laura pauses and bites her lower lip. 
+    <<TColor DialogueManager Black>>
+    “He was going to contact me today but… I just haven’t heard anything from him. I guess I… I lashed out at him yesterday.”
 ->"Maybe you're right."
     <<ChangePortrait Portrait LauraP>>
     “You think he can get me through the checkpoint? I don’t know why he would want to though…”
@@ -29,13 +62,29 @@ position: 724,1701
     <<ChangePortrait Portrait LauraP>>
     “Well, we’ll see.”<<TColor DialogueManager Blue>> Laura pauses and bites her lower lip.<<TColor DialogueManager Black>> “Jeb told me he knew someone in AlphaAid who could help me. He just needs time to set it up.” <<TColor DialogueManager Blue>>Laura pauses and bites her lower lip. <<TColor DialogueManager Black>>“He was going to contact me today but… I just haven’t heard anything from him. I guess I… I lashed out at him yesterday.”
 <<ChangePortrait Portrait NorbertP>>
-“Well, Jeb seems a bit touchy about the past.”<<TColor DialogueManager Blue>>Norbert’s smile wanes. <<TColor DialogueManager Black>>“I’m sure he has his reasons. Anyway, I think Bobby is your best bet. I don’t know how much sway he has with the enforcers at the checkpoint but I’m sure he’ll do anything to help an old friend out.”
+“Well, Jeb seems a bit touchy about the past.”
+<<TColor DialogueManager Blue>>
+Norbert’s smile wanes.
+<<TColor DialogueManager Black>>
+“I’m sure he has his reasons. Anyway, I think Bobby is your best bet. I don’t know how much sway he has with the enforcers at the checkpoint but I’m sure he’ll do anything to help an old friend out.”
 <<ChangePortrait Portrait DottieP>>
 “Hey! I wanna go to the checkpoint! I saw this big truck and they hand out all kinds of stuff! Can we go? Can we?”
 <<ChangePortrait Portrait NorbertP>>
-“Oh, I saw that too. That’s the Paragon Foundation van.”<<TColor DialogueManager Blue>> Norbert turns to Laura with a frown on his face. <<TColor DialogueManager Black>>“Remember that they are the ones working on the genome project who put us in this mess to begin with!” <<TColor DialogueManager Blue>>His face softens as he collects his thoughts. <<TColor DialogueManager Black>> “They started some new project. No clue what’s it for. I’m not sure they could help. I wouldn’t trust them one bit if I were you.”
+“Oh, I saw that too. That’s the Paragon Foundation van.”
+<<TColor DialogueManager Blue>> 
+Norbert turns to Laura with a frown on his face.
+<<TColor DialogueManager Black>>
+“Remember that they are the ones working on the genome project who put us in this mess to begin with!” 
+<<TColor DialogueManager Blue>>
+His face softens as he collects his thoughts. 
+<<TColor DialogueManager Black>> 
+“They started some new project. No clue what’s it for. I’m not sure they could help. I wouldn’t trust them one bit if I were you.”
 <<ChangePortrait Portrait LauraP>>
-“I guess I could see what’s going on at least… I need to discern all my options.”<<TColor DialogueManager Blue>> A determined look forms upon her face.<<TColor DialogueManager Black>> “I’ll do anything necessary. Legal, illegal or in-between doesn’t matter!”
+“I guess I could see what’s going on at least… I need to discern all my options.”
+<<TColor DialogueManager Blue>> 
+A determined look forms upon her face.
+<<TColor DialogueManager Black>> 
+“I’ll do anything necessary. Legal, illegal or in-between doesn’t matter!”
 <<ChangePortrait Portrait NorbertP>>
 “Well don’t even think of getting involved with the wrong crowd! The streets are rife with opportunist scum just looking for people in a pinch to squeeze dry. They use you just as much as they use the system!”
 <<ChangePortrait Portrait LauraP>>
@@ -45,7 +94,7 @@ position: 724,1701
 title: RightChoices
 tags: 
 colorID: 0
-position: 298,1980
+position: 245,2554
 ---
 “I do what I have to, but I won’t stoop that low.”
 <<ChangePortrait Portrait NorbertP>>
@@ -55,7 +104,7 @@ position: 298,1980
 title: KnowAGuy
 tags: 
 colorID: 0
-position: 863,2089
+position: 1003,2480
 ---
 “I actually know a guy and if he can do anything to help me I couldn’t care any less about what he does for a living!”<<TColor DialogueManager Blue>> Laura sighs.<<TColor DialogueManager Black>> “Don’t worry, Norbert. I can take care of myself, and I would never put Dottie in harm’s way.”
 <<ChangePortrait Portrait NorbertP>>
