@@ -15,7 +15,13 @@ public class PlayerControls : MonoBehaviour
 
     float v, h;
 
-    bool moving = false, movementEnabled = true;
+    bool moving = false, movementEnabled = true, inputEnabled;
+
+    public bool InputEnabled
+    {
+        get { return this.inputEnabled; }
+        set { this.inputEnabled = value; }
+    }
 
     private CharacterController characterController;
 
@@ -49,6 +55,7 @@ public class PlayerControls : MonoBehaviour
 
     void Start()
     {
+        inputEnabled = true;
         originalSpeed = speed;
         playerAnim = GetComponent<Animator>();
         characterController = GetComponent<CharacterController>();
@@ -63,7 +70,7 @@ public class PlayerControls : MonoBehaviour
     void Update()
     {
         Move();
-        if (Input.GetKeyDown(KeyCode.E) && currentInteractable != null)         //Interagerar med föremål och NPCs när spelaren klickar på E
+        if (Input.GetKeyDown(KeyCode.E) && currentInteractable != null && inputEnabled)         //Interagerar med föremål och NPCs när spelaren klickar på E
         {
             playerAnim.SetBool("isRunning", false);
             playerAnim.SetBool("isWalking", false);
