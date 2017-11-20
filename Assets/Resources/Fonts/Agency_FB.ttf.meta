@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 4357362863d69c84db661d69c36f5aca
-timeCreated: 1510696354
+guid: f72e7f97aa0d84e4ea8a03f0bd7570eb
+timeCreated: 1510745221
 licenseType: Free
 TrueTypeFontImporter:
   externalObjects: {}
@@ -10,9 +10,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Agency
+  fontName: Agency FB
   fontNames:
-  - Agency
+  - Agency FB
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
