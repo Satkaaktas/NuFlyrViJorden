@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour {
 
     public AudioSource musicSource; // GameObject.Camera.fin
     public AudioSource efxSource;
+
+    public Slider MusicVolSlider;
+    public Slider EfxVolSlicer;
 
     public float lowPitchLimit = 0.95f;
     public float highPitchLimit = 1.05f;
@@ -57,6 +61,19 @@ public class SoundManager : MonoBehaviour {
         
     }
 
+    // invoked when slider button is clicked.
+    public void ChangeMusicVol()
+    {
+        musicSource.volume = MusicVolSlider.value;
+    }
+
+    // invoke when slider button is clicked
+    public void ChangeEfxVol()
+    {
+        efxSource.volume = MusicVolSlider.value;
+    }
 
 }
+
+// Stina Hedman
 

@@ -104,6 +104,8 @@ public class Inventory : MonoBehaviour {
     {
         if (showInventory)
         {
+            GUI.DrawTexture(new Rect(0, 0, 350, 350), Resources.Load<Texture2D>("Sprites/UI/InventoryBackground"), ScaleMode.ScaleToFit);
+
             OpenInventory();
         }
     }
@@ -117,7 +119,7 @@ public class Inventory : MonoBehaviour {
         {
             for (int x = 1; x < slotsX+1; x++)
             {
-                Rect slotRect = new Rect(x * 50, y * 50, 100, 100);
+                Rect slotRect = new Rect((x * 75)+20,(y * 40)+70, 75, 75);
 
                 GUI.Box(slotRect, Resources.Load<Texture2D>("Sprites/UI/InventorySlot"), GUIStyle.none);
 
