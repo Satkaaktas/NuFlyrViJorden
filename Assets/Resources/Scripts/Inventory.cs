@@ -17,7 +17,7 @@ public class Inventory : MonoBehaviour {
 
     bool showInventory;
 
-    public int slotsX, slotsY;
+    public int slotsX = 2, slotsY = 5;
 
     public static Inventory instance;
 
