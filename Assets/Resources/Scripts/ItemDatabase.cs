@@ -19,3 +19,5 @@ public class ItemDatabase : MonoBehaviour {
         items.Add(new Item("Cup", 2, "The holy cup"));
     }
 }
+
+// Stina Hedman
