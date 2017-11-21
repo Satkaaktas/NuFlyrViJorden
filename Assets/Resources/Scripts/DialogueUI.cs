@@ -13,9 +13,16 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour
      * disabled when it ends.
      */
     public GameObject dialogueContainer;
+    [SerializeField]
+    Image lastLineBox;
+
+    [SerializeField]
+    Text lastLineText;
 
     [SerializeField]
     KeyCode[] dialogueKeys;
+
+    string lastLine;
 
     /// The UI element that displays lines
     public Text lineText;
@@ -41,11 +48,12 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour
     /// dialogue is active and to restore them when dialogue ends
     public RectTransform gameControlsContainer;
 
-
+    TextColorChanger tCC;
 
     void Awake()
     {
         // Start by hiding the container, line and option buttons
+        tCC = FindObjectOfType<TextColorChanger>();
         if (dialogueContainer != null)
             dialogueContainer.SetActive(false);
 
@@ -69,20 +77,42 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour
         lineText.gameObject.SetActive(true);
         if (textSpeed > 0.0f)
         {
+            lastLine = line.text;
             // Display the line one character at a time
             var stringBuilder = new StringBuilder();
 
             foreach (char c in line.text)
             {
-                yield return new WaitForSeconds(textSpeed);
-                if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
+                if (c == '¤')
                 {
-                    skipping = true;
-                    lineText.text = line.text;
-                    break;
+                    tCC.ChangeTextColor("Blue");
                 }
-                stringBuilder.Append(c);
-                lineText.text = stringBuilder.ToString();
+                else if (c == '%')
+                {
+                    tCC.ChangeTextColor("Black");
+                }
+                else
+                {
+                    yield return new WaitForSeconds(textSpeed);
+                    string finalLine = "";
+                    if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
+                    {
+                        skipping = true;
+                        foreach (char c2 in line.text)
+                        {
+                            if (c2 != '¤' && c2 != '%')
+                                finalLine += c2;
+                        }
+                        lineText.text = finalLine;
+
+                        break;
+                    }
+                    else
+                    {
+                        stringBuilder.Append(c);
+                        lineText.text = stringBuilder.ToString();
+                    }
+                }
             }
         }
         else
@@ -119,7 +149,8 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour
             Debug.LogWarning("There are more options to present than there are" +
                              "buttons to present them in. This will cause problems.");
         }
-
+        lastLineBox.gameObject.SetActive(true);
+        lastLineText.text = lastLine;
         // Display each option in a button, and make it visible
         int i = 0;
         foreach (var optionString in optionsCollection.options)
@@ -143,6 +174,7 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour
         {
             button.gameObject.SetActive(false);
         }
+        lastLineBox.gameObject.SetActive(false);
     }
 
     /// Called by buttons to make a selection.
