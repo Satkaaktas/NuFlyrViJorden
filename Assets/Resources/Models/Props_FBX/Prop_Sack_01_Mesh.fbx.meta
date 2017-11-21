@@ -1,24 +1,22 @@
 fileFormatVersion: 2
-guid: 21437a6007de2d04ca1755ed9ca0f1c6
-timeCreated: 1510602828
+guid: 2e94020e63f414c45a45f39ac9072c99
+timeCreated: 1511247656
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Prop_Safevault_00
-    100002: //RootNode
-    400000: Prop_Safevault_00
-    400002: //RootNode
-    2300000: Prop_Safevault_00
-    3300000: Prop_Safevault_00
-    4300000: Prop_Safevault_00
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: pSphere2
     9500000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Prop_Safe_Vault_00_Material
-    second: {fileID: 2100000, guid: cefa38f07f4459045ba492f62d680eca, type: 2}
+      name: Prop_Sack_01_Material
+    second: {fileID: 2100000, guid: 2534fe606ef8d3342a1f397ee9d09b42, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
