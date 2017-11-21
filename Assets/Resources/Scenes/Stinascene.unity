@@ -273,6 +273,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114970814439534234, guid: 112d981df07e6ab43a72583996bd6722,
+        type: 2}
+      propertyPath: slotsX
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114970814439534234, guid: 112d981df07e6ab43a72583996bd6722,
+        type: 2}
+      propertyPath: slotsY
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 112d981df07e6ab43a72583996bd6722, type: 2}
   m_IsPrefabParent: 0
@@ -467,6 +477,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1492696762}
   efxSource: {fileID: 1492696761}
+  MusicVolSlider: {fileID: 0}
+  EfxVolSlicer: {fileID: 0}
   lowPitchLimit: 0.95
   highPitchLimit: 1.05
 --- !u!4 &1492696764
