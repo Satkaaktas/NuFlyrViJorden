@@ -132,6 +132,19 @@ public class ExampleVariableStorage : VariableStorageBehaviour
 
         return variables[variableName];
     }
+    public List<string> GetVariableNames()
+    {
+        List<string> variableNames = new List<string>();
+
+        Dictionary<string, Yarn.Value>.KeyCollection keyColl = variables.Keys;
+
+        foreach (string s in keyColl)
+        {
+            variableNames.Add(s);
+        }
+
+        return variableNames;
+    }
 
     /// Erase all variables
     public override void Clear()
