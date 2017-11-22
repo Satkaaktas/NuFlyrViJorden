@@ -10,7 +10,7 @@ public class Inventory : MonoBehaviour {
     //List of items visualised in inventorySlots
     public List<Item> inventorySlots = new List<Item>();
 
-    public AudioClip invOpenSound, invCloseSound;
+    private AudioClip invOpenSound, invCloseSound;
 
     //reference to database
     private ItemDatabase database;
@@ -82,11 +82,13 @@ public class Inventory : MonoBehaviour {
 
         //-----------------------------------------    TILLSVIDARE Lägger till och ta bort item i inventory ------------------------------------------------
 
-        if (Input.GetKeyDown(KeyCode.Keypad1) && indexitem <= 2 && indexitem >= 0)
+        if (Input.GetKeyDown(KeyCode.Keypad1) && indexitem < 1 && indexitem >= 0)
         {
-            inventory[indexitem] = database.items[indexitem];
-            indexitem++;
-            Debug.Log("Item added. indexitem = " + indexitem);
+                inventory[indexitem] = database.items[indexitem];
+                indexitem++;
+                Debug.Log("Item added. indexitem = " + indexitem);
+
+
         }
         
         if (Input.GetKeyDown(KeyCode.Keypad2) && indexitem >= 1 && indexitem <= 3)
@@ -148,6 +150,11 @@ public class Inventory : MonoBehaviour {
             inventory[removeIndex] = new Item();
         }
 
+    }
+
+    public void AddItem(Item item)
+    {
+        
     }
 
     //Stina Hedman
