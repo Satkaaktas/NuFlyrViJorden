@@ -4,10 +4,9 @@ using UnityEngine.UI;
 using System.Text;
 using System.Collections.Generic;
 using Yarn.Unity;
-
+/*Modified by Björn Andersson && Timmy Alvelöv*/
 public class DialogueUI : Yarn.Unity.DialogueUIBehaviour
 {
-
     /// The object that contains the dialogue and the options.
     /** This object will be enabled when conversation starts, and 
      * disabled when it ends.
@@ -50,9 +49,12 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour
 
     TextColorChanger tCC;
 
+    PauseGame pG;
+
     void Awake()
     {
         // Start by hiding the container, line and option buttons
+        pG = FindObjectOfType<PauseGame>();
         tCC = FindObjectOfType<TextColorChanger>();
         if (dialogueContainer != null)
             dialogueContainer.SetActive(false);
@@ -80,7 +82,6 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour
             lastLine = line.text;
             // Display the line one character at a time
             var stringBuilder = new StringBuilder();
-
             foreach (char c in line.text)
             {
                 if (c == '¤')
@@ -94,31 +95,47 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour
                 else
                 {
                     yield return new WaitForSeconds(textSpeed);
-                    string finalLine = "";
                     if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
                     {
+                        stringBuilder = new StringBuilder();
                         skipping = true;
                         foreach (char c2 in line.text)
                         {
                             if (c2 != '¤' && c2 != '%')
-                                finalLine += c2;
+                            {
+                                stringBuilder.Append(c2);
+                            }
                         }
-                        lineText.text = finalLine;
+                        lineText.text = stringBuilder.ToString();
+                        lastLine = stringBuilder.ToString();
 
                         break;
                     }
                     else
                     {
-                        stringBuilder.Append(c);
+                        if (c != '#' && c != '¤')
+                        {
+                            stringBuilder.Append(c);
+                        }
                         lineText.text = stringBuilder.ToString();
+                        lastLine = stringBuilder.ToString();
                     }
                 }
             }
         }
         else
         {
+            string finalLine = "";
             // Display the line immediately if textSpeed == 0
-            lineText.text = line.text;
+            foreach (char c in line.text)
+            {
+                if (c != '¤' && c != '%')
+                {
+                    finalLine += c;
+                }
+            }
+            lineText.text = finalLine;
+            lastLine = finalLine;
         }
         // Show the 'press any key' prompt when done, if we have one
         if (continuePrompt != null)
@@ -130,7 +147,6 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour
             skipping = false;
             yield return null;
         }
-
         // Hide the text and prompt
         lineText.gameObject.SetActive(false);
 
@@ -202,7 +218,7 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour
     public override IEnumerator DialogueStarted()
     {
         Debug.Log("Dialogue starting!");
-
+        pG.CanPause = false;
         // Enable the dialogue controls.
         if (dialogueContainer != null)
             dialogueContainer.SetActive(true);
@@ -219,6 +235,7 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour
     /// Called when the dialogue system has finished running.
     public override IEnumerator DialogueComplete()
     {
+        pG.CanPause = true;
         Debug.Log("Complete!");
 
         // Hide the dialogue interface.
