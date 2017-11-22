@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Yarn.Unity;
+using UnityEngine.AI;
 
-                                                                /*By Björn Andersson && Timmy Alvelöv*/
+/*By Björn Andersson && Timmy Alvelöv*/
 
 public interface IInteractable              //Ser till att spelaren kan interagera med både föremål och NPCs via samma interface
 {
@@ -23,19 +24,33 @@ public class NPCScript : MonoBehaviour, IInteractable
     [SerializeField]
     Material highlightMat;
 
-    [SerializeField]
     DialogueRunner dR;
+
+    NavMeshAgent agent;
+
+    Animator anim;
 
     void Start()
     {
+        anim = GetComponent<Animator>();
+        agent = GetComponent<NavMeshAgent>();
         myMat = GetComponent<Renderer>().material;
-        //dR = GameObject.Find("DialogueManager").GetComponent<DialogueRunner>();
-        //dR = FindObjectOfType<DialogueRunner>();
+        if (agent.destination != null)
+        {
+            anim.SetBool("isWalking", true);
+        }
+        dR = FindObjectOfType<DialogueRunner>();
     }
 
     public void DoAction()          //Initierar en dialog mellan spelaren och NPCn
     {
-        GameObject.Find("PlayerPrefab").GetComponent<PlayerControls>().CurrentInteractable = null;      
+        anim.SetBool("isWalking", false);
+        FindObjectOfType<DialogueRunner>().CurrentAgent = GetComponent<NavMeshAgent>();
+        if (!agent.isStopped)
+        {
+            agent.isStopped = true;
+        }
+        GameObject.Find("PlayerPrefab").GetComponent<PlayerControls>().CurrentInteractable = null;
         dR.SetDialogue(myDialogueNode);
     }
 

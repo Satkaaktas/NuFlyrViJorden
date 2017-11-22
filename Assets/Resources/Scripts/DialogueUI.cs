@@ -108,7 +108,6 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour
                         }
                         lineText.text = stringBuilder.ToString();
                         lastLine = stringBuilder.ToString();
-
                         break;
                     }
                     else
@@ -228,7 +227,6 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour
         {
             gameControlsContainer.gameObject.SetActive(false);
         }
-
         yield break;
     }
 
@@ -236,6 +234,7 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour
     public override IEnumerator DialogueComplete()
     {
         pG.CanPause = true;
+        GetComponent<DialogueRunner>().CurrentAgent = null;
         Debug.Log("Complete!");
 
         // Hide the dialogue interface.
@@ -247,7 +246,6 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour
         {
             gameControlsContainer.gameObject.SetActive(true);
         }
-
         yield break;
     }
 
