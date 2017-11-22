@@ -4,11 +4,11 @@ colorID: 0
 position: 622,2186
 ---
 <<ChangePortrait Portrait UI_Portrait_Norbert>>
-"Hello Laura, Dottie. May I come in?"
+%"Hello Laura, Dottie. May I come in?"
 <<ChangePortrait Portrait UI_Portrait_Laura>> 
-¤"Norbert. Of course, come in!" Laura is quickly roused from her rumination
+¤"Norbert. Of course, come in!" Laura is quickly roused from her rumination.
 <<ChangePortrait Portrait UI_Portrait_Dottie>>
-%"Hi Norb!" Dottie looks up at Norbert and greets him with a nod and then quickly switches her attention back to the toy
+%"Hi Norb!" Dottie looks up at Norbert and greets him with a nod and then quickly switches her attention back to the toy.
 <<ChangePortrait Portrait UI_Portrait_Laura>>
 ¤"What can I do for you?" Laura takes a few steps toward Norbert as he comes in.
 <<ChangePortrait Portrait UI_Portrait_Norbert>>
@@ -41,7 +41,7 @@ position: 622,2186
 %“Well don’t even think of getting involved with the wrong crowd! The streets are rife with opportunist scum just looking for people in a pinch to squeeze dry. They use you just as much as they use the system!”
 <<ChangePortrait Portrait UI_Portrait_Laura>>
 [[I won’t stoop that low.|RightChoices]]
-[[Don't Worry, I know a guy|KnowAGuy]]
+[[Don't worry, I know a guy.|KnowAGuy]]
 ===
 title: RightChoices
 tags: 
@@ -50,7 +50,7 @@ position: 262,2540
 ---
 ¤“I do what I have to, but I won’t stoop that low.”
 <<ChangePortrait Portrait Norbert>>%
-“Whatever you do I’m sure you’ll make the right choices.”
+%“Whatever you do I’m sure you’ll make the right choices.”
 Norbert gives you a comforting smile, but the concern in his eyes is obvious.
 
 ===
@@ -60,10 +60,10 @@ colorID: 0
 position: 948,2572
 ---
 ¤“I actually know a guy and if he can do anything to help me I couldn’t care any less about what he does for a living!” Laura sighs. “Don’t worry, Norbert. I can take care of myself, and I would never put Dottie in harm’s way.”
-<<ChangePortrait Portrait Norbert>>%
-“Oh, is that so? Its Carl isn’t it? I knew he was up to no good!” Norbert expression is a mix of resentment and fear.
-<<ChangePortrait Portrait Laura>>¤
-“What? No, of course not! Carl is like… twelve years old!” Laura gives Norbert a reassuring smile. “Don’t worry it’s no one from this place. He goes by the name ‘Snake’. Some outsider, totally non-threatening. I’ll stay out of trouble. I promise!”
-<<ChangePortrait Portrait Norbert>>%
-“Well… Just promise me you go see Bobby and don’t do anything stupid.” Norbert lets out a deep sigh. “Whatever you do I’m sure you’ll make the right choices.” Norbert gives you a comforting smile, but the concern in his eyes is obvious.
+<<ChangePortrait Portrait Norbert>>
+%“Oh, is that so? Its Carl isn’t it? I knew he was up to no good!” Norbert expression is a mix of resentment and fear.
+<<ChangePortrait Portrait Laura>>
+¤“What? No, of course not! Carl is like… twelve years old!” Laura gives Norbert a reassuring smile. “Don’t worry it’s no one from this place. He goes by the name ‘Snake’. Some outsider, totally non-threatening. I’ll stay out of trouble. I promise!”
+<<ChangePortrait Portrait Norbert>>
+%“Well… Just promise me you go see Bobby and don’t do anything stupid.” Norbert lets out a deep sigh. “Whatever you do I’m sure you’ll make the right choices.” Norbert gives you a comforting smile, but the concern in his eyes is obvious.
 ===

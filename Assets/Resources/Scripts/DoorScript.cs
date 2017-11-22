@@ -17,6 +17,10 @@ public class DoorScript : MonoBehaviour {
     Color tempColor;
     int childs;
 
+    [SerializeField]
+    SaveLoad saveLoad;
+
+    public bool inBool;
 
     void Start()
     {
@@ -33,17 +37,32 @@ public class DoorScript : MonoBehaviour {
         {
             roof.SetActive(false);
             ShowWalls(false);
+            inBool = true;
         }
         else if (inOut == outColl)
         {
             roof.SetActive(true);
             ShowWalls(true);
+            inBool = false;
         }
         else
         {
             print("nu har nåt gått fel här.");
         }
     }
+
+    public void WalkThroughDoor(bool inBool)
+    {
+        if (inBool)
+        {
+            WalkThroughDoor(inColl);
+        }
+        else
+        {
+            WalkThroughDoor(outColl);
+        }
+    }
+
     void ShowWalls(bool showWalls)         //Gömmer och visar väggar när spelaren går in och ut ur hus
     {
         
