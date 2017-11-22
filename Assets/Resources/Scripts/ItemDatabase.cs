@@ -9,7 +9,9 @@ public class ItemDatabase : MonoBehaviour {
 
     private void Start()
     {
-        items.Add(new Item("Larva Drug", 0, "Crushed Larva"));
+        items.Add(new Item("Larva Drug",0 , "Crushed Larva."));
+        items.Add(new Item("Syringe", 1, "Syringe for injecting drugs."));
+        items.Add(new Item("Vaccine", 2, "Vaccine against diseases."));
     }
 }
 

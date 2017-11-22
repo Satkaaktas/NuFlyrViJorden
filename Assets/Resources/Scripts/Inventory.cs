@@ -21,9 +21,9 @@ public class Inventory : MonoBehaviour {
 
     public static Inventory instance;
 
-    //-----------------------------------------    TILLSVIDARE   ------------------------------------------------
+    //-----------------------------------------    TILLSVIDARE   ------------------------------------------------------------------------------------------------------------------------------
     int indexitem = 0;
-    //-----------------------------------------    TILLSVIDARE   -------------------------------------------------
+    //-----------------------------------------    TILLSVIDARE   ------------------------------------------------------------------------------------------------------------------------------
 
     private void Awake()
     {
@@ -80,7 +80,7 @@ public class Inventory : MonoBehaviour {
             }
         }
 
-        //-----------------------------------------    TILLSVIDARE Lägger till och ta bort item i inventory ------------------------------------------------
+        //-----------------------------------------    TILLSVIDARE Lägger till och ta bort item i inventory ---------------------------------------------------------------
 
         if (Input.GetKeyDown(KeyCode.Keypad1) && indexitem < 1 && indexitem >= 0)
         {
@@ -98,7 +98,7 @@ public class Inventory : MonoBehaviour {
             Debug.Log("item removed. indexitem = " + indexitem);
         }
 
-        //-----------------------------------------    TILLSVIDARE   ------------------------------------------------
+        //-----------------------------------------    TILLSVIDARE   -------------------------------------------------------------------------------------------------------
     }
 
     //creates inventory if Inventorykey is pressed.
@@ -152,9 +152,11 @@ public class Inventory : MonoBehaviour {
 
     }
 
+
+    //OM MAN BARA SPARAR ID KAN VI LÄGGA TILL ITEM via database.items[ID] <------------------------------------------------------------------------------------------------------------------------------
     public void AddItem(Item item)
     {
-        
+        inventory.Add(item);
     }
 
     //Stina Hedman
