@@ -1,9 +1,9 @@
-title: Exiled
+title: Exiled.yarn
 tags: 
 colorID: 0
 position: 540,260
 ---
-<<if $Exiled != true >>
+<<if $Exiled is false >>
     <<set $Exiled to true>>
     <<ChangePortrait Portrait UI_Portrait_Exiled>>
     %"...So... things aren't looking very rosy in The Projects. Not enough medical personnel, not enough supplies. People are worn out thin and sick as fuck!" he wags his head, wide-eyed.
@@ -20,5 +20,7 @@ position: 540,260
         <<ChangePortrait Portrait UI_Portrait_Exiled>>
         %"I'm not upset!!" he keeps on walking, the voice fading "I'm not ... " burying his face in his palms "Oh god.. what am I gonna do here... " his voice fades as looks about the square in despair.    
     ->"....." she says nothing, getting out of their path.
+<<else>>
+...
 <<endif>>
 ===
