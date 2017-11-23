@@ -8,9 +8,6 @@ public class ItemDatabase : MonoBehaviour {
     public List<Item> items = new List<Item>();
 
     public List<Item> Items
-    {
-        get { return this.items; }
-    }
 
     private void Start()
     {

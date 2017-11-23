@@ -33,12 +33,6 @@ public class SoundManager : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
     }
 
-    private void Start()
-    {
-        //REFERENS TILL SLIDER 1 <-----------------------------------------------------------------------------------------------------------------------------------------------------------
-        //REFERENS TILL SLIDER 2 <-----------------------------------------------------------------------------------------------------------------------------------------------------------
-    }
-
     // used to play single soundclips.
     public void PlaySingle(AudioClip clip)
     {
