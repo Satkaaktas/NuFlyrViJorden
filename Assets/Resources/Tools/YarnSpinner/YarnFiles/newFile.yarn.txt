@@ -30,12 +30,4 @@ jag vill sjunga ett solo också, går det bra eller brush?
 walla phil-boii sa att du ska snacka med brushan inne i huset
 <<ChangePortrait Portrait JonPortrait>>
 ¤Jahaja, jag får väl göra det då...
-[[lol.yarn]]
-===
-title: lol.yarn
-tags: 
-colorID: 0
-position: 402,-192
----
-Hallå hej!
 ===
