@@ -16,7 +16,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Environment_Rock_01_Material
-    second: {fileID: 2100000, guid: 7a5e66bd9081fee4f86b2cc0c308f5a9, type: 2}
+    second: {fileID: 2100000, guid: a5db8731cf16bf3439ae5e88cbd456dc, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -88,7 +88,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

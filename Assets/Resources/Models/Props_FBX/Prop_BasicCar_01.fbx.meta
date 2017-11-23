@@ -16,7 +16,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Prop_BasicCar_01_Material
-    second: {fileID: 2100000, guid: 188938376a0f5184f93aec33bc64732a, type: 2}
+    second: {fileID: 2100000, guid: 6544b9d9ec3935845b24a0fc84844003, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -88,7 +88,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
