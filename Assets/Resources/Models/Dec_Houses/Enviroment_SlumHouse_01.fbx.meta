@@ -16,7 +16,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Enviroment_SlumHouse_01_material
-    second: {fileID: 2100000, guid: 00edca510e71fd941a5f32ee2f8b8154, type: 2}
+    second: {fileID: 2100000, guid: a6131b849c1c14143bb6fdbdb97addfb, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -69,7 +69,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
@@ -88,7 +88,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

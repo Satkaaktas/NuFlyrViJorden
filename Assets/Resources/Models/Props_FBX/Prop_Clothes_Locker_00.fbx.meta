@@ -18,7 +18,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Prop_Clothes_Locker_00_Material
-    second: {fileID: 2100000, guid: 522aa7572475ebd4baf186de284014b9, type: 2}
+    second: {fileID: 2100000, guid: 541c75a07ac6d1147b741cc2af3b179a, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -90,7 +90,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
