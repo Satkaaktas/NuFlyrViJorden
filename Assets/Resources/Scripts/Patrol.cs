@@ -29,7 +29,7 @@ public class Patrol : MonoBehaviour
     void GotoNextPoint()
     {
         // Returns if no points have been set up
-        if (points.Length == 0)
+        if (points.Length < 1)
             return;
 
         // Set the agent to go to the currently selected destination.
