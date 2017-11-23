@@ -1,7 +1,7 @@
-title: Bobby_FirstApproach
+title: Bobby.yarn
 tags: 
 colorID: 0
-position: 297,263
+position: 294,263
 ---
 <<if $Bobby_FirstApproach is false>>
     <<set $Bobby_FirstApproach to true>>
@@ -37,7 +37,7 @@ position: 123,604
 title: Bobby_Flirt
 tags: 
 colorID: 0
-position: 518,594
+position: 367,608
 ---
 <<ChangePortrait Portrait UI_Portrait_Bobby>>
 %Bobby shuffles his boots uncomfortably and avoids looking directly at Laura. “... Thanks. This job sure has its perks. So, what brings you to District Square today, surely not to fool around with some Enforcer? I ain't that dumb anymore.”
@@ -48,7 +48,7 @@ position: 518,594
 title: Bobby_Sorry
 tags: 
 colorID: 0
-position: 857,845
+position: 635,604
 ---
 <<ChangePortrait Portrait UI_Portrait_Bobby>>
 %Bobby's tone has changed as he responds: “Oh, now you're sorry?” He pauses, checking his gun. “Well, I don't do charity, and I sure won't do anything for old times sake. But there is one thing you can help me with first. My boss ain't happy about how the smugglers are gaining influence in the Projects. Drugs show up in the wrong places. You get me the name of their distribution leader, then I'll help you with whatever you need.”
@@ -74,7 +74,7 @@ position: 372,861
 title: Bobby_Silent
 tags: 
 colorID: 0
-position: 106,1097
+position: 61,891
 ---
 <<ChangePortrait Portrait UI_Portrait_Bobby>>
 %Bobby stands silent a while, watching the children argue as the toy breaks after hitting the Projects wall. With a sigh he shifts his gaze back to Laura. “Fine! God damnit! Fuck you Laura. You always knew which buttons to push... I’ll help you. But I'm not leaving empty handed this time. I’ll need something from you first. My superiors are unhappy about the smugglers advances and the investigation is going slowly. With your way around people I'm sure you can get me the name of their distribution leader.”
@@ -87,7 +87,7 @@ position: 106,1097
 title: Bobby_Friendly
 tags: 
 colorID: 6
-position: -880,181
+position: -588,139
 ---
 <<ChangePortrait Portrait UI_Portrait_Bobby>>
 %“Hi again Laura, got any progress?”
@@ -99,7 +99,7 @@ position: -880,181
 title: Bobby_Neutral
 tags: 
 colorID: 0
-position: -514,172
+position: -191,443
 ---
 <<ChangePortrait Portrait UI_Portrait_Bobby>>
 %“Made up your mind yet Laura? I don't have time to stand here talking all day. Doesn't look good to my superiors either.”
@@ -111,7 +111,7 @@ position: -514,172
 title: Bobby_Hostile
 tags: 
 colorID: 0
-position: -189,173
+position: -126,-57
 ---
 <<ChangePortrait Portrait UI_Portrait_Bobby>>
 %Bobby ignores your approach and keeps watching the District square.
@@ -119,7 +119,7 @@ position: -189,173
 title: Bobby_Reminder
 tags: 
 colorID: 0
-position: -1022,470
+position: -730,428
 ---
 <<ChangePortrait Portrait UI_Portrait_Bobby>>
 %“You really forgot or did you just miss me? I need the name of the smugglers distribution leader. This shouldn't be too hard for you.”
@@ -127,7 +127,7 @@ position: -1022,470
 title: Bobby_SmugglerName
 tags: 
 colorID: 0
-position: -755,485
+position: -463,443
 ---
 <<ChangePortrait Portrait UI_Portrait_Bobby>>
 %Bobby brightens up and gives Laura a big smile. “Great! I knew I could count on you, I'll get you into the Projects tomorrow, dont worry. Sleep tight.”
