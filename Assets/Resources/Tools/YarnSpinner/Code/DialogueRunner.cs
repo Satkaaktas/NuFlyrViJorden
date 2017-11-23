@@ -86,7 +86,7 @@ namespace Yarn.Unity
         public NavMeshAgent CurrentAgent
         {
             get { return this.currentAgent; }
-            set { if (value == null) { currentAgent.isStopped = false; if (currentAgent.destination != null && currentAgent.GetComponent<Patrol>().Points.Length > 0) currentAgent.GetComponent<Animator>().SetBool("isWalking", true); } this.currentAgent = value; }
+            set { if (value == null) { currentAgent.isStopped = false; if (currentAgent.destination != null) currentAgent.GetComponent<Animator>().SetBool("isWalking", true); } this.currentAgent = value; }
         }
 
         PlayerControls player;
