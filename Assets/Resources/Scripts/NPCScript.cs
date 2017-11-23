@@ -30,12 +30,17 @@ public class NPCScript : MonoBehaviour, IInteractable
 
     Animator anim;
 
+    public Animator Anim
+    {
+        get { return this.anim; }
+    }
+
     void Start()
     {
         anim = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         myMat = GetComponent<Renderer>().material;
-        if (agent.destination != null)
+        if (agent.destination != null && GetComponent<Patrol>().Points.Length > 0)
         {
             anim.SetBool("isWalking", true);
         }

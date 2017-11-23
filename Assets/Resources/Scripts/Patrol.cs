@@ -13,10 +13,18 @@ public class Patrol : MonoBehaviour
     private int destPoint = 0;
     private NavMeshAgent agent;
 
+    public Transform[] Points
+    {
+        get { return this.points; }
+    }
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-
+        if(points.Length < 0)
+        {
+            GetComponent<NPCScript>().Anim.SetBool("isWalking", false);
+        }
         // Disabling auto-braking allows for continuous movement
         // between points (ie, the agent doesn't slow down as it
         // approaches a destination point).
