@@ -1,0 +1,24 @@
+title: Patient3.yarn
+tags: 
+colorID: 0
+position: 1208,248
+---
+<<ChangePortrait Portrait UI_Portrait_Patient3>>
+%"I need some juice... some... " he bends over, leaning on his knees and starts coughing, clearing his throat harshly, loudly. The substance he expelled was thick and gooey, almost black. "Some juice... to get me through the day. To make me well again... " he lifts the head, looking at the queue before him, frowning. 
+<<ChangePortrait Portrait UI_Portrait_MedicalPersonnel>>
+%"Antioxidants are rationed both according to need and supply" he recites in a monotone voice, as if repeating it for the hundredth time. "If you've received your weekly rations, additional dosage can not and will not be administered" his eyes remain fixed on the lamenting one, a slightly troubled frown breaking through the deadpan expression.
+<<ChangePortrait Portrait UI_Portrait_Patient3>>
+%"But what am I supposed to do?!" he cries out, spreading his arms, showing palms. "Go out and find some bloody berries...?" he shook his head, in visible and audible despair. "The mosquitoes will eat me alive!" 
+<<ChangePortrait Portrait UI_Portrait_MedicalPersonnel>>
+%"Go out and find some bl. .  some berries..... yes" he confirms and nods, barely. 
+<<ChangePortrait Portrait UI_Portrait_Patient3>>
+%He stood there for a long moment until a primal cry starts to build in his throat, in his broken lungs. "...aAaAAaaARRrRRgGGHH!!!" with newfound strength he pushed the nearest person in queue and ran off, away from the crowds. 
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+->"Is there really no way to help these people?" she looked to the young man in a dusty white lab coat. "Can you not synthesize enough? Do you lack raw materials? This can't be the case.. " she shook her head.
+    <<ChangePortrait Portrait UI_Portrait_MedicalPersonnel>>
+    %"We need more of the appropriate biomatter to coat the chemicals with. They cannot be absorbed otherwise. The body cannot use them.. " his head slowly turns to Laura, it seems like he is reciting, repeating yet again. 
+    <<ChangePortrait Portrait UI_Portrait_Laura>>
+    ->"I have some alg.... hh h sh .. stored away... " most of the sentence is inaudible and her voice fades away as she recalls she has other, pressing matters to attend to. After a short pause of peering at the dust on the ground, she lifts her gaze. "I .. I see.." and shrugs lightly, moving on, immersed in thought.
+    ->"I seeee... " she stood there for a long moment, with her mouth ajar. "Oh well.. " she shrugs lightly and moves on.
+->She said nothing and went about her business.
+===

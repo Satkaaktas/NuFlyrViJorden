@@ -1,0 +1,43 @@
+title: Norbert.yarn
+tags: 
+colorID: 0
+position: 540,260
+---
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+¤“I wanted to ask you something.”
+[[Norbert_Ask]]
+===
+title: Norbert_Ask
+tags: 
+colorID: 0
+position: 539,534
+---
+<<ChangePortrait Portrait UI_Portrait_Norbert>>
+%“What is it?”
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+->“What makes you think Bobby is willing to help?”
+    <<ChangePortrait Portrait UI_Portrait_Norbert>>
+    %“He is a good lad, he will do what is right! Besides, he really likes you, even now. I´m sure of it!”
+    <<ChangePortrait Portrait UI_Portrait_Laura>>
+    ¤“I´m not to sure. But how do you suppose he could get me through the checkpoint?”
+    <<ChangePortrait Portrait UI_Portrait_Norbert>>
+    %“Well, he is stationed there. I´m sure he knows someone who can help if he can´t get you through himself. I think it´s your best bet.”
+    <<ChangePortrait Portrait UI_Portrait_Laura>>
+    ->“Maybe you are right. There was something else I wanted to ask you.”
+        [[Norbert_Ask]]
+    ->“Ok. I better be going.”
+->“Do you know anything more about the med-van and what's going on at the square?”
+    <<ChangePortrait Portrait UI_Portrait_Norbert>>
+    %“They started something new. Handing out stuff for free, pretending to care. I wouldn’t bother. They don’t care about any of us regular folk.” Norbert let’s out a deep sigh. “I heard Tammy and Sam talking about it though. Maybe they know more.”
+    <<ChangePortrait Portrait UI_Portrait_Laura>>
+    ->“I see. There was something else I wanted to ask you.”
+        [[Norbert_Ask]]
+    ->“Ok. I better be going.”
+->“Aren´t the smugglers getting through the checkpoint?”
+    <<ChangePortrait Portrait UI_Portrait_Norbert>>
+    %“Yeah, well... probably! But don’t you get mixed up with them! It will only make things worse. They are not willing to do any charity work.”
+    ->“Don’t worry. I can take care of myself. There was something else I wanted to ask you.” 
+        [[Norbert_Ask]]
+    ->“Don’t worry. I can take care of myself. I better be going.” [LEAVE]
+->“Nevermind.” [LEAVE]
+===

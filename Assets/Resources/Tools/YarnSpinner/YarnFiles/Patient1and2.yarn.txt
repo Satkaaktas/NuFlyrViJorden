@@ -1,0 +1,19 @@
+title: Patient1and2.yarn
+tags: 
+colorID: 0
+position: 901,255
+---
+<<if $Patient1and2 != true>>
+    <<set $Patient1and2 to true>>
+    <<ChangePortrait Portrait UI_Portrait_Patient1>>
+    %She hops in place, somewhere in between being neurotic and ecstatic "I know it's gonna be right this time! I know it has to be right... They can't make the same mistake twice!" 
+    <<ChangePortrait Portrait UI_Portrait_Patient2>>
+    %She just stood there, watching her with a dullness about her facial features. 
+    <<ChangePortrait Portrait UI_Portrait_Patient1>>
+    %"They're gonna hand me the test... and it will say: "This is your ticket, honey. Come join us where you belong. Come and leave this ... " she looks to the side, sadness and angst creeping up on her face ".. hellhole behind. This cesspool of mankind.. " her voice fades in favour of troubling thoughts. 
+    <<ChangePortrait Portrait UI_Portrait_Patient2>>
+    %"Ssuuuuure they are, love... sssuuure they are... " the apathetic one replies, just watching her interlocutor, soaking in her every move and expression as her own remains unchanged. 
+    <<ChangePortrait Portrait UI_Portrait_Laura>>
+    ¤"....." she stood in place, not feeling a need to inquire about anything nor interject, before moving on.
+<<endif>>
+===

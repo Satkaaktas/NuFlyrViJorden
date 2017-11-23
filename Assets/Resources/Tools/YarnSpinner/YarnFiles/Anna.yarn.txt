@@ -1,0 +1,8 @@
+title: Anna.yarn
+tags: 
+colorID: 0
+position: 1561,245
+---
+<<ChangePortrait Portrait UI_Portrait_Anna>>
+%“I can’t imagine what I would do in your stead. We will do anything to help. Just ask.”
+===

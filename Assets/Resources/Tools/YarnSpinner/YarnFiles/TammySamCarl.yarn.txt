@@ -1,0 +1,19 @@
+title: TammySamCarl.yarn
+tags: 
+colorID: 0
+position: 876,253
+---
+<<ChangePortrait Portrait UI_Portrait_Tammy>>
+%“Laura, sweetheart. How can we help?”
+<<ChangePortrait Portrait UI_Portrait_Sam>>
+%“Anything, Laura. All you gotta do is ask.”
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+->“Thank you. I’ll remember that. Do you know anything about the Paragon staff are doing at the square?”
+    <<ChangePortrait Portrait UI_Portrait_Tammy>>
+    %“Well, I heard they're handing out some kind of vaccine. Natasha already went there with Nick. She told us your doctor is there. Maybe he can help you?”
+    <<ChangePortrait Portrait UI_Portrait_Sam>>
+    %“We’re actually planning on going there later today! It all sounds pretty good.”
+    <<ChangePortrait Portrait UI_Portrait_Laura>>
+    ¤“Thanks guys. Maybe I’ll check it out.”
+->“Thank you guys. It means a lot. I better be on my way.”
+===

@@ -1,0 +1,26 @@
+title: Exiled.yarn
+tags: 
+colorID: 0
+position: 540,260
+---
+<<if $Exiled is false >>
+    <<set $Exiled to true>>
+    <<ChangePortrait Portrait UI_Portrait_Exiled>>
+    %"...So... things aren't looking very rosy in The Projects. Not enough medical personnel, not enough supplies. People are worn out thin and sick as fuck!" he wags his head, wide-eyed.
+    <<ChangePortrait Portrait UI_Portrait_Aquaintence>>
+    %"But that's not why they threw you out, eh?" she walks alongside him, studying his face. Her expression is mostly flat.
+    <<ChangePortrait Portrait UI_Portrait_Exiled>>
+    %"No ... it's not ... " he still walks, looking to the ground, immersed in thought "... but it's good that they did. At least out here I can fend for myself... instead of waiting for them to provide the bare necessities. D'you know how many people I've seen coughing their lungs out?" he raised his brows to her, before turning to Laura as she was in their path. 
+    <<ChangePortrait Portrait UI_Portrait_Laura>>
+    ->"Guess it's all the same, more or less... unless you're in the inner circles.. " she pauses, eying both interlocutors.
+        <<ChangePortrait Portrait UI_Portrait_Exiled>>
+        %"The fuck are you?" he says with a dire frown. "Git outta my face!" waving a hand upward dismissively, almost hitting her as it flew by her nose. 
+        <<ChangePortrait Portrait UI_Portrait_Aquaintence>>
+        %"Excuse him... " she looks back to Laura and Dottie as they went past. "He's a bit upset... having lost his ... privileges... " 
+        <<ChangePortrait Portrait UI_Portrait_Exiled>>
+        %"I'm not upset!!" he keeps on walking, the voice fading "I'm not ... " burying his face in his palms "Oh god.. what am I gonna do here... " his voice fades as looks about the square in despair.    
+    ->"....." she says nothing, getting out of their path.
+<<else>>
+...
+<<endif>>
+===

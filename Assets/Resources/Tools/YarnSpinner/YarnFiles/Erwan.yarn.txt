@@ -1,0 +1,35 @@
+title: Erwan.yarn
+tags: 
+colorID: 0
+position: 1230,246
+---
+<<ChangePortrait Portrait UI_Portrait_Erwan>>
+%“What can I do for you?”
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+->“Gotten yourself into any trouble lately?” Laura smiles teasingly.
+    <<ChangePortrait Portrait UI_Portrait_Erwan>>
+    %“Heh. Not at all. I caught that no-good ‘Snake’ guy creeping around outside here, though. Made sure he knew he isn’t welcome here.”
+    <<ChangePortrait Portrait UI_Portrait_Laura>>
+    ¤“Really? When?”
+    <<ChangePortrait Portrait UI_Portrait_Erwan>>
+    %“Few hours ago. You in any trouble?”
+    <<ChangePortrait Portrait UI_Portrait_Laura>>
+    ->“No, no. It’s nothing. Do you know where he hangs out, though?”
+        <<ChangePortrait Portrait UI_Portrait_Erwan>>
+        %“Hm.” Erwan studies Laura with hesitation. “His kind hangs out to the north of here, but you probably already knew that. That’s no place for a honest guy to be”.
+        <<ChangePortrait Portrait UI_Portrait_Laura>>
+        ¤“Don’t worry. I can take care of myself. Thanks!”
+        [[Erwan_Leave]]
+    ->“Not at all. No worries.”
+        [[Erwan_Leave]]
+->“Nevermind.”
+    [[Erwan_Leave]]
+===
+title: Erwan_Leave
+tags: 
+colorID: 0
+position: 1245,499
+---
+<<ChangePortrait Portrait UI_Portrait_Erwan>>
+%“If you ever get into any trouble, just come and find me, okay?”
+===
