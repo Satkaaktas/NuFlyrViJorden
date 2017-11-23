@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-                                                     /*By Björn Andersson && Timmy Alvelöv*/
+/*By Björn Andersson && Timmy Alvelöv*/
 public class CameraBehaviour : MonoBehaviour
 {
     [SerializeField]
@@ -33,13 +33,18 @@ public class CameraBehaviour : MonoBehaviour
         else if (following && !waiting)
         {
 
-            Vector3 targetPos = player.transform.position + offset;             
+            Vector3 targetPos = player.transform.position + offset;
             transform.position = Vector3.Lerp(gameObject.transform.position, targetPos, speed);             //Följer efter spelaren utan att hinna ikapp direkt
             if (Vector3.Distance(transform.position, targetPos) < 0.2f)
             {
                 following = false;
             }
         }
+    }
+
+    public void SetFollow()
+    {
+        transform.position = player.transform.position + offset;
     }
 
     IEnumerator FollowWait()           //Väntar en stund innan den börjar följa spelaren

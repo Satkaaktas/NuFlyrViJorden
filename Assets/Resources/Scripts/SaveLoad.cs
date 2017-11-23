@@ -6,9 +6,21 @@ using System;
 
 public class SaveLoad : MonoBehaviour
 {
-    public ExampleVariableStorage storage;
-    public string file = "SaveFile";
-    public Transform playerTransform;
+
+    [SerializeField]
+    ExampleVariableStorage storage;
+
+    [SerializeField]
+    string file = "SaveFile";
+
+    [SerializeField]
+    Transform playerTransform;
+
+    [SerializeField]
+    CameraBehaviour cameraBehaviour;
+
+    public List<DoorScript> doors;
+
 
 
     private void Update()
@@ -28,7 +40,11 @@ public class SaveLoad : MonoBehaviour
     {
         using (StreamWriter sw = new StreamWriter(file, false))
         {
-            sw.WriteLine(playerTransform.position.x + " " + playerTransform.position.y + " " + playerTransform.position.z);
+            sw.WriteLine("x" + playerTransform.position.x + " " + playerTransform.position.y + " " + playerTransform.position.z);
+            for (int i = 0; i < doors.Count; i++)
+            {
+                sw.WriteLine("I" + i + " " + doors[i].inBool);
+            }
 
             foreach (string s in storage.GetVariableNames())
             {
@@ -70,50 +86,69 @@ public class SaveLoad : MonoBehaviour
                 storage.Clear();
                 while ((line = sr.ReadLine()) != null)
                 {
-                    if (line[0] != Convert.ToChar("$")) //ej en Yarn variabel
+                    switch (line[0])
                     {
-                        //Spelarkaraktärens position
-                        string x = line.Substring(0, line.IndexOf(" "));
-                        string y = line.Substring(line.IndexOf(" ") + 1, line.LastIndexOf(" ") - line.IndexOf(" ") - 1);
-                        string z = line.Substring(line.LastIndexOf(" ") + 1);
+                        case '$': //Yarn Variabel
+                            //Laddar alla Yarn variabler och sparar dem i Variable Storage
+                            string variableName = line.Substring(0, line.IndexOf(" "));
+                            string variableTypeS = line.Substring(line.IndexOf(" ") + 1, line.LastIndexOf(" ") - line.IndexOf(" ") - 1);
+                            Yarn.Value variable = new Yarn.Value();
+                            string variableValue = line.Substring(line.LastIndexOf(" ") + 1);
+                            switch (variableTypeS)
+                            {
+                                case "Number":
+                                    variable = new Yarn.Value(Convert.ToInt32(variableValue));
+                                    variable.type = Yarn.Value.Type.Number;
+                                    break;
+                                case "String":
+                                    variable = new Yarn.Value(variableValue);
+                                    variable.type = Yarn.Value.Type.String;
+                                    break;
+                                case "Bool":
+                                    variable = new Yarn.Value(Convert.ToBoolean(variableValue));
+                                    variable.type = Yarn.Value.Type.Bool;
+                                    break;
+                                case "Variable":
+                                    variable = new Yarn.Value(variableValue);
+                                    variable.type = Yarn.Value.Type.Variable;
+                                    break;
+                                case "null":
+                                    variable.type = Yarn.Value.Type.Null;
+                                    break;
+                                default:
+                                    break;
+                            }
+                            storage.SetValue(variableName, variable);
+                            break;
 
-                        Vector3 pos = new Vector3((float)Convert.ToDouble(x), (float)Convert.ToDouble(y), (float)Convert.ToDouble(z));
+                        case 'x': //Spelarkaraktärens position
+                            string x = line.Substring(1, line.IndexOf(" "));
+                            string y = line.Substring(line.IndexOf(" ") + 1, line.LastIndexOf(" ") - line.IndexOf(" ") - 1);
+                            string z = line.Substring(line.LastIndexOf(" ") + 1);
+                            Vector3 pos = new Vector3((float)Convert.ToDouble(x), (float)Convert.ToDouble(y), (float)Convert.ToDouble(z));
 
-                        playerTransform.position = pos;
+                            playerTransform.position = pos;
+                            cameraBehaviour.SetFollow();
+                            break;
 
-                        continue;
-                    }
+                        case 'I': //Ute/Inne
 
-                    //Laddar alla Yarn variabler och sparar dem i Variable Storage
-                    string variableName = line.Substring(0, line.IndexOf(" "));
-                    string variableTypeS = line.Substring(line.IndexOf(" ") + 1, line.LastIndexOf(" ") - line.IndexOf(" ") - 1);
-                    Yarn.Value variable = new Yarn.Value();
-                    string variableValue = line.Substring(line.LastIndexOf(" ") + 1);
-                    switch (variableTypeS)
-                    {
-                        case "Number":
-                            variable = new Yarn.Value(Convert.ToInt32(variableValue));
-                            variable.type = Yarn.Value.Type.Number;
+                            int doorID = Convert.ToInt32(line.Substring(1, line.IndexOf(" ")));
+                            bool inBool = Convert.ToBoolean(line.Substring(line.LastIndexOf(" ") + 1));
+
+                            for (int i = 0; i < doors.Count; i++)
+                            {
+                                if (i == doorID)
+                                {
+                                    doors[i].WalkThroughDoor(inBool);
+                                }
+                            }
+
                             break;
-                        case "String":
-                            variable = new Yarn.Value(variableValue);
-                            variable.type = Yarn.Value.Type.String;
-                            break;
-                        case "Bool":
-                            variable = new Yarn.Value(Convert.ToBoolean(variableValue));
-                            variable.type = Yarn.Value.Type.Bool;
-                            break;
-                        case "Variable":
-                            variable = new Yarn.Value(variableValue);
-                            variable.type = Yarn.Value.Type.Variable;
-                            break;
-                        case "null":
-                            variable.type = Yarn.Value.Type.Null;
-                            break;
+
                         default:
                             break;
                     }
-                    storage.SetValue(variableName, variable);
                 }
             }
         }

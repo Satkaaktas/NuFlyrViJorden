@@ -30,17 +30,17 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using CsvHelper;
 using UnityEngine.UI;
+using UnityEngine.AI;
 
 namespace Yarn.Unity
 {
-
     [System.Serializable]
     public class LocalisedStringGroup
     {
         public SystemLanguage language;
         public TextAsset[] stringFiles;
     }
-
+    
     /// DialogueRunners act as the interface between your game and YarnSpinner.
     /** Make our menu item slightly nicer looking */
     [AddComponentMenu("Scripts/Yarn Spinner/Dialogue Runner")]
@@ -80,6 +80,14 @@ namespace Yarn.Unity
         /// Our conversation engine
         /** Automatically created on first access
          */
+
+        NavMeshAgent currentAgent;
+
+        public NavMeshAgent CurrentAgent
+        {
+            get { return this.currentAgent; }
+            set { if (value == null) { currentAgent.isStopped = false; if (currentAgent.destination != null) currentAgent.GetComponent<Animator>().SetBool("isWalking", true); } this.currentAgent = value; }
+        }
 
         PlayerControls player;
 
@@ -530,7 +538,7 @@ namespace Yarn.Unity
         /// The conversation has ended.
         public virtual IEnumerator DialogueComplete()
         {
-            // Default implementation does nothing.
+            // Default implementation does nothing.            
             yield break;
         }
     }

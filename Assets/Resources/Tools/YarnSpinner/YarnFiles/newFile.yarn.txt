@@ -3,17 +3,31 @@ tags:
 colorID: 0
 position: 27,-229
 ---
-<<ChangePortrait Portrait PhilPortrait>>
-Jon.
-<<TColor DialogueManager Blue>>
-Tiden är äntligen inne.
+<<ChangePortrait Portrait FreitasPortrait>>
+%walla brush
+phil sa att jag ska stå här
+och låta bli min fidget spinner
+så jag inte kan ha sönder fler saker
+ett badkar har redan råkat illa ut
 <<ChangePortrait Portrait JonPortrait>>
-[[kjhgb|killphil]]
-===
-title: killphil
-tags: 
-colorID: 0
-position: 334,5
----
-walla brush
+¤...
+Vafan pratar du om? Vart är Phil?
+<<ChangePortrait Portrait FreitasPortrait>>
+%brush-phil är o skaffar biskvi- och gyrosglass yao
+det är min favorit för den är inte för kall
+speciellt om man micrar den höhöhö
+<<ChangePortrait Portrait JonPortrait>>
+¤Hörru det där verkar inte så vettigt, det blir underkänt.
+<<ChangePortrait Portrait FreitasPortrait>>
+%fan också.....
+men jag fyller ju år idag, ge mig godkänt för fan
+<<ChangePortrait Portrait JonPortrait>>
+¤Hördu det gör du inte alls, det är ju Karl som fyller idag, tror du inte jag har koll eller?
+Så nu tycker jag att Karl ställer sig längst fram och att vi alla ställer oss upp och sjunger för Karl!
+<<ChangePortrait Portrait FreitasPortrait>>
+%okej då....
+jag vill sjunga ett solo också, går det bra eller brush?
+walla phil-boii sa att du ska snacka med brushan inne i huset
+<<ChangePortrait Portrait JonPortrait>>
+¤Jahaja, jag får väl göra det då...
 ===

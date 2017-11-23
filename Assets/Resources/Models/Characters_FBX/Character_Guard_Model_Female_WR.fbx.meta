@@ -1,0 +1,131 @@
+fileFormatVersion: 2
+guid: cb34cc9aef4bc9d4db6660b6faa5363c
+timeCreated: 1511422140
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Character_Guard_Female
+    100002: //RootNode
+    100004: Chest_bJNT
+    100006: Head_bJNT
+    100008: L_Elbow_bJNT
+    100010: L_Foot_bJNT
+    100012: L_Hand_bJNT
+    100014: L_Hip_bJNT
+    100016: L_Knee_bJNT
+    100018: L_Shoulder_bJNT
+    100020: Pelvis_bJNT
+    100022: R_Elbow_bJNT
+    100024: R_Foot_bJNT
+    100026: R_Hand_bJNT
+    100028: R_Hip_bJNT
+    100030: R_Knee_bJNT
+    100032: R_Shoulder_bJNT
+    100034: Root_JNT4
+    100036: Spine_1_bJNT
+    400000: Character_Guard_Female
+    400002: //RootNode
+    400004: Chest_bJNT
+    400006: Head_bJNT
+    400008: L_Elbow_bJNT
+    400010: L_Foot_bJNT
+    400012: L_Hand_bJNT
+    400014: L_Hip_bJNT
+    400016: L_Knee_bJNT
+    400018: L_Shoulder_bJNT
+    400020: Pelvis_bJNT
+    400022: R_Elbow_bJNT
+    400024: R_Foot_bJNT
+    400026: R_Hand_bJNT
+    400028: R_Hip_bJNT
+    400030: R_Knee_bJNT
+    400032: R_Shoulder_bJNT
+    400034: Root_JNT4
+    400036: Spine_1_bJNT
+    4300000: Character_Guard_Female
+    9500000: //RootNode
+    13700000: Character_Guard_Female
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Character_Guard_Model_Female_Material
+    second: {fileID: 2100000, guid: 616987da141669945a22c049de4002b6, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
