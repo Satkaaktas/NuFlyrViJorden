@@ -6,15 +6,11 @@ public class ItemDatabase : MonoBehaviour {
 
     //list of all items in game
     public List<Item> items = new List<Item>();
-
-<<<<<<< HEAD
-    public List<Item> Items;
-=======
+    
     public List<Item> Items
     {
         get { return this.items; }
     }
->>>>>>> fc2fec9c77082aad54328b51eaf820ab2bfcc59c
 
     private void Start()
     {
