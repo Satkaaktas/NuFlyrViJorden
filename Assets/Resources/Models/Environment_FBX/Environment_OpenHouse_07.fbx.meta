@@ -1,0 +1,223 @@
+fileFormatVersion: 2
+guid: bd549e3764be70f479db8e338a94f5e1
+timeCreated: 1511349457
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Environment_DoorFrame_03
+    100002: Environment_DoorFrame_04
+    100004: //RootNode
+    100006: Environment_RifledRoofSide_02
+    100008: Environment_RifledRoofSide_03
+    100010: Environment_Wall_015
+    100012: Environment_Wall_016
+    100014: Environment_Wall_017
+    100016: Environment_Wall_018
+    100018: Environment_Wall_019
+    100020: Environment_Wall_021
+    100022: Environment_Wall_022
+    100024: Environment_Wall_023
+    100026: Environment_Wall_05
+    100028: Environment_WoodenShackCornerRoof_01
+    100030: Environment_WoodenShackCornerRoof_02
+    100032: Environment_WoodenShackCornerRoof_03
+    100034: Environment_WoodenShackRoof_02
+    100036: Environment_WoodenShackRoof_03
+    100038: Environment_WoodenShackRoof_04
+    100040: pCube3
+    100042: pCube4
+    400000: Environment_DoorFrame_03
+    400002: Environment_DoorFrame_04
+    400004: //RootNode
+    400006: Environment_RifledRoofSide_02
+    400008: Environment_RifledRoofSide_03
+    400010: Environment_Wall_015
+    400012: Environment_Wall_016
+    400014: Environment_Wall_017
+    400016: Environment_Wall_018
+    400018: Environment_Wall_019
+    400020: Environment_Wall_021
+    400022: Environment_Wall_022
+    400024: Environment_Wall_023
+    400026: Environment_Wall_05
+    400028: Environment_WoodenShackCornerRoof_01
+    400030: Environment_WoodenShackCornerRoof_02
+    400032: Environment_WoodenShackCornerRoof_03
+    400034: Environment_WoodenShackRoof_02
+    400036: Environment_WoodenShackRoof_03
+    400038: Environment_WoodenShackRoof_04
+    400040: pCube3
+    400042: pCube4
+    2300000: Environment_DoorFrame_03
+    2300002: Environment_DoorFrame_04
+    2300004: Environment_RifledRoofSide_02
+    2300006: Environment_RifledRoofSide_03
+    2300008: Environment_Wall_015
+    2300010: Environment_Wall_016
+    2300012: Environment_Wall_017
+    2300014: Environment_Wall_018
+    2300016: Environment_Wall_019
+    2300018: Environment_Wall_021
+    2300020: Environment_Wall_022
+    2300022: Environment_Wall_023
+    2300024: Environment_Wall_05
+    2300026: Environment_WoodenShackCornerRoof_01
+    2300028: Environment_WoodenShackCornerRoof_02
+    2300030: Environment_WoodenShackCornerRoof_03
+    2300032: Environment_WoodenShackRoof_02
+    2300034: Environment_WoodenShackRoof_03
+    2300036: Environment_WoodenShackRoof_04
+    2300038: pCube3
+    2300040: pCube4
+    3300000: Environment_DoorFrame_03
+    3300002: Environment_DoorFrame_04
+    3300004: Environment_RifledRoofSide_02
+    3300006: Environment_RifledRoofSide_03
+    3300008: Environment_Wall_015
+    3300010: Environment_Wall_016
+    3300012: Environment_Wall_017
+    3300014: Environment_Wall_018
+    3300016: Environment_Wall_019
+    3300018: Environment_Wall_021
+    3300020: Environment_Wall_022
+    3300022: Environment_Wall_023
+    3300024: Environment_Wall_05
+    3300026: Environment_WoodenShackCornerRoof_01
+    3300028: Environment_WoodenShackCornerRoof_02
+    3300030: Environment_WoodenShackCornerRoof_03
+    3300032: Environment_WoodenShackRoof_02
+    3300034: Environment_WoodenShackRoof_03
+    3300036: Environment_WoodenShackRoof_04
+    3300038: pCube3
+    3300040: pCube4
+    4300000: Environment_WoodenShackRoof_02
+    4300002: Environment_RifledRoofSide_02
+    4300004: Environment_WoodenShackCornerRoof_01
+    4300006: pCube3
+    4300008: Environment_Wall_05
+    4300010: Environment_DoorFrame_03
+    4300012: Environment_Wall_015
+    4300014: Environment_Wall_016
+    4300016: Environment_Wall_017
+    4300018: Environment_Wall_018
+    4300020: Environment_Wall_019
+    4300022: Environment_Wall_021
+    4300024: Environment_Wall_022
+    4300026: Environment_Wall_023
+    4300028: Environment_WoodenShackCornerRoof_02
+    4300030: Environment_WoodenShackCornerRoof_03
+    4300032: Environment_WoodenShackRoof_03
+    4300034: Environment_WoodenShackRoof_04
+    4300036: Environment_RifledRoofSide_03
+    4300038: pCube4
+    4300040: Environment_DoorFrame_04
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Environment_DoorFrame_01
+    second: {fileID: 2100000, guid: aea63f536d1835448a8fabeacfb14a74, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Environment_RifledRoofSide_01_Material
+    second: {fileID: 2100000, guid: 58acf068a1ca41346b25fb67fc02795a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Environment_Wall_01_Material_C
+    second: {fileID: 2100000, guid: ef5d8382de36ef445a27809432f8eca6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Environment_Wall_With_Window_03_Material_C
+    second: {fileID: 2100000, guid: 4eaa6fa335a751a4192cf0cdd13b481e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Environment_WoodenShackCornerRoof_01_Material
+    second: {fileID: 2100000, guid: d1345ff1ea081cd449c1ee0b72f109bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Environment_WoodenShackRoof_01_Material
+    second: {fileID: 2100000, guid: a2a514f9f386ab94aaa6d2375b6b8013, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
