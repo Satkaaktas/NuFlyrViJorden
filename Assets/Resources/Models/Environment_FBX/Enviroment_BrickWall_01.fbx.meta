@@ -16,7 +16,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Enviroment_BrickWall_01_material
-    second: {fileID: 2100000, guid: 917a8f74ce0bffa4f94265d7bc9c3179, type: 2}
+    second: {fileID: 2100000, guid: 82c3322ff57cd744fabd224d40d817d5, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
