@@ -5,14 +5,16 @@ using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour {
 
-    public AudioSource musicSource; // GameObject.Camera.fin
-    public AudioSource efxSource;
+    private AudioSource musicSource; // GameObject.Camera.fin
+    private AudioSource efxSource;
 
-    public Slider MusicVolSlider;
-    public Slider EfxVolSlicer;
+    private Slider PauseMscVolSlider;
+    private Slider PauseEfxVolSlicer;
+    private Slider MainMscSlider;
+    private Slider MainEfxVolSlider;
 
-    public float lowPitchLimit = 0.95f;
-    public float highPitchLimit = 1.05f;
+    private float lowPitchLimit = 0.95f;
+    private float highPitchLimit = 1.05f;
 
     public static SoundManager instance;
 
@@ -29,6 +31,12 @@ public class SoundManager : MonoBehaviour {
         }
 
         DontDestroyOnLoad(gameObject);
+    }
+
+    private void Start()
+    {
+        //REFERENS TILL SLIDER 1 <-----------------------------------------------------------------------------------------------------------------------------------------------------------
+        //REFERENS TILL SLIDER 2 <-----------------------------------------------------------------------------------------------------------------------------------------------------------
     }
 
     // used to play single soundclips.
@@ -62,15 +70,21 @@ public class SoundManager : MonoBehaviour {
     }
 
     // invoked when slider button is clicked.
-    public void ChangeMusicVol()
+    public void ChangeMusicVol(Slider slider)
     {
-        musicSource.volume = MusicVolSlider.value;
+        musicSource.volume = slider.value;
+
+        PauseMscVolSlider.value = musicSource.volume;
+        MainMscSlider.value = musicSource.volume;
     }
 
     // invoke when slider button is clicked
-    public void ChangeEfxVol()
+    public void ChangeEfxVol(Slider slider)
     {
-        efxSource.volume = MusicVolSlider.value;
+        efxSource.volume = slider.value;
+
+        PauseEfxVolSlicer.value = efxSource.volume;
+        MainEfxVolSlider.value = efxSource.volume;
     }
 
 }

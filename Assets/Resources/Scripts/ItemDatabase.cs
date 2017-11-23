@@ -14,9 +14,9 @@ public class ItemDatabase : MonoBehaviour {
 
     private void Start()
     {
-        items.Add(new Item("Hammer", 0, "and my hammer"));
-        items.Add(new Item("Shovel", 1, "Dig dig dug"));
-        items.Add(new Item("Cup", 2, "The holy cup"));
+        items.Add(new Item("Larva Drug",0 , "Crushed Larva."));
+        items.Add(new Item("Syringe", 1, "Syringe for injecting drugs."));
+        items.Add(new Item("Vaccine", 2, "Vaccine against diseases."));
     }
 }
 

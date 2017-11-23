@@ -10,7 +10,7 @@ public class Inventory : MonoBehaviour {
     //List of items visualised in inventorySlots
     public List<Item> inventorySlots = new List<Item>();
 
-    public AudioClip invOpenSound, invCloseSound;
+    private AudioClip invOpenSound, invCloseSound;
 
     //reference to database
     private ItemDatabase database;
@@ -21,9 +21,9 @@ public class Inventory : MonoBehaviour {
 
     public static Inventory instance;
 
-    //-----------------------------------------    TILLSVIDARE   ------------------------------------------------
+    //-----------------------------------------    TILLSVIDARE   ------------------------------------------------------------------------------------------------------------------------------
     int indexitem = 0;
-    //-----------------------------------------    TILLSVIDARE   -------------------------------------------------
+    //-----------------------------------------    TILLSVIDARE   ------------------------------------------------------------------------------------------------------------------------------
 
     private void Awake()
     {
@@ -80,13 +80,23 @@ public class Inventory : MonoBehaviour {
             }
         }
 
-        //-----------------------------------------    TILLSVIDARE Lägger till och ta bort item i inventory ------------------------------------------------
+        //-----------------------------------------    TILLSVIDARE Lägger till och ta bort item i inventory ---------------------------------------------------------------
 
+<<<<<<< HEAD
         if (Input.GetKey(KeyCode.LeftShift)&& Input.GetKeyDown(KeyCode.Alpha1) && indexitem <= 2 && indexitem >= 0)
         {
             inventory[indexitem] = database.Items[indexitem];
             indexitem++;
             Debug.Log("Item added. indexitem = " + indexitem);
+=======
+        if (Input.GetKeyDown(KeyCode.Keypad1) && indexitem < 1 && indexitem >= 0)
+        {
+                inventory[indexitem] = database.items[indexitem];
+                indexitem++;
+                Debug.Log("Item added. indexitem = " + indexitem);
+
+
+>>>>>>> Inventory3
         }
         
         if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha2) && indexitem >= 1 && indexitem <= 3)
@@ -96,7 +106,7 @@ public class Inventory : MonoBehaviour {
             Debug.Log("item removed. indexitem = " + indexitem);
         }
 
-        //-----------------------------------------    TILLSVIDARE   ------------------------------------------------
+        //-----------------------------------------    TILLSVIDARE   -------------------------------------------------------------------------------------------------------
     }
 
     //creates inventory if Inventorykey is pressed.
@@ -148,6 +158,13 @@ public class Inventory : MonoBehaviour {
             inventory[removeIndex] = new Item();
         }
 
+    }
+
+
+    //OM MAN BARA SPARAR ID KAN VI LÄGGA TILL ITEM via database.items[ID] <------------------------------------------------------------------------------------------------------------------------------
+    public void AddItem(Item item)
+    {
+        inventory.Add(item);
     }
 
     //Stina Hedman
