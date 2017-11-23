@@ -1,0 +1,135 @@
+title: Bobby_FirstApproach
+tags: 
+colorID: 0
+position: 297,263
+---
+<<if $Bobby_FirstApproach is false>>
+    <<set $Bobby_FirstApproach to true>>
+    <<ChangePortrait Portrait UI_Portrait_Bobby>>
+    %Bobby scans the district with a bored gaze, arms crossed. Brightens up when he notices Laura and opens up his arms for a bear hug. 
+    "Laura! Long time no see. Still working with Norbert?”
+    <<ChangePortrait Portrait UI_Portrait_Laura>>
+    [[“Hello Bob, and... Yeah. Everyone needs to eat, you know.”|Bobby_Hug]]
+    [[Laura Lowers her tone and says “Hello there old Friend. I like that uniform, it suits you."|Bobby_Flirt]]
+<<elseif $Bobby_Attitude is "Friendly">>
+    [[Bobby_Friendly]]
+<<elseif $Bobby_Attitude is "Neutral">>
+    [[Bobby_Neutral]]
+<<elseif $Bobby_Attitude is "Hostile">>
+    [[Bobby_Hostile]]
+<<endif>>
+===
+title: Bobby_Hug
+tags: 
+colorID: 0
+position: 123,604
+---
+<<ChangePortrait Portrait UI_Portrait_Bobby>>
+%Bobby steps closer. As his arms wrap around Laura, he doesn't notice Laura trying to resist the hug. “You always smell of dirt and the sea. I like that about you…”
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+¤Laura hides her discomfort by speaking into Bobby's uniform. “I need your help Bob. I’m all alone. They are forcing me and Dottie apart! I have been chosen by the MSA but… she… Didn't…“
+<<ChangePortrait Portrait UI_Portrait_Bobby>>
+%As the words leave Laura's lips, Bobby stiffens and takes a step backwards, releasing her. He watches Dottie play with the other children at the square. ”His offspring wasn't good enough for MSA huh? Who would have guessed... Go to your Hovel friends Laura, you choose them over the Projects, over Me. You are not alone. You won't fool me twice.”
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+¤“I'm Sorry... I'm really sorry Bob, okay? I understand that you don't want anything to do with me after what happened.” Laura turns around gesturing towards the children chasing a toy between the lines. “But think about Dottie. Don't let her suffer for something I did! She didn't choose this world.”
+[[Bobby_Silent]]
+===
+title: Bobby_Flirt
+tags: 
+colorID: 0
+position: 517,594
+---
+<<ChangePortrait Portrait UI_Portrait_Bobby>>
+%Bobby shuffles his boots uncomfortably and avoids looking directly at Laura. “... Thanks. This job sure has its perks. So, what brings you to District Square today, surely not to fool around with some Enforcer? I ain't that dumb anymore.”
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+[[“Sorry Bob, I… I never meant to hurt you. I'm really sorry things turned out the way they did. Anyway, I had a fight with Jeb again and need to sort things out. I need your help to get into the Projects.”|Bobby_Sorry]]
+[[“Haha, c'mon Bob!” Laura bursts out while teasingly throwing a jab at his shoulder. “ Who wouldn't want to fool around with someone like you.”|Bobby_Haha]]
+===
+title: Bobby_Sorry
+tags: 
+colorID: 0
+position: 857,845
+---
+<<ChangePortrait Portrait UI_Portrait_Bobby>>
+%Bobby's tone has changed as he responds: “Oh, now you're sorry?” He pauses, checking his gun. “Well, I don't do charity, and I sure won't do anything for old times sake. But there is one thing you can help me with first. My boss ain't happy about how the smugglers are gaining influence in the Projects. Drugs show up in the wrong places. You get me the name of their distribution leader, then I'll help you with whatever you need.”
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+-> “I think I might know where to start, I'll come back to you.” [ACCEPT TASK]
+    <<set $Bobby_Attitude to "Friendly">>
+-> “I don't know Bob, It sound dangerous... I'll think about it.” [LEAVE]
+    <<set $Bobby_Attitude to "Neutral">>
+===
+title: Bobby_Haha
+tags: 
+colorID: 0
+position: 372,861
+---
+<<ChangePortrait Portrait UI_Portrait_Bobby>>
+%Bobby straightens and gives Laura a stern look. “You wouldn't.” Bobby looks at the citizens of the hovel. Bobby: “You choose him, the charming farmer boy, and look where that got you. A lone mother with the burden of supporting a child in these dirty Slums! Stop this nonsense... you made your choice years ago.”
+<<ChangePortrait Portrait UI_Portrait_Bobby>>
+-> “... You're right. I went out of line. I'm sorry. My daughter needs your help. Please don't let Dottie suffer in my place. You have all the right to be mad at me. But not her, she never choose this. I did. Please help her.”
+    [[Bobby_Silent]]
+-> “Don’t you dare talk about Kaleb like that! He was twice the man you will ever be. You think you got somewhere joining the enforcers?! All you do is oppress the people in the Hovels!” [LEAVE]
+    <<set $Bobby_Attitude to "Hostile">>
+===
+title: Bobby_Silent
+tags: 
+colorID: 0
+position: 106,1097
+---
+<<ChangePortrait Portrait UI_Portrait_Bobby>>
+%Bobby stands silent a while, watching the children argue as the toy breaks after hitting the Projects wall. With a sigh he shifts his gaze back to Laura. “Fine! God damnit! Fuck you Laura. You always knew which buttons to push... I’ll help you. But I'm not leaving empty handed this time. I’ll need something from you first. My superiors are unhappy about the smugglers advances and the investigation is going slowly. With your way around people I'm sure you can get me the name of their distribution leader.”
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+-> “If I do this for you, and I don't like it one bit... then you must help me reach Jeb. Ok?” [ACCEPT TASK] 
+    <<set $Bobby_Attitude to "Friendly">>
+-> Laura shakes her head “ I don't know Bobby, I've been avoiding the smugglers for all these years for a reason. They are fucking dangerous. I have to think about this." [LEAVE]
+    <<set $Bobby_Attitude to "Neutral">>
+===
+title: Bobby_Friendly
+tags: 
+colorID: 6
+position: -880,181
+---
+<<ChangePortrait Portrait UI_Portrait_Bobby>>
+%“Hi again Laura, got any progress?”
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+[[“Yeah, I got your name, I think it goes without saying you didn't hear this from me? Her name is Jade Kaiser.”|Bobby_SmugglerName]] 
+[[“What did you need from me again?”|Bobby_Reminder]]
+[[“No, not yet. I need more time.”|LEAVE]]
+===
+title: Bobby_Neutral
+tags: 
+colorID: 0
+position: -514,172
+---
+<<ChangePortrait Portrait UI_Portrait_Bobby>>
+%“Made up your mind yet Laura? I don't have time to stand here talking all day. Doesn't look good to my superiors either.”
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+-> ”Fine, I'll help you Bob. But If Dottie gets in trouble for this, in any way or shape. You will be in a living hell.” [ACCEPT TASK]
+    <<set $Bobby_Attitude to "Friendly">>
+-> “I'm not sure Bob, I’ve heard some bad things about the smugglers.” [LEAVE]
+===
+title: Bobby_Hostile
+tags: 
+colorID: 0
+position: -189,173
+---
+<<ChangePortrait Portrait UI_Portrait_Bobby>>
+%Bobby ignores your approach and keeps watching the District square.
+===
+title: Bobby_Reminder
+tags: 
+colorID: 0
+position: -1022,470
+---
+<<ChangePortrait Portrait UI_Portrait_Bobby>>
+%“You really forgot or did you just miss me? I need the name of the smugglers distribution leader. This shouldn't be too hard for you.”
+===
+title: Bobby_SmugglerName
+tags: 
+colorID: 0
+position: -755,485
+---
+<<ChangePortrait Portrait UI_Portrait_Bobby>>
+%Bobby brightens up and gives Laura a big smile. “Great! I knew I could count on you, I'll get you into the Projects tomorrow, dont worry. Sleep tight.”
+<<GameClear GameClear>>
+===

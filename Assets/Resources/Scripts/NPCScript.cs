@@ -50,7 +50,7 @@ public class NPCScript : MonoBehaviour, IInteractable
         {
             agent.isStopped = true;
         }
-        GameObject.Find("PlayerPrefab").GetComponent<PlayerControls>().CurrentInteractable = null;
+        FindObjectOfType<PlayerControls>().CurrentInteractable = null;
         dR.SetDialogue(myDialogueNode);
     }
 
