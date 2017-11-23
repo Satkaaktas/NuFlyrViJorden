@@ -1,0 +1,190 @@
+title: Jake
+tags: 
+colorID: 0
+position: 537,69
+---
+<<if $JakeApproach leq 2>>
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+¤Laura carefully approaches the man formerly introduced as "The snake". He winches as Laura calls for his attention. “Hey! Excuse me“
+<<ChangePortrait Portrait UI_Portrait_Jake>>
+%Jake is still looking around barely noticing Laura and irritably says “What do you want? I’m busy.”
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+¤Laura cautiously moves closer, lays a hand on Jake's shoulder trying to get his attention and says:
+->“I need to speak to you.”
+    [[Jake_SpeakToYou]]
+->“I’m ready to discuss your earlier offer”
+    [[Jake_Offer]]
+->“Busy? Standing here doing nothing? I need to meet the one you work for”
+    [[Jake_Busy]]
+->“Sorry... wrong person”[LEAVE]
+<<elseif $JakeApproach is 2>>
+    [[Jake_SecondApproach]]
+<<elseif $JakeApproach is 3>>
+    [[Jake_ThirdApproach]]
+<<elseif $JakeApproach is 4>>
+    [[Jake_FourthApproach]]
+<<elseif $JakeApproach is 5>>
+    [[Jake_FifthApproach]]
+<<endif>>
+===
+title: Jake_SpeakToYou
+tags: 
+colorID: 0
+position: 60,326
+---
+<<ChangePortrait Portrait UI_Portrait_Jake>>
+%“Is that so?” Jake responds as he turns to Laura and bursts out “Well, well if it isn’t the bug lady! Changed your mind have you?” and gives Laura a suspicious look before continuing. “Why is that?”
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+[[“I need your help.”|Jake_Offer]]
+[[“What is it to you?”|Jake_Patience]]
+[[“Does it matter? I’m here to make a deal.”|Jake_Deal]]
+===
+title: Jake_Offer
+tags: 
+colorID: 0
+position: 549,400
+---
+<<ChangePortrait Portrait UI_Portrait_Jake>>
+%Jake stares at Laura for a second, seemingly contemplating and says… “Alright love, what do you need?”
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+[[”I need to speak to your boss.”|Jake_Boss]]
+[[“I’m not sure I trust you enough to tell you yet…”|Jake_Trust]]
+[[“First, what exactly is the price of you helping me?”|Jake_Price]]
+===
+title: Jake_Busy
+tags: 
+colorID: 0
+position: 973,625
+---
+<<ChangePortrait Portrait UI_Portrait_Jake>>
+%While still not paying much attention Jake threateningly lets out... “Tread carefully love, if you wanna live through the day.” Jake turns around to see who's bothering him. “Well look who it is! I remember you having better manners… so why do you need to meet the boss?”
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+[[“Does it matter? I’m here to make a deal.”|Jake_Deal]]
+[[“I need a favour that i believe only you people could help me with.”|Jake_Offer]]
+===
+title: Jake_Patience
+tags: 
+colorID: 0
+position: -54,725
+---
+<<ChangePortrait Portrait UI_Portrait_Jake>>
+%“Don’t test my patience, you came to me, now speak!”
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+¤“I’m sorry! I need your help so maybe we could make a deal?”
+[[Jake_Offer]]
+===
+title: Jake_Deal
+tags: 
+colorID: 0
+position: 222,721
+---
+<<ChangePortrait Portrait UI_Portrait_Jake>>
+%“It matters cause i don’t deal with untrustworthy people that could get me caught… guess what, you’re untrustworthy right now, since you already turned us down once.”
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+->“Fine, I need a favour that I believe only you could help me with”
+    [[Jake_Offer]]
+->“Fine, I’ll leave then”[LEAVE]
+    <<set $JakeApproach to 4>>
+===
+title: Jake_SecondApproach
+tags: 
+colorID: 0
+position: 1341,-31
+---
+<<ChangePortrait Portrait UI_Portrait_Jake>>
+%“Hello there! Did you do what I asked?”
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+->“No, not yet.” [LEAVE]
+->“Yes it’s done, now will you help me?” <<if $Crushed_Larvae is 0>>
+    <<ChangePortrait Portrait UI_Portrait_Jake>>
+    %“Nice work love, maybe you’re worth something after all. I told the boss you had a favour to ask, so maybe you’ll get that help you so desperately needed. Jake lets out a chuckle and points to the metal doors. You can find her beyond those doors right there, the guards should let you in now…. oh, and watch what you say around Jade. She’ll make you disappear if you displease her in any way...”
+    <<set $JakeApproach to 5>>
+===
+title: Jake_ThirdApproach
+tags: 
+colorID: 0
+position: 1369,207
+---
+<<ChangePortrait Portrait UI_Portrait_Jake>>
+%“Hello there! Changed your mind?”
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+->“Not quite.” [LEAVE]
+->“Guess I got no choice…” [ACCEPT TASK]
+    <<set $Crushed_Larvae to 5>>
+    <<set $JakeApproach to 2>>
+===
+title: Jake_FourthApproach
+tags: 
+colorID: 0
+position: 1348,427
+---
+<<ChangePortrait Portrait UI_Portrait_Jake>>
+%“Ready to talk yet?”
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+->“Fine, I need a favour that i believe only you could help me with”
+    [[Jake_Offer]]
+->“No, not yet” [LEAVE]
+===
+title: Jake_FifthApproach
+tags: 
+colorID: 0
+position: 1359,681
+---
+<<ChangePortrait Portrait UI_Portrait_Jake>>
+%“What are you still doing here love? The boss is waiting.”
+===
+title: Jake_Boss
+tags: 
+colorID: 0
+position: 425,987
+---
+<<ChangePortrait Portrait UI_Portrait_Jake>>
+%“We don’t do charity love. You help us first, then we talk about what you need. Here… Jake hands over a bag. “Take this and sell it around town, from my experience there’s a few easy sales around the market and that building where you live. Come back to me when you’re finished.
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+->“Guess I got no choice…” [ACCEPT TASK]
+    <<set $Crushed_Larvae to 5>>
+    <<set $JakeApproach to 2>>
+->“I’ll have to think about it.”[LEAVE]
+    <<set $JakeApproach to 3>>
+->“I can’t possible do that!”[LEAVE]
+    <<set $JakeApproach to 3>>
+===
+title: Jake_Trust
+tags: 
+colorID: 0
+position: 713,947
+---
+<<ChangePortrait Portrait UI_Portrait_Jake>>
+%“...and i don’t trust you yet either, but you came to me so either tell me or piss off!”
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+[[“I need to speak to your boss about getting something from point A to B. Isn’t that what you guys do for a living?”|Jake_Boss]]
+[[“I don’t think your boss would be that happy if you turned me away, so you better help me...”|Jake_UnhappyBoss]]
+===
+title: Jake_Price
+tags: 
+colorID: 0
+position: 1050,928
+---
+<<ChangePortrait Portrait UI_Portrait_Jake>>
+%“Nothing major, i just need you to do a few things for me. Don’t worry, if you do this you’re one of us... and we take care of our own. Here…” Jake hands over a bag. “Take this and sell it around town, from my experience there’s a few easy sales around the market and that building where you live. Come back to me when you’re finished.
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+->“Guess I got no choice…” [ACCEPT TASK]
+    <<set $Crushed_Larvae to 5>>
+    <<set $JakeApproach to 2>>
+->“I’ll have to think about it.”[LEAVE]
+    <<set $JakeApproach to 3>>
+->“I can’t possible do that!”[LEAVE]
+    <<set $JakeApproach to 3>>
+===
+title: Jake_UnhappyBoss
+tags: 
+colorID: 0
+position: 706,1287
+---
+<<ChangePortrait Portrait UI_Portrait_Jake>>
+%“Are you giving me orders!? Who do you think you are? There’s a moment of silence
+“...Speak or I’ll have to get rough with you."
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+¤Laura reacts with fear and instinctively take a step back. “Okay, okay I’ll tell you... I… I need something smuggled.”
+[[Jake_Boss]]
+===
