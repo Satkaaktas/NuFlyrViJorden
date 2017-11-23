@@ -37,7 +37,7 @@ position: 123,604
 title: Bobby_Flirt
 tags: 
 colorID: 0
-position: 517,594
+position: 518,594
 ---
 <<ChangePortrait Portrait UI_Portrait_Bobby>>
 %Bobby shuffles his boots uncomfortably and avoids looking directly at Laura. “... Thanks. This job sure has its perks. So, what brings you to District Square today, surely not to fool around with some Enforcer? I ain't that dumb anymore.”
@@ -64,7 +64,7 @@ colorID: 0
 position: 372,861
 ---
 <<ChangePortrait Portrait UI_Portrait_Bobby>>
-%Bobby straightens and gives Laura a stern look. “You wouldn't.” Bobby looks at the citizens of the hovel. Bobby: “You choose him, the charming farmer boy, and look where that got you. A lone mother with the burden of supporting a child in these dirty Slums! Stop this nonsense... you made your choice years ago.”
+%Bobby straightens and gives Laura a stern look. “You wouldn't.” Bobby looks at the citizens of the hovel. “You chose him, the charming farmer boy, and look where that got you. A lone mother with the burden of supporting a child in these dirty Slums! Stop this nonsense... you made your choice years ago.”
 <<ChangePortrait Portrait UI_Portrait_Bobby>>
 -> “... You're right. I went out of line. I'm sorry. My daughter needs your help. Please don't let Dottie suffer in my place. You have all the right to be mad at me. But not her, she never choose this. I did. Please help her.”
     [[Bobby_Silent]]
@@ -131,5 +131,5 @@ position: -755,485
 ---
 <<ChangePortrait Portrait UI_Portrait_Bobby>>
 %Bobby brightens up and gives Laura a big smile. “Great! I knew I could count on you, I'll get you into the Projects tomorrow, dont worry. Sleep tight.”
-<<GameClear GameClear>>
+//<<GameClear GameClear>>
 ===
