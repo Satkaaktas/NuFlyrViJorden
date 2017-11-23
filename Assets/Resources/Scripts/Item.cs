@@ -26,6 +26,4 @@ public class Item {
 
     }
 
-}
-
-//Stina Hedman
+} // Stina Hedman

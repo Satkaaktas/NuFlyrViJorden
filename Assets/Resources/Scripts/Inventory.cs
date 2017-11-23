@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour {
+public class Inventory : MonoBehaviour
+{
 
     //List of items in the inventory
     public List<Item> inventory = new List<Item>();
@@ -42,7 +43,8 @@ public class Inventory : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
     }
 
-    void Start () {
+    void Start()
+    {
 
         showInventory = false;
 
@@ -59,8 +61,9 @@ public class Inventory : MonoBehaviour {
         invCloseSound = Resources.Load<AudioClip>("Audio/Inventory/closeInv");
     }
 
-    
-    void Update () {
+
+    void Update()
+    {
 
         //open and close inventory.
         if (Input.GetButtonDown("Inventory"))
@@ -82,31 +85,32 @@ public class Inventory : MonoBehaviour {
 
         //-----------------------------------------    TILLSVIDARE Lägger till och ta bort item i inventory ---------------------------------------------------------------
 
-<<<<<<< HEAD
-        if (Input.GetKey(KeyCode.LeftShift)&& Input.GetKeyDown(KeyCode.Alpha1) && indexitem <= 2 && indexitem >= 0)
+
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha1) && indexitem <= 2 && indexitem >= 0)
         {
             inventory[indexitem] = database.Items[indexitem];
             indexitem++;
             Debug.Log("Item added. indexitem = " + indexitem);
-=======
-        if (Input.GetKeyDown(KeyCode.Keypad1) && indexitem < 1 && indexitem >= 0)
-        {
+
+            if (Input.GetKeyDown(KeyCode.Keypad1) && indexitem < 1 && indexitem >= 0)
+            {
                 inventory[indexitem] = database.items[indexitem];
                 indexitem++;
                 Debug.Log("Item added. indexitem = " + indexitem);
 
 
->>>>>>> Inventory3
-        }
-        
-        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha2) && indexitem >= 1 && indexitem <= 3)
-        {
-            RemoveItem(database.Items[indexitem-1]);
-            indexitem--;
-            Debug.Log("item removed. indexitem = " + indexitem);
-        }
 
-        //-----------------------------------------    TILLSVIDARE   -------------------------------------------------------------------------------------------------------
+            }
+
+            if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha2) && indexitem >= 1 && indexitem <= 3)
+            {
+                RemoveItem(database.Items[indexitem - 1]);
+                indexitem--;
+                Debug.Log("item removed. indexitem = " + indexitem);
+            }
+
+            //-----------------------------------------    TILLSVIDARE   -------------------------------------------------------------------------------------------------------
+        }
     }
 
     //creates inventory if Inventorykey is pressed.
@@ -120,16 +124,17 @@ public class Inventory : MonoBehaviour {
         }
     }
 
+
     // creates the inventory and loads in items.
     public void OpenInventory()
     {
         int i = 0;
 
-        for (int y = 1; y < slotsY+1; y++) 
+        for (int y = 1; y < slotsY + 1; y++)
         {
-            for (int x = 1; x < slotsX+1; x++)
+            for (int x = 1; x < slotsX + 1; x++)
             {
-                Rect slotRect = new Rect((x * 75)+20,(y * 40)+70, 75, 75);
+                Rect slotRect = new Rect((x * 75) + 20, (y * 40) + 70, 75, 75);
 
                 GUI.Box(slotRect, Resources.Load<Texture2D>("Sprites/UI/InventorySlot"), GUIStyle.none);
 
@@ -137,12 +142,12 @@ public class Inventory : MonoBehaviour {
                 {
                     GUI.Box(slotRect, inventory[i].itemIcon, GUIStyle.none);
 
-                }  
+                }
 
                 i++;
             }
         }
-        
+
     }
 
 
@@ -161,11 +166,10 @@ public class Inventory : MonoBehaviour {
     }
 
 
-    //OM MAN BARA SPARAR ID KAN VI LÄGGA TILL ITEM via database.items[ID] <------------------------------------------------------------------------------------------------------------------------------
+    //OM MAN BARA SPARAR ID KAN VI LÄGGA TILL ITEM via database.items[ID] -----------------------------------------------------------------------------------------------------------------------------
     public void AddItem(Item item)
     {
         inventory.Add(item);
     }
+ }
 
-    //Stina Hedman
-}

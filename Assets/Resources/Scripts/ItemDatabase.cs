@@ -5,7 +5,7 @@ using UnityEngine;
 public class ItemDatabase : MonoBehaviour {
 
     //list of all items in game
-    List<Item> items = new List<Item>();
+    public List<Item> items = new List<Item>();
 
     public List<Item> Items
     {
