@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour {
 
-    private AudioSource musicSource; // GameObject.Camera.fin
-    private AudioSource efxSource;
+    [SerializeField]
+    AudioSource musicSource,efxSource;
 
     private Slider PauseMscVolSlider;
     private Slider PauseEfxVolSlicer;
