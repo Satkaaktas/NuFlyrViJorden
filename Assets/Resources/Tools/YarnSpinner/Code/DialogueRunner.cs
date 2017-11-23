@@ -40,7 +40,7 @@ namespace Yarn.Unity
         public SystemLanguage language;
         public TextAsset[] stringFiles;
     }
-    
+
     /// DialogueRunners act as the interface between your game and YarnSpinner.
     /** Make our menu item slightly nicer looking */
     [AddComponentMenu("Scripts/Yarn Spinner/Dialogue Runner")]
@@ -86,7 +86,17 @@ namespace Yarn.Unity
         public NavMeshAgent CurrentAgent
         {
             get { return this.currentAgent; }
-            set { if (value == null) { currentAgent.isStopped = false; if (currentAgent.destination != null && currentAgent.GetComponent<Patrol>().Points.Length > 0) currentAgent.GetComponent<Animator>().SetBool("isWalking", true); } this.currentAgent = value; }
+            set
+            {
+                if (value == null && currentAgent != null)
+                { currentAgent.isStopped = true; }
+                if (currentAgent != null && currentAgent.destination != null && currentAgent.GetComponent<Patrol>().Points.Length > 0)
+                {
+                    currentAgent.GetComponent<Animator>().SetBool("isWalking", true);
+                    currentAgent.isStopped = false;
+                }
+                this.currentAgent = value;
+            }
         }
 
         PlayerControls player;

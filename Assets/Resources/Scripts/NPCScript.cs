@@ -51,10 +51,7 @@ public class NPCScript : MonoBehaviour, IInteractable
     {
         anim.SetBool("isWalking", false);
         FindObjectOfType<DialogueRunner>().CurrentAgent = GetComponent<NavMeshAgent>();
-        if (!agent.isStopped)
-        {
-            agent.isStopped = true;
-        }
+        agent.isStopped = true;
         FindObjectOfType<PlayerControls>().CurrentInteractable = null;
         dR.SetDialogue(myDialogueNode);
     }
