@@ -45,7 +45,7 @@ ModelImporter:
     400034: R_Shoulder_bJNT
     400036: Root_JNT
     400038: Spine_1_bJNT
-    7400000: Take 001
+    7400000: MainChar_Pickup
     9500000: //RootNode
   externalObjects: {}
   materials:
@@ -60,12 +60,7 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     rigImportErrors: 
-    rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Bone length in
-      copied configuration does not match position in animation file:\n\t'L_Hip_bJNT'
-      : position error = 7205.855469 mm\n\t'L_Knee_bJNT' : position error = 40388.097656
-      mm\n\t'L_Foot_bJNT' : position error = 42458.085938 mm\n\t'R_Hip_bJNT' : position
-      error = 7205.858887 mm\n\t'R_Knee_bJNT' : position error = 40388.078125 mm\n\t'R_Foot_bJNT'
-      : position error = 42458.074219 mm\n"
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -78,7 +73,35 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: MainChar_Pickup
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
