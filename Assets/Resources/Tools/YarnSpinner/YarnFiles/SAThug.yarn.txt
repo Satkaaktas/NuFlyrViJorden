@@ -1,0 +1,32 @@
+title: SAThug.yarn
+tags: 
+colorID: 0
+position: 540,260
+---
+<<if $SAThug is true>>
+    [[SAThug_Alternative]]
+<<endif>>
+
+<<ChangePortrait Portrait UI_Portrait_SAThug>>
+%Engaged in conversation with the rest, he flexes and states in a loud voice "I had my ssshit PUSHED IN, BRO, BIG TIME!!" and lets out a forced, obnoxious laugh. He turns to Laura as she nears. The scene feels like a deja-vu, for whatever reason. 
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+->"Never mind me... " she raised a hand, looking to them all with wide eyes.
+    <<ChangePortrait Portrait UI_Portrait_SAThug>>
+    %"Alllrighhht?" he 'asked' and raised a brow, looking to her as she turns to move away. 
+->"Have you ssseeen... " she looks to both sides, searching the dim-lit area with her eyes "... The Snake? He's supposed to be selling... somewhere around here." 
+    <<ChangePortrait Portrait UI_Portrait_SAThug>>
+    %"He's right there" he scanned her head-to-toe with a derisive deadpan, lifting a sizable arm to throw it and point leftward. "Good luck.. " he adds and loses interest in Laura, looking away.
+    <<set $SAThug to true>>
+===
+title: SAThug_Alternative
+tags: 
+colorID: 0
+position: 851,260
+---
+<<ChangePortrait Portrait UI_Portrait_SAThug>>
+%You can see him scratching his head with a sizable blade, peering at the dust at his feet. As Laura nears his head turns and the face forms a formidable frown. It is either exaggerated on purpose or this guy is stark-raving-mad.
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+¤"Ne. .. neh .. .never mind me... " she lifted both hands and waved them in front of herself, then quickly moved away.
+<<ChangePortrait Portrait UI_Portrait_SAThug>>
+%"Fukh off.. " he let out faintly, almost inaudibly and returned to peering at his feet and his cognitive processes, if any.
+===

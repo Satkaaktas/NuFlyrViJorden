@@ -361,7 +361,7 @@ Prefab:
         type: 2}
       propertyPath: dR
       value: 
-      objectReference: {fileID: 1378985687}
+      objectReference: {fileID: 0}
     - target: {fileID: 4515976426743728, guid: 22ade85547e149140aeecce0088015ee, type: 2}
       propertyPath: m_LocalScale.x
       value: 1
@@ -623,7 +623,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1378985686}
+      - m_Target: {fileID: 0}
         m_MethodName: SetOption
         m_Mode: 3
         m_Arguments:
@@ -1376,7 +1376,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1378985686}
+      - m_Target: {fileID: 0}
         m_MethodName: SetOption
         m_Mode: 3
         m_Arguments:
@@ -1441,6 +1441,18 @@ GameObject:
   m_PrefabParentObject: {fileID: 1584811574196150, guid: 4f71d57e65d229748b1ba4a5b1cbf46e,
     type: 2}
   m_PrefabInternal: {fileID: 789697608}
+--- !u!65 &335810711
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 335810706}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: 0.5}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!4 &344940386 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4172026539646344, guid: 8f207c453e1d20849ada4d0d1df77502,
@@ -1554,7 +1566,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4449016749542372, guid: e5ee23a07c13e464db4e1c40f60fbd0f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -45.463
+      value: -34.96
       objectReference: {fileID: 0}
     - target: {fileID: 4449016749542372, guid: e5ee23a07c13e464db4e1c40f60fbd0f, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1562,7 +1574,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4449016749542372, guid: e5ee23a07c13e464db4e1c40f60fbd0f, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -30.627
+      value: -30.6
       objectReference: {fileID: 0}
     - target: {fileID: 4449016749542372, guid: e5ee23a07c13e464db4e1c40f60fbd0f, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1604,6 +1616,11 @@ Prefab:
       propertyPath: points.Array.data[3]
       value: 
       objectReference: {fileID: 386280614}
+    - target: {fileID: 114432614620800052, guid: e5ee23a07c13e464db4e1c40f60fbd0f,
+        type: 2}
+      propertyPath: myDialogueNode
+      value: Bobby.yarn
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5ee23a07c13e464db4e1c40f60fbd0f, type: 2}
   m_IsPrefabParent: 0
@@ -2339,7 +2356,7 @@ Prefab:
         type: 2}
       propertyPath: dR
       value: 
-      objectReference: {fileID: 1378985687}
+      objectReference: {fileID: 0}
     - target: {fileID: 114360410612250142, guid: 22ade85547e149140aeecce0088015ee,
         type: 2}
       propertyPath: myDialogueNode
@@ -3087,7 +3104,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1378985686}
+      - m_Target: {fileID: 0}
         m_MethodName: SetOption
         m_Mode: 3
         m_Arguments:
@@ -4636,18 +4653,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4172026539646344, guid: 8f207c453e1d20849ada4d0d1df77502,
     type: 2}
   m_PrefabInternal: {fileID: 2032313306}
---- !u!114 &1378985686 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114579263008798768, guid: 22361cd2418433649a9d8e2d5770ead4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1692672989}
-  m_Script: {fileID: 11500000, guid: 5417db35459a112488e54b32f7caf7df, type: 3}
---- !u!114 &1378985687 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114678719308102264, guid: 22361cd2418433649a9d8e2d5770ead4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1692672989}
-  m_Script: {fileID: 11500000, guid: 4bec29c0a230741bdac901dba8da47ee, type: 3}
 --- !u!1001 &1391087994
 Prefab:
   m_ObjectHideFlags: 0
@@ -5847,6 +5852,35 @@ Prefab:
       propertyPath: sourceText.Array.data[0]
       value: 
       objectReference: {fileID: 4900000, guid: 3a23660ccd93ab041bebf818bd453cb0, type: 3}
+    - target: {fileID: 4251651670713956, guid: 22361cd2418433649a9d8e2d5770ead4, type: 2}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 114667503349416966, guid: 22361cd2418433649a9d8e2d5770ead4,
+        type: 2}
+      propertyPath: dialogueContainer
+      value: 
+      objectReference: {fileID: 1272638982}
+    - target: {fileID: 114667503349416966, guid: 22361cd2418433649a9d8e2d5770ead4,
+        type: 2}
+      propertyPath: lastLineBox
+      value: 
+      objectReference: {fileID: 420185474}
+    - target: {fileID: 114667503349416966, guid: 22361cd2418433649a9d8e2d5770ead4,
+        type: 2}
+      propertyPath: lastLineText
+      value: 
+      objectReference: {fileID: 176265299}
+    - target: {fileID: 114667503349416966, guid: 22361cd2418433649a9d8e2d5770ead4,
+        type: 2}
+      propertyPath: lineText
+      value: 
+      objectReference: {fileID: 1440540825}
+    - target: {fileID: 114892071565133456, guid: 22361cd2418433649a9d8e2d5770ead4,
+        type: 2}
+      propertyPath: portrait
+      value: 
+      objectReference: {fileID: 105588619}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 22361cd2418433649a9d8e2d5770ead4, type: 2}
   m_IsPrefabParent: 0
@@ -6829,7 +6863,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1378985686}
+      - m_Target: {fileID: 0}
         m_MethodName: SetOption
         m_Mode: 3
         m_Arguments:
