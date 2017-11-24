@@ -91,6 +91,11 @@ public class Inventory : MonoBehaviour
             inventory[indexitem] = database.Items[indexitem];
             indexitem++;
             Debug.Log("Item added. indexitem = " + indexitem);
+        }
+
+
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha2) && indexitem >= 1 && indexitem <= 3)
+        {
 
             if (Input.GetKeyDown(KeyCode.Keypad1) && indexitem < 1 && indexitem >= 0)
             {
@@ -109,8 +114,13 @@ public class Inventory : MonoBehaviour
                 Debug.Log("item removed. indexitem = " + indexitem);
             }
 
-            //-----------------------------------------    TILLSVIDARE   -------------------------------------------------------------------------------------------------------
+
+            RemoveItem(database.items[indexitem - 1]);
+            indexitem--;
+            Debug.Log("item removed. indexitem = " + indexitem);
         }
+
+        //-----------------------------------------    TILLSVIDARE   -------------------------------------------------------------------------------------------------------
     }
 
     //creates inventory if Inventorykey is pressed.
@@ -152,8 +162,11 @@ public class Inventory : MonoBehaviour
 
 
     // used to remove item from inventory by itemname.
+
+    // ------------------------------------------------------ TILLSVIDARE ------------------------------------------------------------
     public void RemoveItem(Item item)
     {
+        
         int removeIndex = -1;
 
         removeIndex = inventory.FindIndex(i => i.itemID == item.itemID);
@@ -166,10 +179,58 @@ public class Inventory : MonoBehaviour
     }
 
 
+
     //OM MAN BARA SPARAR ID KAN VI LÄGGA TILL ITEM via database.items[ID] -----------------------------------------------------------------------------------------------------------------------------
+
     public void AddItem(Item item)
     {
         inventory.Add(item);
     }
- }
+
+    // ------------------------------------------------------ TILLSVIDARE ------------------------------------------------------------
+
+    //called by items name to add that item to the inventory
+    public void AddItem(string itemName)
+    {
+        int addIndex = -1;
+
+        addIndex = database.items.FindIndex(i => i.itemName == itemName);
+
+        if (addIndex != -1)
+        {
+            inventory.Add(database.items[addIndex]);
+        }
+    }
+
+    //called by items name to remove the first of that item from inventory
+    public void RemoveItem(string itemName)
+    {
+        int removeIndex = -1;
+
+        removeIndex = database.items.FindIndex(i => i.itemName == itemName);
+
+        if (removeIndex != -1)
+        {
+            inventory.Add(database.items[removeIndex]);
+        }
+    }
+
+    //called by items name to check for how many items of that kind are in the inventory.
+    public void CheckForItem(string itemname, out int foundItems)
+    {
+        foundItems = 0;
+
+        foreach (Item item in inventory)
+        {
+            if (item.itemName == itemname)
+            {
+                foundItems++;
+            }
+        }
+    }
+
+}
+
+ 
+
 

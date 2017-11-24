@@ -5,13 +5,19 @@ using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour {
 
-    private AudioSource musicSource; // GameObject.Camera.fin
-    private AudioSource efxSource;
+    [SerializeField]
+    AudioSource musicSource; // GameObject.Camera.fin
+    [SerializeField]
+    AudioSource efxSource;
+    
 
     private Slider PauseMscVolSlider;
     private Slider PauseEfxVolSlicer;
     private Slider MainMscSlider;
     private Slider MainEfxVolSlider;
+
+    public float musicVol;
+    public float efxVol;
 
     private float lowPitchLimit = 0.95f;
     private float highPitchLimit = 1.05f;
@@ -35,8 +41,7 @@ public class SoundManager : MonoBehaviour {
 
     private void Start()
     {
-        //REFERENS TILL SLIDER 1 <-----------------------------------------------------------------------------------------------------------------------------------------------------------
-        //REFERENS TILL SLIDER 2 <-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
     }
 
     // used to play single soundclips.

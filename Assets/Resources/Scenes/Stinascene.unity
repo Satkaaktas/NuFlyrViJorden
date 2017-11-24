@@ -193,6 +193,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114615577487906638, guid: e371cc98e15176444a51d93cd4138ce4,
+        type: 2}
+      propertyPath: musicSource
+      value: 
+      objectReference: {fileID: 596947419}
+    - target: {fileID: 114615577487906638, guid: e371cc98e15176444a51d93cd4138ce4,
+        type: 2}
+      propertyPath: efxSource
+      value: 
+      objectReference: {fileID: 596947418}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e371cc98e15176444a51d93cd4138ce4, type: 2}
   m_IsPrefabParent: 0
@@ -276,6 +286,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &596947418 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 82414689345245438, guid: e371cc98e15176444a51d93cd4138ce4,
+    type: 2}
+  m_PrefabInternal: {fileID: 274783709}
+--- !u!82 &596947419 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 82054289685871220, guid: e371cc98e15176444a51d93cd4138ce4,
+    type: 2}
+  m_PrefabInternal: {fileID: 274783709}
 --- !u!1001 &986526413
 Prefab:
   m_ObjectHideFlags: 0
