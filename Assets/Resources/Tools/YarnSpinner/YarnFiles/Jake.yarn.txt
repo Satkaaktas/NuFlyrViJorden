@@ -1,22 +1,22 @@
-title: Jake
+title: Jake.yarn
 tags: 
 colorID: 0
 position: 537,69
 ---
-<<if $JakeApproach leq 2>>
-<<ChangePortrait Portrait UI_Portrait_Laura>>
-¤Laura carefully approaches the man formerly introduced as "The snake". He winches as Laura calls for his attention. “Hey! Excuse me“
-<<ChangePortrait Portrait UI_Portrait_Jake>>
-%Jake is still looking around barely noticing Laura and irritably says “What do you want? I’m busy.”
-<<ChangePortrait Portrait UI_Portrait_Laura>>
-¤Laura cautiously moves closer, lays a hand on Jake's shoulder trying to get his attention and says:
-->“I need to speak to you.”
-    [[Jake_SpeakToYou]]
-->“I’m ready to discuss your earlier offer”
-    [[Jake_Offer]]
-->“Busy? Standing here doing nothing? I need to meet the one you work for”
-    [[Jake_Busy]]
-->“Sorry... wrong person”[LEAVE]
+<<if $JakeApproach is null>>
+    <<ChangePortrait Portrait UI_Portrait_Laura>>
+    ¤Laura carefully approaches the man formerly introduced as "The snake". He winches as Laura calls for his attention. “Hey! Excuse me“
+    <<ChangePortrait Portrait UI_Portrait_Jake>>
+    %Jake is still looking around barely noticing Laura and irritably says “What do you want? I’m busy.”
+    <<ChangePortrait Portrait UI_Portrait_Laura>>
+    ¤Laura cautiously moves closer, lays a hand on Jake's shoulder trying to get his attention and says:
+    ->“I need to speak to you.”
+        [[Jake_SpeakToYou]]
+    ->“I’m ready to discuss your earlier offer”
+        [[Jake_Offer]]
+    ->“Busy? Standing here doing nothing? I need to meet the one you work for”
+        [[Jake_Busy]]
+    ->“Sorry... wrong person”[LEAVE]
 <<elseif $JakeApproach is 2>>
     [[Jake_SecondApproach]]
 <<elseif $JakeApproach is 3>>

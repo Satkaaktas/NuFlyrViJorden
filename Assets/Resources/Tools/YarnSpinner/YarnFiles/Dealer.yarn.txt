@@ -1,0 +1,37 @@
+title: Dealer.yarn
+tags: 
+colorID: 0
+position: 540,260
+---
+<<if $Dealer is true>>
+    [[Dealer_Alternative]]
+<<endif>>
+<<set $Dealer to true>>
+<<ChangePortrait Portrait UI_Portrait_Dealer>>
+%A thin, drained looking man addresses you "Oi! What's up little lady? You lookin' to score?" and he slowly comes closer, hunching on habit, ready to deliver the goods from within his long, leather trenchcoat.
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+->"No.... no thank you" she says and moves away slowly, carefully.
+    <<ChangePortrait Portrait UI_Portrait_Dealer>>
+    %"Suitcho' self..." he steps back, raising his head again and losing interest. 
+->"What are you selling?" she stopped in place, raising her brows. Dottie waited nearby, not near enough to hear the discourse.
+    <<ChangePortrait Portrait UI_Portrait_Dealer>>
+    The dealer shows a light grin, raising a hand from his pocket, holding a small, reddish vial "This thing, Boost, will jack you up for two days.... " he looks her up and down ".. you look like you got 60 kg on ya... two days... and well.... you might start trippin' ballss..." he stops mid sentence and waves a hand away ".. rarely happens."
+    "This other thing... " he raised the other hand, showing a yellow vial of the same size "...Fade, is if you want to drift out of the world and leave it behind for a time.. " he closed his eyes slowly, the head leaning back "y'know... forget all the bad shit. Let it be, man... " he looks to her again, opening the eyes "... y'know?"
+    <<ChangePortrait Portrait UI_Portrait_Laura>>
+    ->"Well... maybe... later?" she says, inching away and turning to check if Dottie didn't drift away. "Later... yes." She moves away, raising a hand limply. 
+    ->"No, I don't need any of that" she says with a deadpan and moves away.
+<<ChangePortrait Portrait UI_Portrait_Dealer>>
+%"Suitcho' self..." he steps back, raising his head again and shaking it lightly. 
+===
+title: Dealer_Alternative
+tags: 
+colorID: 0
+position: 821,292
+---
+<<ChangePortrait Portrait UI_Portrait_Dealer>>
+%"Hmm ... you' back" he says and looks to both sides warily. "Changed your mind?" and his hand goes inside his coat yet again.
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+¤"No, thank ... thank you.. " she lifts a palm and waves it in front of herself, declining, then moves on.
+<<ChangePortrait Portrait UI_Portrait_Dealer>>
+%The thin figure said nothing, stepping back and watching her pace away.
+===

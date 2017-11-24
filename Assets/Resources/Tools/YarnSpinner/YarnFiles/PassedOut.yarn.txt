@@ -1,0 +1,28 @@
+title: PassedOut.yarn
+tags: 
+colorID: 0
+position: 540,260
+---
+<<if $PassedOut is true>>
+    [[PassedOut_Alternative]]
+<<endif>>
+
+<<ChangePortrait Portrait UI_Portrait_PassedOut>>
+%A figure is lying on the ground, mostly motionless, sometimes starting to move and twitch, toss and turn, then going still again, drooling into a puddle. "GnRnHhHHaLlJrrnhh ... gMarh!" he states from where he lay, eyes going wide but not focused, pointing in the general direction of Laura as she nears.
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+->"Do you need help?" she asks with a creased forehead and arching brows, leaning over him, placing hands above her knees.
+    <<ChangePortrait Portrait UI_Portrait_PassedOut>>
+    %"ZMnLJgnGNgnGnhhhH... . ... trippin' baalllss.. " is what it appears he 'said', then started tossing and turning more fiercely, limbs splashing in the puddle.
+    <<ChangePortrait Portrait UI_Portrait_Laura>>
+    ¤"Guess.... not.. ?" her voice fades and she moves away, looking back once and shaking her head as she walks.
+->"......" she peered at him for a moment, shook her head and turned to leave.
+<<set $PassedOut to true>>
+===
+title: PassedOut_Alternative
+tags: 
+colorID: 0
+position: 791,215
+---
+<<ChangePortrait Portrait UI_Portrait_PassedOut>>
+%The figure is still lying on the ground, mostly motionless, sometimes starting to move and twitch, toss and turn, then going still again. He doesn't notice Laura approaching nor respond to any attempts at communication.
+===

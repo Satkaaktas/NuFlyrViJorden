@@ -1,0 +1,70 @@
+title: BMThug.yarn
+tags: 
+colorID: 0
+position: 536,83
+---
+<<if $BMThug_Snake is true>>
+    [[BMThug_Alternative]]
+<<endif>>
+<<ChangePortrait Portrait UI_Portrait_BMThug>>
+%" 'Ey..." he upnods, pacing towards her as his meaty arms swing about "Laura .. Little miss ... grow-a-mollusk.. " he says with a snide, wide grin. "Didya miss the market or sumthin'?" his head wags, along with raised brows.
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+->"No I... came to the right one" she says as her eyes slowly scan the surroundings.
+    <<ChangePortrait Portrait UI_Portrait_BMThug>>
+    %"OoOoh?" the thug's head tilts to a side. "So you here to score some guns... crank......... crack!" his eyes flash wide over a smile. "Naah, mommy wouldn't do ~that~... " he says, leaning over to try and tickle Dottie's cheek, where it meets the neck. 
+    <<ChangePortrait Portrait UI_Portrait_Laura>>
+    ->"Get your filthy paws off my daughter!" she says and slaps his hand away before it reached her . 
+        <<ChangePortrait Portrait UI_Portrait_BMThug>>
+        %"Whoa, whoa.. " he stood up again, smiling, with raised hands showing palms. "So watchu want?" he says and upnods again. 
+        [[BMThug_A]]
+    ->"I'm here to... " she reached out to catch his hand slowly and carefully "... find .. Snake?."
+        <<ChangePortrait Portrait UI_Portrait_BMThug>>
+        %"You know where he be... " thug's chin flicked to the north-west "... out there, in the dark corner... where no one wanna go." His cheeks grew round from a smile "Where folk go missing lest they belong.. " and his eyes fall to Dottie, lines forming under the eyes before he looked to Laura again. A silent question can be seen on his face, along the lines of ~Why on earth do you wanna go there, woman?~. He looks almost concerned.
+        [[BMThug_B]]
+    ->"Nothing .. " she takes Dottie's hand and places herself between her and the man, leading her daughter away. "Nothing.. " she adds as they pace off.
+        [[BMThug_Leave]]
+->"Yeah... I must have... wandered off" she waves a hand downward and takes Dottie's hand to lead her away.
+    [[BMThug_Leave]]
+===
+title: BMThug_Leave
+tags: 
+colorID: 0
+position: 189,482
+---
+<<ChangePortrait Portrait UI_Portrait_BMThug>>
+%"Awright.. " he peers at her under heavy eyelids, not blinking. "Off you go... mom... " watching her for a long moment, until she's out of sight.
+===
+title: BMThug_A
+tags: 
+colorID: 0
+position: 511,346
+---
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+->"I'm here to... " she looked to each side, lowering her voice "... find ... Snake?"
+    <<ChangePortrait Portrait UI_Portrait_BMThug>>
+    %"You know where he be... " thug's chin flicked to the north-west "... out there, in the dark corner... where no one wanna go." His cheeks grew round from a smile "Where folk go missing lest they belong.. " and his eyes fall to Dottie, lines forming under the eyes before he looked to Laura again. A silent question can be seen on his face, along the lines of ~Why on earth do you wanna go there, woman?~. He looks almost concerned.
+    [[BMThug_B]]
+->"Nothing .. " she takes Dottie's hand, leading her daughter away. "Nothing.. " she adds as they pace off.
+    [[BMThug_Leave]]
+===
+title: BMThug_B
+tags: 
+colorID: 0
+position: 783,484
+---
+<<set $BMThug_Snake to true>>
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+->"Ok, well.... thanks. I'll be off now" she says, leading Dottie away, eyeing everyone nearby out the corner of her eye.
+    [[BMThug_Leave]]
+->"Naw you don't.. " he snorts out a chuckle and shakes his head, reaching up to pat her cheek lightly. "Off you go .... mom... " he says and gestures with his head, as if there's a winding way towards the market's exit. 
+===
+title: BMThug_Alternative
+tags: 
+colorID: 0
+position: 1018,83
+---
+<<ChangePortrait Portrait UI_Portrait_BMThug>>
+%"Watchu want, little one?" he says as his eyes scan her figure.
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+¤Laura pauses, lifting a hand as she thinks, eyes turning to a corner for a short moment. "Nnnnnnn... .. . nothing" she concludes and shakes her head, moving away.
+===
