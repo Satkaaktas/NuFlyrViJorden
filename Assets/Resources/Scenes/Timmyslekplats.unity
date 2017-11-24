@@ -2359,6 +2359,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114389799955623974, guid: 526c21216afb91b4691574ca279263fe,
+        type: 2}
+      propertyPath: sourceText.Array.size
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 4362266887238024, guid: 526c21216afb91b4691574ca279263fe, type: 2}
       propertyPath: m_LocalPosition.x
       value: 224.5
@@ -2421,6 +2426,81 @@ Prefab:
       propertyPath: cameraBehaviour
       value: 
       objectReference: {fileID: 642860430}
+    - target: {fileID: 224904213728056342, guid: 526c21216afb91b4691574ca279263fe,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224904213728056342, guid: 526c21216afb91b4691574ca279263fe,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114389799955623974, guid: 526c21216afb91b4691574ca279263fe,
+        type: 2}
+      propertyPath: sourceText.Array.data[9]
+      value: 
+      objectReference: {fileID: 4900000, guid: 5bad7bf43faad6945ba83703ffda1bf2, type: 3}
+    - target: {fileID: 114389799955623974, guid: 526c21216afb91b4691574ca279263fe,
+        type: 2}
+      propertyPath: sourceText.Array.data[10]
+      value: 
+      objectReference: {fileID: 4900000, guid: f973588c785451044844f76e95537f2c, type: 3}
+    - target: {fileID: 114389799955623974, guid: 526c21216afb91b4691574ca279263fe,
+        type: 2}
+      propertyPath: sourceText.Array.data[11]
+      value: 
+      objectReference: {fileID: 4900000, guid: 3eb0189d4384f3d428e49dcf3bb8b51b, type: 3}
+    - target: {fileID: 114389799955623974, guid: 526c21216afb91b4691574ca279263fe,
+        type: 2}
+      propertyPath: sourceText.Array.data[12]
+      value: 
+      objectReference: {fileID: 4900000, guid: 911bb5107007ea743a4ba81bbc0acfbd, type: 3}
+    - target: {fileID: 114389799955623974, guid: 526c21216afb91b4691574ca279263fe,
+        type: 2}
+      propertyPath: sourceText.Array.data[13]
+      value: 
+      objectReference: {fileID: 4900000, guid: cce11ed0c0753b943b22b5f64a6e84ed, type: 3}
+    - target: {fileID: 114389799955623974, guid: 526c21216afb91b4691574ca279263fe,
+        type: 2}
+      propertyPath: sourceText.Array.data[1]
+      value: 
+      objectReference: {fileID: 4900000, guid: 6744682069e743243bc59fc061e913c4, type: 3}
+    - target: {fileID: 114389799955623974, guid: 526c21216afb91b4691574ca279263fe,
+        type: 2}
+      propertyPath: sourceText.Array.data[2]
+      value: 
+      objectReference: {fileID: 4900000, guid: 3a23660ccd93ab041bebf818bd453cb0, type: 3}
+    - target: {fileID: 114389799955623974, guid: 526c21216afb91b4691574ca279263fe,
+        type: 2}
+      propertyPath: sourceText.Array.data[3]
+      value: 
+      objectReference: {fileID: 4900000, guid: fc454f7932253174ba02e5bc93c27b55, type: 3}
+    - target: {fileID: 114389799955623974, guid: 526c21216afb91b4691574ca279263fe,
+        type: 2}
+      propertyPath: sourceText.Array.data[4]
+      value: 
+      objectReference: {fileID: 4900000, guid: ddd90b62548eb4147b3fa1b02e999b6f, type: 3}
+    - target: {fileID: 114389799955623974, guid: 526c21216afb91b4691574ca279263fe,
+        type: 2}
+      propertyPath: sourceText.Array.data[5]
+      value: 
+      objectReference: {fileID: 4900000, guid: b08e274c3f21c7d4bac3022876418c3a, type: 3}
+    - target: {fileID: 114389799955623974, guid: 526c21216afb91b4691574ca279263fe,
+        type: 2}
+      propertyPath: sourceText.Array.data[6]
+      value: 
+      objectReference: {fileID: 4900000, guid: 8864ea6548f90da43825d2fe2062caa5, type: 3}
+    - target: {fileID: 114389799955623974, guid: 526c21216afb91b4691574ca279263fe,
+        type: 2}
+      propertyPath: sourceText.Array.data[7]
+      value: 
+      objectReference: {fileID: 4900000, guid: 167a79772e2793a4bab5021d621fb702, type: 3}
+    - target: {fileID: 114389799955623974, guid: 526c21216afb91b4691574ca279263fe,
+        type: 2}
+      propertyPath: sourceText.Array.data[8]
+      value: 
+      objectReference: {fileID: 4900000, guid: 197024acc2ac3994bb80d041e17093dc, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 526c21216afb91b4691574ca279263fe, type: 2}
   m_IsPrefabParent: 0

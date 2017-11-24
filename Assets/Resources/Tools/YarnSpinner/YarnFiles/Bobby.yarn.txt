@@ -74,7 +74,7 @@ position: 372,861
 title: Bobby_Silent
 tags: 
 colorID: 0
-position: 61,891
+position: 62,891
 ---
 <<ChangePortrait Portrait UI_Portrait_Bobby>>
 %Bobby stands silent a while, watching the children argue as the toy breaks after hitting the Projects wall. With a sigh he shifts his gaze back to Laura. “Fine! God damnit! Fuck you Laura. You always knew which buttons to push... I’ll help you. But I'm not leaving empty handed this time. I’ll need something from you first. My superiors are unhappy about the smugglers advances and the investigation is going slowly. With your way around people I'm sure you can get me the name of their distribution leader.”
@@ -92,9 +92,11 @@ position: -588,139
 <<ChangePortrait Portrait UI_Portrait_Bobby>>
 %“Hi again Laura, got any progress?”
 <<ChangePortrait Portrait UI_Portrait_Laura>>
-[[“Yeah, I got your name, I think it goes without saying you didn't hear this from me? Her name is Jade Kaiser.”|Bobby_SmugglerName]] 
-[[“What did you need from me again?”|Bobby_Reminder]]
-[[“No, not yet. I need more time.”|LEAVE]]
+->“Yeah, I got your name, I think it goes without saying you didn't hear this from me? Her name is Jade Kaiser.” <<if $Bobby_Quest is true>>
+    [[Bobby_SmugglerName]] 
+->“What did you need from me again?”
+    [[Bobby_Reminder]]
+->“No, not yet. I need more time.”[LEAVE]
 ===
 title: Bobby_Neutral
 tags: 
