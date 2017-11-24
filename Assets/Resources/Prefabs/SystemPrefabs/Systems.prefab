@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 4244796301697506}
   - component: {fileID: 114542065285098094}
   - component: {fileID: 114267543200450108}
+  - component: {fileID: 114115036941935296}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -251,6 +252,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba604b057d16b1f40b0d3ad1676a06d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114115036941935296
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1497092039647562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1327945023, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114265123499259838
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -331,7 +343,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c894de0b2059ac44fa04cfaf6538b8b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items: []
+  items:
+  - itemName: Larva Drug
+    itemID: 0
+    itemDesc: Crushed Larva.
+    itemIcon: {fileID: 0}
+    itemGo: {fileID: 0}
+  - itemName: Syringe
+    itemID: 1
+    itemDesc: Syringe for injecting drugs.
+    itemIcon: {fileID: 0}
+    itemGo: {fileID: 0}
+  - itemName: Vaccine
+    itemID: 2
+    itemDesc: Vaccine against diseases.
+    itemIcon: {fileID: 0}
+    itemGo: {fileID: 0}
 --- !u!114 &114831106837539252
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -343,8 +370,108 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 380666cf1ba8529489d72515ab521c15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: []
-  inventorySlots: []
+  inventory:
+  - itemName: 
+    itemID: 0
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemGo: {fileID: 0}
+  - itemName: 
+    itemID: 0
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemGo: {fileID: 0}
+  - itemName: 
+    itemID: 0
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemGo: {fileID: 0}
+  - itemName: 
+    itemID: 0
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemGo: {fileID: 0}
+  - itemName: 
+    itemID: 0
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemGo: {fileID: 0}
+  - itemName: 
+    itemID: 0
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemGo: {fileID: 0}
+  - itemName: 
+    itemID: 0
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemGo: {fileID: 0}
+  - itemName: 
+    itemID: 0
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemGo: {fileID: 0}
+  - itemName: 
+    itemID: 0
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemGo: {fileID: 0}
+  - itemName: 
+    itemID: 0
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemGo: {fileID: 0}
+  inventorySlots:
+  - itemName: 
+    itemID: 0
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemGo: {fileID: 0}
+  - itemName: 
+    itemID: 0
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemGo: {fileID: 0}
+  - itemName: 
+    itemID: 0
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemGo: {fileID: 0}
+  - itemName: 
+    itemID: 0
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemGo: {fileID: 0}
+  - itemName: 
+    itemID: 0
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemGo: {fileID: 0}
+  - itemName: 
+    itemID: 0
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemGo: {fileID: 0}
+  - itemName: 
+    itemID: 0
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemGo: {fileID: 0}
+  - itemName: 
+    itemID: 0
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemGo: {fileID: 0}
+  - itemName: 
+    itemID: 0
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemGo: {fileID: 0}
+  - itemName: 
+    itemID: 0
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemGo: {fileID: 0}
   slotsX: 2
   slotsY: 5
 --- !u!114 &114880014475477518
@@ -381,12 +508,10 @@ MonoBehaviour:
   - {fileID: 4900000, guid: ddd90b62548eb4147b3fa1b02e999b6f, type: 3}
   - {fileID: 4900000, guid: b08e274c3f21c7d4bac3022876418c3a, type: 3}
   - {fileID: 4900000, guid: 8864ea6548f90da43825d2fe2062caa5, type: 3}
-  - {fileID: 4900000, guid: 167a79772e2793a4bab5021d621fb702, type: 3}
   - {fileID: 4900000, guid: 197024acc2ac3994bb80d041e17093dc, type: 3}
   - {fileID: 4900000, guid: f973588c785451044844f76e95537f2c, type: 3}
   - {fileID: 4900000, guid: 3eb0189d4384f3d428e49dcf3bb8b51b, type: 3}
   - {fileID: 4900000, guid: cce11ed0c0753b943b22b5f64a6e84ed, type: 3}
-  - {fileID: 0}
   stringGroups: []
   shouldOverrideLanguage: 0
   overrideLanguage: 10

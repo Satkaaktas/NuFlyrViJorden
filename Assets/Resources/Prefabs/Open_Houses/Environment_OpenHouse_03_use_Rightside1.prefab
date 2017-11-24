@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 4489577985179426}
   - component: {fileID: 95741139112103652}
   m_Layer: 0
-  m_Name: Environment_OpenHouse_03_use_side1
+  m_Name: Environment_OpenHouse_03_use_Rightside1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
