@@ -88,7 +88,7 @@ public class Inventory : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha1) && indexitem <= 2 && indexitem >= 0)
         {
-            inventory[indexitem] = database.Items[indexitem];
+            inventory[indexitem] = database.items[indexitem];
             indexitem++;
             Debug.Log("Item added. indexitem = " + indexitem);
 
@@ -104,7 +104,7 @@ public class Inventory : MonoBehaviour
 
             if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha2) && indexitem >= 1 && indexitem <= 3)
             {
-                RemoveItem(database.Items[indexitem - 1]);
+                RemoveItem(database.items[indexitem - 1]);
                 indexitem--;
                 Debug.Log("item removed. indexitem = " + indexitem);
             }
@@ -165,11 +165,37 @@ public class Inventory : MonoBehaviour
 
     }
 
-
-    //OM MAN BARA SPARAR ID KAN VI LÄGGA TILL ITEM via database.items[ID] -----------------------------------------------------------------------------------------------------------------------------
+    // ------------------------------------------------------ TILLSVIDARE ------------------------------------------------------------
     public void AddItem(Item item)
     {
         inventory.Add(item);
     }
- }
+    // ------------------------------------------------------ TILLSVIDARE ------------------------------------------------------------
+
+    public void AddItem(string itemName)
+    {
+        int addIndex = -1;
+
+        addIndex = database.items.FindIndex(i => i.itemName == itemName);
+
+        if (addIndex != -1)
+        {
+            inventory.Add(database.items[addIndex]);
+        }
+    }
+
+    public void CheckForItem(string itemname, out int foundItems)
+    {
+        foundItems = 0;
+
+        foreach (Item item in inventory)
+        {
+            if (item.itemName == itemname)
+            {
+                foundItems++;
+            }
+        }
+    }
+
+}
 
