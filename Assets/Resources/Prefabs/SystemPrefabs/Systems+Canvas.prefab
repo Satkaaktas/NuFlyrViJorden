@@ -880,7 +880,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 036516dcae9cc464eb4188d0477b9453, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1204,7 +1204,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pressen sie bitte "E" zu interagieren
+  m_Text: 
 --- !u!114 &114533227181147258
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1217,14 +1217,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: d10f39d0cef374944b60647e36196a10, type: 3}
+  - {fileID: 21300000, guid: b39f0475ac2c0ea4abdd9265a5dd3504, type: 3}
+  - {fileID: 21300000, guid: f73eb366aee06d441a0059b8e441b354, type: 3}
   - {fileID: 21300000, guid: 18a1b73fc0942df4cb6ba82803291ca1, type: 3}
   - {fileID: 21300000, guid: 46327edb5d4226043a1702c9f99e0aab, type: 3}
+  - {fileID: 21300000, guid: 03600c2e70d68784e85f4edf3f810d13, type: 3}
   - {fileID: 21300000, guid: 43de7daece4a96642936d56a54f6fa8d, type: 3}
+  - {fileID: 21300000, guid: f9ae35e157307d040b6b7a30ef8e7da9, type: 3}
   - {fileID: 21300000, guid: 4b75d3e03b37b8d439337f9e64f3b32e, type: 3}
   - {fileID: 21300000, guid: b0e5174302e4fc64da48e46d891c0244, type: 3}
+  - {fileID: 21300000, guid: 2f08ac98257608844b9ae40a422bb70b, type: 3}
   - {fileID: 21300000, guid: df11c2e22b877e84b9a265b6e3b444a0, type: 3}
-  - {fileID: 21300000, guid: 88c6b4c4fc4365a40b046aad0a303109, type: 3}
 --- !u!114 &114538131621854632
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1818,7 +1821,7 @@ RectTransform:
   m_GameObject: {fileID: 1843788855118364}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 50, y: -50, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.5106761, z: 1}
   m_Children:
   - {fileID: 224376945514427470}
   m_Father: {fileID: 224904213728056342}
