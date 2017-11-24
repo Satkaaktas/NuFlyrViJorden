@@ -6,10 +6,15 @@ public class ItemDatabase : MonoBehaviour {
 
     //list of all items in game
     public List<Item> items = new List<Item>();
+    
+    public List<Item> Items
+    {
+        get { return this.items; }
+    }
 
     private void Start()
     {
-        items.Add(new Item("Crushed_Larvae",0 , "Crushed Larva."));
+        items.Add(new Item("Larva Drug",0 , "Crushed Larva."));
         items.Add(new Item("Syringe", 1, "Syringe for injecting drugs."));
         items.Add(new Item("Vaccine", 2, "Vaccine against diseases."));
     }
