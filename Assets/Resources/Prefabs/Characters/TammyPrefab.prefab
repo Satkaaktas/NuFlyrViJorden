@@ -678,7 +678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d42c9e24a4e87e4eb84f368cb3969aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myDialogueNode: newFile.yarn
+  myDialogueNode: TammySamCarl.yarn
   highlightMat: {fileID: 2100000, guid: 3dc841133c8aa5a41823e6de2fc89307, type: 2}
 --- !u!114 &114854182577393026
 MonoBehaviour:
