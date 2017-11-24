@@ -9,12 +9,6 @@ public class SoundManager : MonoBehaviour {
     AudioSource musicSource; // GameObject.Camera.fin
     [SerializeField]
     AudioSource efxSource;
-    
-
-    private Slider PauseMscVolSlider;
-    private Slider PauseEfxVolSlicer;
-    private Slider MainMscSlider;
-    private Slider MainEfxVolSlider;
 
     public float musicVol;
     public float efxVol;
@@ -79,17 +73,12 @@ public class SoundManager : MonoBehaviour {
     {
         musicSource.volume = slider.value;
 
-        PauseMscVolSlider.value = musicSource.volume;
-        MainMscSlider.value = musicSource.volume;
     }
 
     // invoke when slider button is clicked
     public void ChangeEfxVol(Slider slider)
     {
-        efxSource.volume = slider.value;
 
-        PauseEfxVolSlicer.value = efxSource.volume;
-        MainEfxVolSlider.value = efxSource.volume;
     }
 
 }
