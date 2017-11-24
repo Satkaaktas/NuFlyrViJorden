@@ -18,6 +18,11 @@ public class NPCScript : MonoBehaviour, IInteractable
 
     Material myMat;
 
+    public string MyDialogueNode
+    {
+        get { return this.myDialogueNode; }
+    }
+
     [SerializeField]
     string myDialogueNode;
 
@@ -49,16 +54,19 @@ public class NPCScript : MonoBehaviour, IInteractable
 
     public void DoAction()          //Initierar en dialog mellan spelaren och NPCn
     {
-        anim.SetBool("isWalking", false);
-        FindObjectOfType<DialogueRunner>().CurrentAgent = GetComponent<NavMeshAgent>();
-        agent.isStopped = true;
-        FindObjectOfType<PlayerControls>().CurrentInteractable = null;
-        dR.SetDialogue(myDialogueNode);
+        if (myDialogueNode != "null")
+        {
+            anim.SetBool("isWalking", false);
+            FindObjectOfType<DialogueRunner>().CurrentAgent = GetComponent<NavMeshAgent>();
+            agent.isStopped = true;
+            FindObjectOfType<PlayerControls>().CurrentInteractable = null;
+            dR.SetDialogue(myDialogueNode);
+        }
     }
 
     public void ShowAction(bool show)       //Visar att NPCn går att interagera med
     {
-        if (show)
+        if (show && myDialogueNode != "null")
             GetComponent<Renderer>().material = highlightMat;
         else
             GetComponent<Renderer>().material = myMat;

@@ -72,9 +72,12 @@ public class PlayerControls : MonoBehaviour
         Move();
         if (Input.GetKeyDown(KeyCode.E) && currentInteractable != null && inputEnabled)         //Interagerar med föremål och NPCs när spelaren klickar på E
         {
-            playerAnim.SetBool("isRunning", false);
-            playerAnim.SetBool("isWalking", false);
-            currentInteractable.DoAction();
+            if (currentInteractable is InteractableObject || ((NPCScript)currentInteractable).MyDialogueNode != "null")
+            {
+                playerAnim.SetBool("isRunning", false);
+                playerAnim.SetBool("isWalking", false);
+                currentInteractable.DoAction();
+            }
         }
 
     }
