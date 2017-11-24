@@ -93,10 +93,10 @@ public class Inventory : MonoBehaviour
             Debug.Log("Item added. indexitem = " + indexitem);
         }
 
-<<<<<<< HEAD
+
         if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha2) && indexitem >= 1 && indexitem <= 3)
         {
-=======
+
             if (Input.GetKeyDown(KeyCode.Keypad1) && indexitem < 1 && indexitem >= 0)
             {
                 inventory[indexitem] = database.items[indexitem];
@@ -113,7 +113,7 @@ public class Inventory : MonoBehaviour
                 indexitem--;
                 Debug.Log("item removed. indexitem = " + indexitem);
             }
->>>>>>> a06a45d3865a8b2ebcb865e4ab500e4c4d4e82a5
+
 
             RemoveItem(database.items[indexitem - 1]);
             indexitem--;
@@ -178,16 +178,15 @@ public class Inventory : MonoBehaviour
 
     }
 
-<<<<<<< HEAD
-=======
+
 
     //OM MAN BARA SPARAR ID KAN VI LÄGGA TILL ITEM via database.items[ID] -----------------------------------------------------------------------------------------------------------------------------
->>>>>>> a06a45d3865a8b2ebcb865e4ab500e4c4d4e82a5
+
     public void AddItem(Item item)
     {
         inventory.Add(item);
     }
-<<<<<<< HEAD
+
     // ------------------------------------------------------ TILLSVIDARE ------------------------------------------------------------
 
     //called by items name to add that item to the inventory
@@ -231,7 +230,7 @@ public class Inventory : MonoBehaviour
     }
 
 }
-=======
- }
->>>>>>> a06a45d3865a8b2ebcb865e4ab500e4c4d4e82a5
+
+ 
+
 
