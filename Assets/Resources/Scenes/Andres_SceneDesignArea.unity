@@ -13788,6 +13788,9 @@ Transform:
   - {fileID: 375470960}
   - {fileID: 89108954}
   - {fileID: 1700229114}
+<<<<<<< HEAD
+>>>>>>> parent of 301506f... sdfsd
+=======
 >>>>>>> parent of 301506f... sdfsd
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -16761,6 +16764,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc8635bfca7d5174b9731508e0e8d74a, type: 2}
   m_IsPrefabParent: 0
+<<<<<<< HEAD
 --- !u!1001 &1138776671
 Prefab:
   m_ObjectHideFlags: 0
@@ -16803,6 +16807,8 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5ee23a07c13e464db4e1c40f60fbd0f, type: 2}
   m_IsPrefabParent: 0
+>>>>>>> parent of 301506f... sdfsd
+=======
 >>>>>>> parent of 301506f... sdfsd
 --- !u!1001 &1140831615
 Prefab:
