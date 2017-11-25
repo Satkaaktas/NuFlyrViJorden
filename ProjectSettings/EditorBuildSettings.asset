@@ -9,5 +9,5 @@ EditorBuildSettings:
     path: Assets/Resources/Scenes/MenuScene.unity
     guid: dc8b1704fca84d9428fd89e3a91e7ee1
   - enabled: 1
-    path: Assets/Resources/Scenes/Andres_SceneDesignArea.unity
-    guid: dc810e0fd1c774e4ebd8d0e4c7b5a20f
+    path: Assets/Resources/Scenes/Pretty_Grafix_Scene.unity
+    guid: 824f355a5a1fa6c47989c568931bdaa4
